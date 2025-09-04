@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بصمة آفاق للخدمات الحكومية - المملكة العربية السعودية</title>
+
+    <!-- External Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./asstes/style.css">
+    <style>
+        * {
+            font-family: 'Cairo', sans-serif;
+        }
+
+        .custom-primary {
+            background-color: #00544d;
+        }
+
+        .custom-primary-light {
+            background-color: #006e5f;
+        }
+
+        .custom-gradient {
+            background: linear-gradient(135deg, #00544d 0%, #006e5f 100%);
+        }
+
+        .custom-gold {
+            background: linear-gradient(135deg, #d4af37 0%, #f4e06d 100%);
+        }
+
+        .custom-purple {
+            background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 84, 77, 0.15);
+        }
+
+        .badge {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .bullet-point {
+            position: relative;
+            padding-right: 20px;
+        }
+
+        .bullet-point::before {
+            content: '•';
+            position: absolute;
+            right: 0;
+            color: #00544d;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+    </style>
+
+</head>
+
+<body class="overflow-x-hidden">
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 w-full z-50 transition-all duration-300">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3 space-x-reverse">
+                    <div
+                        class="w-12 h-12 bg-saudi-green  rounded-lg flex items-center justify-center rounded-full border-1 border-black">
+                        <img src="./asstes/img/شعار بدون خلفية.png" alt="">
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold saudi-green">بصمة آفاق</h1>
+                        <p class="text-sm text-gray-600">للخدمات الحكومية</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-8 space-x-reverse">
+                    <a href="#home"
+                        class="text-gray-700 hover:text-saudi-green transition-colors font-semibold">الرئيسية</a>
+                    <a href="#about" class="text-gray-700 hover:text-saudi-green transition-colors font-semibold">من
+                        نحن</a>
+                    <a href="#services"
+                        class="text-gray-700 hover:text-saudi-green transition-colors font-semibold">خدماتنا</a>
+                    <a href="#partners"
+                        class="text-gray-700 hover:text-saudi-green transition-colors font-semibold">شركاؤنا</a>
+                    <a href="#contact"
+                        class="text-gray-700 hover:text-saudi-green transition-colors font-semibold">تواصل معنا</a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden lg:block">
+                    <a href="#contact" class=" px-6 py-3 rounded-lg font-semibold text-white bg-saudi-green ">
+                        <i class="fas fa-phone-alt ml-2"></i>
+                        اتصل بنا
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-gray-700 text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden mt-4 bg-white rounded-lg shadow-lg p-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="#home"
+                        class="text-gray-700 hover:text-saudi-green transition-colors font-semibold">الرئيسية</a>
+                    <a href="#about" class="text-gray-700 hover:text-saudi-green transition-colors font-semibold">من
+                        نحن</a>
+                    <a href="#services"
+                        class="text-gray-700 hover:text-saudi-green transition-colors font-semibold">خدماتنا</a>
+                    <a href="#partners"
+                        class="text-gray-700 hover:text-saudi-green transition-colors font-semibold">شركاؤنا</a>
+                    <a href="#contact"
+                        class="text-gray-700 hover:text-saudi-green transition-colors font-semibold">تواصل معنا</a>
+                    <a href="#contact"
+                        class="bg-saudi-green px-6 py-3 rounded-lg font-semibold text-white shadow-lg text-center">
+                        <i class="fas fa-phone-alt ml-2"></i>
+                        اتصل بنا
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-pattern islamic-pattern min-h-screen flex items-center justify-center pt-20">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
+                <!-- Floating Icon -->
+                <div class="floating-animation mb-8">
+                    <div class="w-24 h-24 bg-saudi-green rounded-full flex items-center justify-center mx-auto shadow-2xl">
+                         <img src="./asstes/img/شعار بدون خلفية.png" alt="">
+                    </div>
+                </div>
+
+                <!-- Main Title -->
+                <h1 class="hero-text text-4xl lg:text-6xl font-bold saudi-green mb-6 leading-tight">
+                    بصمة آفاق للخدمات الحكومية
+                    <br>
+                    <span class="text-gold">في المملكة العربية السعودية</span>
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="text-xl lg:text-2xl text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
+                    أكثر من 10 سنوات خبرة في مجال الخدمات والتعقيب
+                    <br>
+                    <span class="font-semibold saudi-green">بخبرة عالية وسرعة ودقة في التنفيذ</span>
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#services" class="btn-primary px-8 py-4 rounded-lg font-bold text-lg shadow-xl">
+                        <i class="fas fa-concierge-bell ml-2"></i>
+                        طلب خدمة الآن
+                    </a>
+                    <a href="#about"
+                        class="bg-white text-saudi-green border-2 border-saudi-green px-8 py-4 rounded-lg font-bold text-lg hover:bg-saudi-green hover:text-white transition-all duration-300 shadow-xl">
+                        <i class="fas fa-info-circle ml-2"></i>
+                        تعرف علينا أكثر
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+   <!-- About Us Section -->
+<section id="about" class="py-20 bg-white islamic-pattern">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <h2 class="text-4xl lg:text-5xl font-bold saudi-green mb-4">نبذة عنا</h2>
+            <div class="w-24 h-1 bg-gold mx-auto mb-6"></div>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                نحن شركة متخصصة في تقديم الخدمات الحكومية بأعلى معايير الجودة والمهنية
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Content -->
+            <div data-aos="fade-right" data-aos-delay="200">
+                <div class="space-y-8">
+                    <!-- Feature 1 -->
+                    <div class="flex items-start space-x-4 space-x-reverse">
+                        <div
+                            class="w-16 h-16 bg-saudi-green-lighter rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-tachometer-alt text-saudi-green text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold saudi-green mb-2">السرعة والدقة في أداء الخدمات</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                نلتزم بتقديم خدماتنا في أسرع وقت ممكن مع الحفاظ على أعلى مستويات الدقة والجودة في العمل
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="flex items-start space-x-4 space-x-reverse">
+                        <div
+                            class="w-16 h-16 bg-saudi-green-lighter rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-shield-alt text-saudi-green text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold saudi-green mb-2">التعامل مع الوثائق الحساسة بسرية تامة</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                نضمن الحفاظ على سرية وأمان جميع المعلومات والوثائق الخاصة بعملائنا الكرام
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="flex items-start space-x-4 space-x-reverse">
+                        <div
+                            class="w-16 h-16 bg-saudi-green-lighter rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-heart text-saudi-green text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold saudi-green mb-2">إرضاء العملاء والمصداقية</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                رضا عملائنا هو هدفنا الأول، ونحرص على بناء علاقات طويلة الأمد قائمة على الثقة والمصداقية
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="flex items-start space-x-4 space-x-reverse">
+                        <div
+                            class="w-16 h-16 bg-saudi-green-lighter rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-lock text-saudi-green text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold saudi-green mb-2">الأمان في تنفيذ الخدمات</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                نطبق أعلى معايير الأمان والحماية في جميع مراحل تنفيذ الخدمات لضمان حقوق عملائنا
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+           <!-- Image with working hover -->
+            <div data-aos="fade-left" data-aos-delay="400" class="flex justify-center">
+            <!-- wrapper relative لضبط الترتيب والـ overlay داخل نفس البلوك -->
+            <div class="relative w-full max-w-md">
+                <!-- overlay الخلفي مع تعطيل التقاط الاحداث لتمرير الهوفَر للصورة -->
+                <div class="absolute inset-0 opacity-5 pointer-events-none">
+                <div class="custom-gradient w-full h-full"></div>
+                </div>
+
+                <!-- الصورة نفسها فوق الــ overlay مع تفعيل transform و z-index -->
+                <img
+                src="./asstes/img/2025-08-18.jpg"
+                alt="عن الشركة"
+                class="relative z-10 rounded-2xl shadow-xl w-full object-cover transform hover:scale-105 transition-transform duration-500 ease-in-out"
+                />
+            </div>
+            </div>
+
+    </div>
+</section>
+
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-saudi-green-lighter islamic-pattern">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl lg:text-5xl font-bold saudi-green mb-4">خدماتنا</h2>
+                <div class="w-24 h-1 bg-gold mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    نقدم مجموعة شاملة من الخدمات الحكومية لتلبية احتياجاتكم المختلفة
+                </p>
+            </div>
+
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                    <!-- Card 1: خدمات البلدية -->
+                    <div class="bg-white rounded-3xl p-8 shadow-lg card-hover relative overflow-hidden">
+                        <!-- Background Pattern -->
+                        <div class="absolute top-0 left-0 w-full h-full opacity-5">
+                            <div class="custom-gradient w-full h-full"></div>
+                        </div>
+
+                        <!-- Image -->
+                        <div class="w-full h-48 rounded-2xl overflow-hidden mb-6">
+                            <img src="./asstes/img/balady.png" alt="خدمات البلدية" class="w-full h-full object-cover">
+                        </div>
+
+                        <!-- Content -->
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">خدمات البلدية</h3>
+
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                نوفر جميع خدمات البلديات إلكترونياً وحضورياً لإنجاز معاملاتك بسرعة واحترافية وبأعلى
+                                مستوى من الدقة.
+                            </p>
+
+                            <p class="text-gray-500 text-sm mb-6 leading-relaxed">
+                                تسهيل جميع طلبات التراخيص البلدية من استخراج وتجديد ونقل ملكية مع متابعة المعاملة حتى
+                                إصدارها.
+                            </p>
+
+                            <!-- Services List -->
+                            <ul class="space-y-3 mb-8">
+                                <li class="bullet-point text-gray-700">استخراج رخص بلدية جديدة</li>
+                                <li class="bullet-point text-gray-700">تجديد الرخص القائمة</li>
+                                <li class="bullet-point text-gray-700">نقل ملكية الرخصة</li>
+                                <li class="bullet-point text-gray-700">إلغاء الرخص عند الحاجة</li>
+                                <li class="bullet-point text-gray-700">متابعة معاملات اللوحات الإعلانية</li>
+                            </ul>
+
+                            <!-- Buttons -->
+                            <div class="flex gap-4">
+                                <button
+                                    class="bg-saudi-green text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                    <i class="fas fa-arrow-left"></i>
+                                    اكتشف المزيد
+                                </button>
+                                <button
+                                    class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                    <i class="fab fa-whatsapp"></i>
+                                    واتساب
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: خدمات مكتب العمل -->
+                    <div class="bg-white rounded-3xl p-8 shadow-lg card-hover relative overflow-hidden">
+                        <!-- Background Pattern -->
+                        <div class="absolute top-0 left-0 w-full h-full opacity-5">
+                            <div class="custom-gradient w-full h-full"></div>
+                        </div>
+
+                        <!-- Image -->
+                        <div class="w-full h-48 rounded-2xl overflow-hidden mb-6">
+                            <img src="./asstes/img/Absher Business.png" alt="خدمات مكتب العمل"
+                                class="w-full h-full object-cover">
+                        </div>
+
+                        <!-- Content -->
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">خدمات مكتب العمل</h3>
+
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                نقدم جميع خدمات مكتب العمل للأفراد والشركات بطريقة سهلة وسريعة مع ضمان دقة تنفيذ كافة
+                                الإجراءات الرسمية.
+                            </p>
+
+                            <p class="text-gray-500 text-sm mb-6 leading-relaxed">
+                                نوفر حلول متكاملة لتسهيل جميع معاملات مكتب العمل مثل إصدار وتجديد وإلغاء الرخص ومتابعة
+                                الطلبات لحين إنجازها بالكامل.
+                            </p>
+
+                            <!-- Services List -->
+                            <ul class="space-y-3 mb-8">
+                                <li class="bullet-point text-gray-700">إصدار رخص العمل الجديدة</li>
+                                <li class="bullet-point text-gray-700">تجديد رخص العمل</li>
+                                <li class="bullet-point text-gray-700">إلغاء رخص العمل</li>
+                                <li class="bullet-point text-gray-700">نقل خدمات العمالة</li>
+                                <li class="bullet-point text-gray-700">متابعة معاملات التوظيف</li>
+                            </ul>
+
+                            <!-- Buttons -->
+                            <div class="flex gap-4">
+                                <button
+                                    class="bg-saudi-green text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                    <i class="fas fa-arrow-left"></i>
+                                    اكتشف المزيد
+                                </button>
+                                <button
+                                    class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                    <i class="fab fa-whatsapp"></i>
+                                    واتساب
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                  <!-- Card: خدمات منصة مدد -->
+                    <div class="bg-white rounded-3xl p-8 shadow-lg card-hover relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-full opacity-5">
+                            <div class="custom-gradient w-full h-full"></div>
+                        </div>
+
+                        <!-- Image -->
+                        <div class="w-full h-48 rounded-2xl overflow-hidden mb-6">
+                            <img src="./asstes/img/Mudad.png" alt="خدمات منصة مدد"
+                                class="w-full h-full object-cover">
+                        </div>
+
+                        <!-- Content -->
+                        <div class="mt-16">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">خدمات منصة مدد</h3>
+
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                نقدم جميع خدمات منصة مدد التي تساهم في تعزيز الشفافية وحماية حقوق العاملين وأصحاب الأعمال بكل سهولة وموثوقية.
+                            </p>
+
+                            <p class="text-gray-500 text-sm mb-6 leading-relaxed">
+                                عبر منصة مدد يمكنك إنجاز معاملاتك المالية والإدارية المتعلقة بالرواتب وحماية الأجور بمرونة عالية ودقة مضمونة.
+                            </p>
+
+                            <!-- Services List -->
+                            <ul class="space-y-3 mb-8">
+                                <li class="bullet-point text-gray-700">إزالة ملاحظة حماية الأجور</li>
+                                <li class="bullet-point text-gray-700">تحويل الرواتب شهرياً</li>
+                            </ul>
+
+                            <!-- Buttons -->
+                            <div class="flex gap-4">
+                                <button
+                                    class="bg-saudi-green text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                    <i class="fas fa-arrow-left"></i>
+                                    اكتشف المزيد
+                                </button>
+                                <button
+                                    class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                    <i class="fab fa-whatsapp"></i>
+                                    واتساب
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Card: خدمات المرور -->
+                    <div class="bg-white rounded-3xl p-8 shadow-lg card-hover relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-full opacity-5">
+        <div class="custom-gradient w-full h-full"></div>
+    </div>
+
+    <!-- Image -->
+    <div class="w-full h-48 rounded-2xl overflow-hidden mb-6">
+        <img src="./asstes/img/Ministry of Human Resources and Social Development.png"
+            alt="التأمينات الاجتماعية" class="w-full h-full object-cover">
+    </div>
+
+    <!-- Content -->
+    <div class="mt-16">
+        <h3 class="text-2xl font-bold text-gray-800 mb-4">التأمينات الاجتماعية</h3>
+
+        <p class="text-gray-600 mb-4 leading-relaxed">
+            نوفر لك خدمات التأمينات الاجتماعية التي تساعد أصحاب الأعمال والموظفين على تسهيل جميع
+            الإجراءات بكل احترافية ودقة عالية.
+        </p>
+
+        <p class="text-gray-500 text-sm mb-6 leading-relaxed">
+            مع خبرتنا نضمن لك إنجاز معاملاتك بسهولة سواء في التوظيف أو تعديل البيانات أو تخفيض
+            التكاليف الشهرية المترتبة.
+        </p>
+
+        <!-- Services List -->
+        <ul class="space-y-3 mb-8">
+            <li class="bullet-point text-gray-700">توظيف السعوديين</li>
+            <li class="bullet-point text-gray-700">تعديل أجور الموظفين</li>
+            <li class="bullet-point text-gray-700">تخفيض الفواتير الشهرية</li>
+        </ul>
+
+        <!-- Buttons -->
+        <div class="flex gap-4">
+            <button
+                class="bg-saudi-green text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                <i class="fas fa-arrow-left"></i>
+                اكتشف المزيد
+            </button>
+            <button
+                class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                <i class="fab fa-whatsapp"></i>
+                واتساب
+            </button>
+        </div>
+    </div>
+</div>
+
+
+
+
+                    <!-- Card: خدمات الجوازات -->
+                    <div class="bg-white rounded-3xl p-8 shadow-lg card-hover relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-full opacity-5">
+                            <div class="custom-gradient w-full h-full"></div>
+                        </div>
+
+                        <!-- Image -->
+                        <div class="w-full h-48 rounded-2xl overflow-hidden mb-6">
+                            <img src="./asstes/img/General Directorate of Passports.png" alt="خدمات مكتب العمل"
+                                class="w-full h-full object-cover">
+                        </div>
+
+
+                        <!-- Content -->
+                        <div class="mt-16">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">خدمات الجوازات والإقامة</h3>
+
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                نقدم كافة خدمات الجوازات والإقامة بسرعة وسهولة مع ضمان دقة عالية في تنفيذ جميع المعاملات
+                                الرسمية للأفراد والشركات.
+                            </p>
+
+                            <p class="text-gray-500 text-sm mb-6 leading-relaxed">
+                                نحرص على تيسير جميع معاملات الجوازات من إصدار وتجديد الإقامات والتأشيرات حتى إنهاء
+                                الإجراءات بشكل كامل دون عناء.
+                            </p>
+
+                            <!-- Services List -->
+                            <ul class="space-y-3 mb-8">
+                                <li class="bullet-point text-gray-700">إصدار وتجديد الإقامات</li>
+                                <li class="bullet-point text-gray-700">إصدار تأشيرات الخروج والعودة</li>
+                                <li class="bullet-point text-gray-700">إلغاء التأشيرات</li>
+                                <li class="bullet-point text-gray-700">نقل الكفالات</li>
+                                <li class="bullet-point text-gray-700">متابعة معاملات الجوازات</li>
+                            </ul>
+
+                            <!-- Buttons -->
+                            <div class="flex gap-4">
+                                <button
+                                    class="bg-saudi-green text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                    <i class="fas fa-arrow-left"></i>
+                                    اكتشف المزيد
+                                </button>
+                                <button
+                                    class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                    <i class="fab fa-whatsapp"></i>
+                                    واتساب
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    
+                   <!-- Card: الخدمات الإلكترونية -->
+                    <div class="bg-white rounded-3xl p-8 shadow-lg card-hover relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-full opacity-5">
+                            <div class="custom-gradient w-full h-full"></div>
+                        </div>
+
+                        <!-- Image -->
+                        <div class="w-full h-48 rounded-2xl overflow-hidden mb-6">
+                            <img src="./asstes/img/Najiz.png" alt="الخدمات الإلكترونية"
+                                class="w-full h-full object-cover">
+                        </div>
+
+                        <!-- Content -->
+                        <div class="mt-16">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">الخدمات الإلكترونية</h3>
+
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                نوفر لك مجموعة متكاملة من الخدمات الإلكترونية التي تسهل حياتك اليومية وتساعدك على إنجاز معاملاتك بسرعة ودقة دون الحاجة إلى مراجعة الجهات المختلفة.
+                            </p>
+
+                            <p class="text-gray-500 text-sm mb-6 leading-relaxed">
+                                مع حلول مبتكرة وخدمة عملاء متميزة، نضمن لك تجربة إلكترونية سلسة وآمنة تغطي جميع احتياجاتك الحكومية والشخصية.
+                            </p>
+
+                            <!-- Services List -->
+                            <ul class="space-y-3 mb-8">
+                                <li class="bullet-point text-gray-700">سداد جميع الفواتير العامة والحكومية</li>
+                                <li class="bullet-point text-gray-700">تسجيل وتعديل العنوان الوطني</li>
+                                <li class="bullet-point text-gray-700">فتح حساب بنكي</li>
+                                <li class="bullet-point text-gray-700">تأمين طبي</li>
+                                <li class="bullet-point text-gray-700">فحص طبي</li>
+                                <li class="bullet-point text-gray-700">التسجيل بضمان المطور</li>
+                                <li class="bullet-point text-gray-700">التسجيل بحساب المواطن</li>
+                            </ul>
+
+                            <!-- Buttons -->
+                            <div class="flex gap-4">
+                                <button
+                                    class="bg-saudi-green text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                    <i class="fas fa-arrow-left"></i>
+                                    اكتشف المزيد
+                                </button>
+                                <button
+                                    class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                    <i class="fab fa-whatsapp"></i>
+                                    واتساب
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="bg-white rounded-3xl p-8 shadow-lg card-hover relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-full opacity-5">
+                            <div class="custom-gradient w-full h-full"></div>
+                        </div>
+
+                        <!-- Image -->
+                        <div class="w-full h-48 rounded-2xl overflow-hidden mb-6">
+                            <img src="./asstes/img/Ministry-of-Foreign-Affairs-01.png" alt="خدمات وزارة الخارجية"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <!-- Content -->
+                        <div class="mt-16">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">خدمات وزارة الخارجية</h3>
+
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                نقدم جميع خدمات وزارة الخارجية بخطوات منظمة وسريعة لتسهيل كافة معاملات الأفراد والمؤسسات
+                                داخل المملكة وخارجها.
+                            </p>
+
+                            <p class="text-gray-500 text-sm mb-6 leading-relaxed">
+                                من التفويضات الإلكترونية إلى إصدار التأشيرات المتنوعة، نحرص على تيسير جميع معاملاتك
+                                بمرونة وكفاءة عالية.
+                            </p>
+
+                            <!-- Services List -->
+                            <ul class="space-y-3 mb-8">
+                                <li class="bullet-point text-gray-700">تفويض تأشيرات منزلية</li>
+                                <li class="bullet-point text-gray-700">تفويض تأشيرات مهنية</li>
+                                <li class="bullet-point text-gray-700">إصدار تأشيرات زيارة عائلية</li>
+                            </ul>
+
+                            <!-- Buttons -->
+                            <div class="flex gap-4">
+                                <button
+                                    class="bg-saudi-green text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                    <i class="fas fa-arrow-left"></i>
+                                    اكتشف المزيد
+                                </button>
+                                <button
+                                    class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                    <i class="fab fa-whatsapp"></i>
+                                    واتساب
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-3xl p-8 shadow-lg card-hover relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-full opacity-5">
+                            <div class="custom-gradient w-full h-full"></div>
+                        </div>
+
+                        <!-- Image -->
+                        <div class="w-full h-48 rounded-2xl overflow-hidden mb-6">
+                            <img src="./asstes/img/Ministry-of-Commerce-01-1.png" alt="خدمات وزارة التجارة"
+                                class="w-full h-full object-cover">
+                        </div>
+
+                        <!-- Content -->
+                        <div class="mt-16">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">خدمات وزارة التجارة</h3>
+
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                نقدم لك جميع خدمات وزارة التجارة بخطوات سهلة وسريعة، مع متابعة دقيقة تضمن لك إنجاز
+                                معاملاتك التجارية والقانونية دون أي تعقيدات.
+                            </p>
+
+                            <p class="text-gray-500 text-sm mb-6 leading-relaxed">
+                                سواء كنت صاحب مؤسسة أو شركة أو فرد، نساعدك على إدارة وتوثيق أعمالك التجارية بكفاءة
+                                واحترافية عالية.
+                            </p>
+
+                            <!-- Services List -->
+                            <ul class="space-y-3 mb-8">
+                                <li class="bullet-point text-gray-700">إصدار السجل التجاري</li>
+                                <li class="bullet-point text-gray-700">تجديد السجل التجاري</li>
+                                <li class="bullet-point text-gray-700">حجز الأسماء التجارية</li>
+                                <li class="bullet-point text-gray-700">توثيق العقود التجارية</li>
+                                <li class="bullet-point text-gray-700">التحقق من السجلات إلكترونياً</li>
+                            </ul>
+
+                            <!-- Buttons -->
+                            <div class="flex gap-4">
+                                <button
+                                    class="bg-saudi-green text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                    <i class="fas fa-arrow-left"></i>
+                                    اكتشف المزيد
+                                </button>
+                                <button
+                                    class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                    <i class="fab fa-whatsapp"></i>
+                                    واتساب
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- Card: خدمات مساند -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg card-hover relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-full opacity-5">
+                        <div class="custom-gradient w-full h-full"></div>
+                    </div>
+
+                    <!-- Image -->
+                    <div class="w-full h-48 rounded-2xl overflow-hidden mb-6">
+                        <img src="./asstes/img/Musaned- 01.png" alt="خدمات مساند"
+                            class="w-full h-full object-cover">
+                    </div>
+
+                    <!-- Content -->
+                    <div class="mt-16">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">خدمات مساند</h3>
+
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            منصة مساند تقدم لك حلولاً متكاملة لإصدار التأشيرات الخاصة بالعمالة المنزلية
+                            بكل سهولة ومرونة مع متابعة دقيقة لإنجاز الطلبات بسرعة وموثوقية.
+                        </p>
+
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">
+                            سواء كنت بحاجة إلى تأشيرة سائق خاص أو عامل منزلي، نوفر لك الدعم الكامل
+                            لإتمام الطلب بأعلى مستويات الجودة والاحترافية.
+                        </p>
+
+                        <!-- Services List -->
+                        <ul class="space-y-3 mb-8">
+                            <li class="bullet-point text-gray-700">إصدار تأشيرات العمالة المنزلية (سائق خاص)</li>
+                            <li class="bullet-point text-gray-700">إصدار تأشيرات العمالة المنزلية (عامل منزلي)</li>
+                        </ul>
+
+                        <!-- Buttons -->
+                        <div class="flex gap-4">
+                            <button
+                                class="bg-saudi-green text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                <i class="fas fa-arrow-left"></i>
+                                اكتشف المزيد
+                            </button>
+                            <button
+                                class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                <i class="fab fa-whatsapp"></i>
+                                واتساب
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card: خدمات الزكاة -->
+                <div class="bg-white rounded-3xl p-8 shadow-lg card-hover relative overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-full opacity-5">
+                        <div class="custom-gradient w-full h-full"></div>
+                    </div>
+
+                    <!-- Image -->
+                    <div class="w-full h-48 rounded-2xl overflow-hidden mb-6">
+                        <img src="./asstes/img/zakat-rax-and-customs-authority.png" alt="خدمات الزكاة"
+                            class="w-full h-full object-cover">
+                    </div>
+
+                    <!-- Content -->
+                    <div class="mt-16">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">خدمات الزكاة</h3>
+
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            نقدم خدمات متكاملة خاصة بالزكاة والضرائب لتسهيل إجراءاتك الرسمية بدقة وسرعة مع متابعة كاملة حتى إتمام الطلب.
+                        </p>
+
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">
+                            من تقديم الإقرارات الضريبية إلى إصدار الشهادات الرسمية، نوفر لك الحلول التي تضمن التزامك بالأنظمة بكل احترافية.
+                        </p>
+
+                        <!-- Services List -->
+                        <ul class="space-y-3 mb-8">
+                            <li class="bullet-point text-gray-700">رفع إقرارات ضريبية ربع سنوية</li>
+                            <li class="bullet-point text-gray-700">إصدار شهادة تسجيل في ضريبة القيمة المضافة</li>
+                            <li class="bullet-point text-gray-700">إصدار شهادة الزكاة</li>
+                            <li class="bullet-point text-gray-700">إيقاف الرقم المميز</li>
+                            <li class="bullet-point text-gray-700">إيقاف الضريبة</li>
+                            <li class="bullet-point text-gray-700">إيقاف الزكاة</li>
+                        </ul>
+
+                        <!-- Buttons -->
+                        <div class="flex gap-4">
+                            <button
+                                class="bg-saudi-green text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                <i class="fas fa-arrow-left"></i>
+                                اكتشف المزيد
+                            </button>
+                            <button
+                                class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                <i class="fab fa-whatsapp"></i>
+                                واتساب
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                    <!-- Card: خدمات منصة قوى -->
+                    <div class="bg-white rounded-3xl p-8 shadow-lg card-hover relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-full opacity-5">
+                            <div class="custom-gradient w-full h-full"></div>
+                        </div>
+
+                        <!-- Image -->
+                        <div class="w-full h-48 rounded-2xl overflow-hidden mb-6">
+                            <img src="./asstes/img/QIWA-01.png" alt="خدمات منصة قوى"
+                                class="w-full h-full object-cover">
+                        </div>
+
+                        <!-- Content -->
+                        <div class="mt-16">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">خدمات منصة قوى</h3>
+
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                نوفر لك جميع خدمات منصة قوى التي تسهل إجراءات العمل وتطوير بيئة الأعمال داخل المملكة بكل احترافية وسرعة.
+                            </p>
+
+                            <p class="text-gray-500 text-sm mb-6 leading-relaxed">
+                                سواء كنت صاحب عمل أو موظف، نقدم لك حلول متكاملة لإنجاز معاملاتك عبر منصة قوى بسهولة وبدون تعقيد.
+                            </p>
+
+                            <!-- Services List -->
+                            <ul class="space-y-3 mb-8">
+                                <li class="bullet-point text-gray-700">نقل كفالات</li>
+                                <li class="bullet-point text-gray-700">إصدار تأشيرات بجميع المهن</li>
+                                <li class="bullet-point text-gray-700">رفع النطاق الأحمر إلى أخضر</li>
+                                <li class="bullet-point text-gray-700">تنزيل رصيد</li>
+                            </ul>
+
+                            <!-- Buttons -->
+                            <div class="flex gap-4">
+                                <button
+                                    class="bg-saudi-green text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                    <i class="fas fa-arrow-left"></i>
+                                    اكتشف المزيد
+                                </button>
+                                <button
+                                    class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                    <i class="fab fa-whatsapp"></i>
+                                    واتساب
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section id="partners" class="py-20 bg-white islamic-pattern">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl lg:text-5xl font-bold saudi-green mb-4">شركاؤنا</h2>
+                <div class="w-24 h-1 bg-gold mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    نفتخر بشراكتنا مع أهم الجهات الحكومية في المملكة العربية السعودية
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-8 items-center">
+                <!-- Partner Logos Placeholders -->
+                <div class="partner-logo bg-gray-100 rounded-lg p-6 text-center hover-lift" data-aos="fade-up"
+                    data-aos-delay="100">
+            <img src="./asstes/img/" alt="">
+                    <p class="text-xs font-semibold text-gray-600">وزارة الموارد البشرية</p>
+                </div>
+
+                <div class="partner-logo bg-gray-100 rounded-lg p-6 text-center hover-lift" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <img src="./asstes/img/Ministry-of-Foreign-Affairs-01.png" alt="">
+                    <p class="text-xs font-semibold text-gray-600">وزارة الداخلية</p>
+                </div>
+
+                <div class="partner-logo bg-gray-100 rounded-lg p-6 text-center hover-lift" data-aos="fade-up"
+                    data-aos-delay="300">
+                    <i class="fas fa-passport text-4xl saudi-green mb-2"></i>
+                    <p class="text-xs font-semibold text-gray-600">الجوازات</p>
+                </div>
+
+                <div class="partner-logo bg-gray-100 rounded-lg p-6 text-center hover-lift" data-aos="fade-up"
+                    data-aos-delay="400">
+                    <i class="fas fa-heart text-4xl saudi-green mb-2"></i>
+                    <p class="text-xs font-semibold text-gray-600">التأمينات</p>
+                </div>
+
+                <div class="partner-logo bg-gray-100 rounded-lg p-6 text-center hover-lift" data-aos="fade-up"
+                    data-aos-delay="500">
+                    <i class="fas fa-city text-4xl saudi-green mb-2"></i>
+                    <p class="text-xs font-semibold text-gray-600">بلدي</p>
+                </div>
+
+                <div class="partner-logo bg-gray-100 rounded-lg p-6 text-center hover-lift" data-aos="fade-up"
+                    data-aos-delay="600">
+                    <i class="fas fa-home text-4xl saudi-green mb-2"></i>
+                    <p class="text-xs font-semibold text-gray-600">مساند</p>
+                </div>
+
+                <div class="partner-logo bg-gray-100 rounded-lg p-6 text-center hover-lift" data-aos="fade-up"
+                    data-aos-delay="700">
+                    <i class="fas fa-credit-card text-4xl saudi-green mb-2"></i>
+                    <p class="text-xs font-semibold text-gray-600">سداد</p>
+                </div>
+
+                <div class="partner-logo bg-gray-100 rounded-lg p-6 text-center hover-lift" data-aos="fade-up"
+                    data-aos-delay="800">
+                    <i class="fas fa-briefcase text-4xl saudi-green mb-2"></i>
+                    <p class="text-xs font-semibold text-gray-600">وزارة التجارة</p>
+                </div>
+
+                <div class="partner-logo bg-gray-100 rounded-lg p-6 text-center hover-lift" data-aos="fade-up"
+                    data-aos-delay="900">
+                    <i class="fas fa-hand-holding-heart text-4xl saudi-green mb-2"></i>
+                    <p class="text-xs font-semibold text-gray-600">الزكاة والضريبة</p>
+                </div>
+
+                <div class="partner-logo bg-gray-100 rounded-lg p-6 text-center hover-lift" data-aos="fade-up"
+                    data-aos-delay="1000">
+                    <i class="fas fa-laptop text-4xl saudi-green mb-2"></i>
+                    <p class="text-xs font-semibold text-gray-600">أبشر</p>
+                </div>
+
+                <div class="partner-logo bg-gray-100 rounded-lg p-6 text-center hover-lift" data-aos="fade-up"
+                    data-aos-delay="1100">
+                    <i class="fas fa-calendar-alt text-4xl saudi-green mb-2"></i>
+                    <p class="text-xs font-semibold text-gray-600">مدد</p>
+                </div>
+
+                <div class="partner-logo bg-gray-100 rounded-lg p-6 text-center hover-lift" data-aos="fade-up"
+                    data-aos-delay="1200">
+                    <i class="fas fa-users-cog text-4xl saudi-green mb-2"></i>
+                    <p class="text-xs font-semibold text-gray-600">قوى</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="bg-saudi-green text-white py-16 islamic-pattern">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-3 space-x-reverse mb-6">
+                        <div class="w-12 h-12 bg-gold rounded-lg flex items-center justify-center">
+                            <i class="fas fa-stamp text-white text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">بصمة آفاق</h3>
+                            <p class="text-sm opacity-80">للخدمات الحكومية</p>
+                        </div>
+                    </div>
+                    <p class="opacity-90 leading-relaxed mb-6">
+                        شركة متخصصة في تقديم الخدمات الحكومية بأعلى معايير الجودة والمهنية في المملكة العربية السعودية
+                    </p>
+                    <!-- Social Media -->
+                    <div class="flex space-x-4 space-x-reverse">
+                        <a href="#"
+                            class="w-10 h-10 bg-gold rounded-full flex items-center justify-center hover:bg-opacity-80 transition-colors">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-gold rounded-full flex items-center justify-center hover:bg-opacity-80 transition-colors">
+                            <i class="fab fa-linkedin text-white"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-gold rounded-full flex items-center justify-center hover:bg-opacity-80 transition-colors">
+                            <i class="fab fa-whatsapp text-white"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-gold rounded-full flex items-center justify-center hover:bg-opacity-80 transition-colors">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6">روابط سريعة</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home"
+                                class="opacity-90 hover:opacity-100 hover:text-gold transition-colors">الرئيسية</a></li>
+                        <li><a href="#about" class="opacity-90 hover:opacity-100 hover:text-gold transition-colors">من
+                                نحن</a></li>
+                        <li><a href="#services"
+                                class="opacity-90 hover:opacity-100 hover:text-gold transition-colors">خدماتنا</a></li>
+                        <li><a href="#partners"
+                                class="opacity-90 hover:opacity-100 hover:text-gold transition-colors">شركاؤنا</a></li>
+                        <li><a href="#contact"
+                                class="opacity-90 hover:opacity-100 hover:text-gold transition-colors">تواصل معنا</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6">خدمات رئيسية</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="opacity-90">خدمات البلدية</li>
+                        <li class="opacity-90">خدمات الجوازات</li>
+                        <li class="opacity-90">وزارة التجارة</li>
+                        <li class="opacity-90">التأمينات الاجتماعية</li>
+                        <li class="opacity-90">مكتب العمل</li>
+                        <li class="opacity-90">الخدمات الإلكترونية</li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-xl font-bold mb-6">معلومات التواصل</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3 space-x-reverse">
+                            <i class="fas fa-phone text-gold"></i>
+                            <span class="opacity-90" dir="ltr">+966 XX XXX XXXX</span>
+                        </div>
+                        <div class="flex items-center space-x-3 space-x-reverse">
+                            <i class="fas fa-envelope text-gold"></i>
+                            <span class="opacity-90" dir="ltr">info@basmatafaq.com</span>
+                        </div>
+                        <div class="flex items-start space-x-3 space-x-reverse">
+                            <i class="fas fa-map-marker-alt text-gold mt-1"></i>
+                            <span class="opacity-90">الرياض، المملكة العربية السعودية</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-white border-opacity-20 pt-8">
+                <div class="text-center">
+                    <p class="opacity-90">
+                        © 2024 جميع الحقوق محفوظة لشركة بصمة آفاق للخدمات الحكومية - المملكة العربية السعودية
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top"
+        class="fixed bottom-8 left-8 w-12 h-12 bg-gold rounded-full flex items-center justify-center text-white shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-opacity-80">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Navbar Scroll Effect
+        const header = document.getElementById('header');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('navbar-scroll');
+            } else {
+                header.classList.remove('navbar-scroll');
+            }
+        });
+
+        // Smooth Scrolling for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                // Close mobile menu after clicking
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                backToTopBtn.classList.remove('opacity-0', 'invisible');
+                backToTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopBtn.classList.add('opacity-0', 'invisible');
+                backToTopBtn.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Form Submission
+        document.querySelector('form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Get form data
+            const formData = new FormData(this);
+            const name = this.querySelector('input[type="text"]').value;
+            const email = this.querySelector('input[type="email"]').value;
+            const phone = this.querySelector('input[type="tel"]').value;
+            const message = this.querySelector('textarea').value;
+
+            // Simple validation
+            if (!name || !email || !phone || !message) {
+                alert('يرجى ملء جميع الحقول المطلوبة');
+                return;
+            }
+
+            // Simulate form submission
+            alert('تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.');
+            this.reset();
+        });
+
+        // Add loading animation to service cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up', 'active');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all service cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Add hover effects to partner logos
+        document.querySelectorAll('.partner-logo').forEach(logo => {
+            logo.addEventListener('mouseenter', function () {
+                this.style.transform = 'scale(1.05) translateY(-5px)';
+            });
+
+            logo.addEventListener('mouseleave', function () {
+                this.style.transform = 'scale(1) translateY(0)';
+            });
+        });
+
+        // Add floating animation delay to hero icon
+        const heroIcon = document.querySelector('.floating-animation');
+        if (heroIcon) {
+            heroIcon.style.animationDelay = '1s';
+        }
+
+        // Add typing effect to hero subtitle
+        const subtitle = document.querySelector('.hero-text + p');
+        if (subtitle) {
+            const text = subtitle.textContent;
+            subtitle.textContent = '';
+            let i = 0;
+
+            setTimeout(() => {
+                const typeInterval = setInterval(() => {
+                    subtitle.textContent += text.charAt(i);
+                    i++;
+                    if (i > text.length) {
+                        clearInterval(typeInterval);
+                    }
+                }, 50);
+            }, 2000);
+        }
+    </script>
+</body>
+
+</html>
