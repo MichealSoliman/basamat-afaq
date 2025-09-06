@@ -11,15 +11,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap"
+        rel="stylesheet">
 
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./asstes/style.css">
     <style>
-        * {
-            font-family: 'Cairo', sans-serif;
-        }
-
         .custom-primary {
             background-color: #00544d;
         }
@@ -68,6 +65,399 @@
             font-weight: bold;
             font-size: 1.2em;
         }
+
+        /* Super Modern Partners Section Styles */
+        .partners-mega-section {
+            position: relative;
+            padding: 120px 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            overflow: hidden;
+        }
+
+        .partners-mega-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23e2e8f0" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+            z-index: 1;
+        }
+
+        .partners-hero-header {
+            position: relative;
+            text-align: center;
+            margin-bottom: 20px;
+            z-index: 2;
+        }
+
+        .partners-title-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+
+        .partners-title-backdrop {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1.2);
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(0, 84, 77, 0.05) 0%, rgba(0, 84, 77, 0.02) 50%, transparent 100%);
+            border-radius: 50%;
+            animation: pulseGlow 4s ease-in-out infinite;
+        }
+
+        .partners-mega-title {
+            font-size: 4rem;
+            font-weight: 900;
+            color: #00544d;
+            text-shadow: 0 4px 20px rgba(0, 84, 77, 0.2);
+            margin: 0;
+            position: relative;
+            z-index: 3;
+            background: linear-gradient(135deg, #00544d 0%, #006e5f 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: titleShine 3s ease-in-out infinite;
+        }
+
+        .partners-title-glow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(212, 175, 55, 0.3) 50%, transparent 70%);
+            animation: glowPass 6s ease-in-out infinite;
+            border-radius: 20px;
+        }
+
+        .partners-subtitle-container {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .partners-description {
+            font-size: 1.3rem;
+            color: #64748b;
+            line-height: 1.8;
+            margin: 0 0 20px 0;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.5s forwards;
+        }
+
+        .partners-description-line {
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #d4af37, #f4e06d);
+            margin: 0 auto;
+            border-radius: 2px;
+            opacity: 0;
+            animation: expandLine 1s ease-out 1s forwards;
+        }
+
+        .partners-slider-wrapper {
+            position: relative;
+            max-width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .partners-gradient-overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 150px;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+
+
+        .partners-infinite-track {
+            display: flex;
+            animation: infiniteSlide 40s linear infinite;
+            width: max-content;
+            gap: 20px;
+            padding: 40px 0;
+        }
+
+
+
+
+
+
+        /* .partner-image-container {
+            position: relative;
+            width: 120px;
+            height: 120px;
+        
+            border-radius: 20px;
+            overflow: hidden;
+            background: rgba(0, 84, 77, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        } */
+
+        .partner-super-logo {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+            filter: drop-shadow(0 4px 12px rgba(0, 84, 77, 0.1));
+            transition: all 0.4s ease;
+        }
+
+        .partner-super-item:hover .partner-super-logo {
+            transform: scale(1.1);
+            filter: drop-shadow(0 6px 20px rgba(0, 84, 77, 0.2));
+        }
+
+        .partner-image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 84, 77, 0.02) 0%, rgba(212, 175, 55, 0.02) 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .partner-super-item:hover .partner-image-overlay {
+            opacity: 1;
+        }
+
+        .partner-info {
+            position: relative;
+        }
+
+        .partner-super-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin: 0 0 12px;
+            transition: color 0.3s ease;
+        }
+
+        .partner-super-item:hover .partner-super-name {
+            color: #00544d;
+        }
+
+        .partner-status-indicator {
+            width: 8px;
+            height: 8px;
+            background: linear-gradient(135deg, #10b981, #34d399);
+            border-radius: 50%;
+            margin: 0 auto;
+            position: relative;
+            animation: statusPulse 2s ease-in-out infinite;
+        }
+
+        .partner-status-indicator::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 16px;
+            height: 16px;
+            border: 2px solid rgba(16, 185, 129, 0.3);
+            border-radius: 50%;
+            animation: rippleEffect 2s ease-in-out infinite;
+        }
+
+        .partners-progress-indicator {
+            position: relative;
+            height: 4px;
+            background: rgba(0, 84, 77, 0.1);
+            margin: 60px auto 0;
+            max-width: 400px;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #00544d, #d4af37, #00544d);
+            background-size: 200% 100%;
+            animation: progressFlow 3s ease-in-out infinite;
+            border-radius: 2px;
+        }
+
+        /* Keyframe Animations */
+        @keyframes infiniteSlide {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes pulseGlow {
+
+            0%,
+            100% {
+                opacity: 0.3;
+                transform: translate(-50%, -50%) scale(1.2);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: translate(-50%, -50%) scale(1.4);
+            }
+        }
+
+        @keyframes titleShine {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        @keyframes glowPass {
+
+            0%,
+            100% {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+
+            50% {
+                opacity: 1;
+                transform: translateX(100%);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes expandLine {
+            from {
+                opacity: 0;
+                width: 0;
+            }
+
+            to {
+                opacity: 1;
+                width: 100px;
+            }
+        }
+
+        @keyframes rotateGlow {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes statusPulse {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.8;
+                transform: scale(1.2);
+            }
+        }
+
+        @keyframes rippleEffect {
+            0% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(0.5);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(2);
+            }
+        }
+
+        @keyframes progressFlow {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .partners-mega-section {
+                padding: 80px 20px;
+            }
+
+            .partners-mega-title {
+                font-size: 2.5rem;
+            }
+
+            .partners-description {
+                font-size: 1.1rem;
+                padding: 0 20px;
+            }
+
+            .partner-super-item {
+
+                padding: 10px;
+            }
+
+            .partners-infinite-track {
+                gap: 20px;
+            }
+
+            .partners-gradient-overlay {
+                width: 80px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .partners-mega-title {
+                font-size: 2rem;
+            }
+
+            .partners-infinite-track {
+                gap: 15px;
+            }
+
+            .partner-super-logo {
+                width: 130px;
+                height: 130px;
+            }
+        }
     </style>
 
 </head>
@@ -100,8 +490,8 @@
                         class="text-white hover:text-saudi-green transition-colors font-semibold">خدماتنا</a>
                     <a href="#partners"
                         class="text-white hover:text-saudi-green transition-colors font-semibold">شركاؤنا</a>
-                    <a href="#contact"
-                        class="text-white hover:text-saudi-green transition-colors font-semibold">تواصل معنا</a>
+                    <a href="#contact" class="text-white hover:text-saudi-green transition-colors font-semibold">تواصل
+                        معنا</a>
                 </div>
 
                 <!-- CTA Button -->
@@ -129,8 +519,8 @@
                         class="text-white hover:text-saudi-green transition-colors font-semibold">خدماتنا</a>
                     <a href="#partners"
                         class="text-white hover:text-saudi-green transition-colors font-semibold">شركاؤنا</a>
-                    <a href="#contact"
-                        class="text-white hover:text-saudi-green transition-colors font-semibold">تواصل معنا</a>
+                    <a href="#contact" class="text-white hover:text-saudi-green transition-colors font-semibold">تواصل
+                        معنا</a>
                     <a href="#contact"
                         class="bg-saudi-green px-6 py-3 rounded-lg font-semibold text-white shadow-lg text-center">
                         <i class="fas fa-phone-alt ml-2"></i>
@@ -147,8 +537,9 @@
             <div class="max-w-4xl mx-auto mb-5" data-aos="fade-up" data-aos-duration="1000">
                 <!-- Floating Icon -->
                 <div class="floating-animation mb-8">
-                    <div class="w-24 h-24 bg-saudi-green rounded-full flex items-center justify-center mx-auto shadow-2xl">
-                         <img src="./asstes/img/شعار بدون خلفية.png" alt="">
+                    <div
+                        class="w-24 h-24 bg-saudi-green rounded-full flex items-center justify-center mx-auto shadow-2xl">
+                        <img src="./asstes/img/شعار بدون خلفية.png" alt="">
                     </div>
                 </div>
 
@@ -168,135 +559,142 @@
 
                 <!-- CTA Buttons -->
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center ">
-                    <a href="#services" class="btn-primary px-8 p-4 mb-5 rounded-lg font-bold text-lg shadow-xl">
-                        <i class="fas fa-concierge-bell ml-2"></i>
-                        طلب خدمة الآن
+                    <a href="tel:+9665555555" class="btn-primary px-8 p-4 mb-5 rounded-lg font-bold text-lg shadow-xl">
+                        <i class="fas fa-phone-alt"></i>
+                        اتصل الآن
                     </a>
-                    <a href="#about"
-                        class="bg-white text-saudi-green border-2 border-saudi-green mb-5 px-8 py-4 rounded-lg font-bold text-lg hover:bg-saudi-green hover:text-saudi-green transition-all duration-300 shadow-xl">
-                        <i class="fas fa-info-circle ml-2"></i>
-                        تعرف علينا أكثر
-                    </a>
+
                 </div>
             </div>
         </div>
     </section>
 
-  
-<!-- About Us Section -->
-<section id="about"  class="relative py-20 bg-gradient-to-br from-white via-gray-50 to-green-50 overflow-hidden ">
-  <div class="container mx-auto px-6 lg:px-12">
-    
-    <!-- Title -->
-    <div class="text-center mb-16" data-aos="fade-up">
-      <h2 class="text-4xl lg:text-5xl font-extrabold text-[#00544d] ">نبذة عنا</h2>
-      <div class="w-24 h-1 bg-yellow-500 mx-auto mt-4 mb-6 rounded-full"></div>
-      <p class="text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto  leading-relaxed">
-        نحن شركة متخصصة في تقديم الخدمات الحكومية بأعلى معايير الجودة والمهنية
-      </p>
-    </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
-      
-      <!-- Content -->
-      <div class="space-y-8" data-aos="fade-right" data-aos-delay="200">
-        
-        <!-- Feature Item -->
-        <div class="flex items-start gap-4 group">
-          <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center shadow-md transition-transform group-hover:scale-110">
-            <i class="fas fa-tachometer-alt text-[#00544d] text-xl"></i>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold text-[#00544d]  mb-2">السرعة والدقة في أداء الخدمات</h3>
-            <p class="text-gray-600  leading-relaxed">نلتزم بتقديم خدماتنا في أسرع وقت ممكن مع الحفاظ على أعلى مستويات الدقة والجودة في العمل</p>
-          </div>
+    <!-- About Us Section -->
+    <section id="about" class="relative py-20 bg-gradient-to-br from-white via-gray-50 to-green-50 overflow-hidden ">
+        <div class="container mx-auto px-6 lg:px-12">
+
+            <!-- Title -->
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl lg:text-5xl font-extrabold text-[#00544d] ">نبذة عنا</h2>
+                <div class="w-24 h-1 bg-yellow-500 mx-auto mt-4 mb-6 rounded-full"></div>
+                <p class="text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto  leading-relaxed">
+                    نحن شركة متخصصة في تقديم الخدمات الحكومية بأعلى معايير الجودة والمهنية
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+
+                <!-- Content -->
+                <div class="space-y-8" data-aos="fade-right" data-aos-delay="200">
+
+                    <!-- Feature Item -->
+                    <div class="flex items-start gap-4 group">
+                        <div
+                            class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center shadow-md transition-transform group-hover:scale-110">
+                            <i class="fas fa-tachometer-alt text-[#00544d] text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-[#00544d]  mb-2">السرعة والدقة في أداء الخدمات</h3>
+                            <p class="text-gray-600  leading-relaxed">نلتزم بتقديم خدماتنا في أسرع وقت ممكن مع الحفاظ
+                                على أعلى مستويات الدقة والجودة في العمل</p>
+                        </div>
+                    </div>
+
+                    <!-- Feature Item -->
+                    <div class="flex items-start gap-4 group">
+                        <div
+                            class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center shadow-md transition-transform group-hover:scale-110">
+                            <i class="fas fa-shield-alt text-[#00544d] text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-[#00544d]  mb-2">التعامل مع الوثائق بسرية تامة</h3>
+                            <p class="text-gray-600  leading-relaxed">نضمن الحفاظ على سرية وأمان جميع المعلومات والوثائق
+                                الخاصة بعملائنا الكرام</p>
+                        </div>
+                    </div>
+
+                    <!-- Feature Item -->
+                    <div class="flex items-start gap-4 group">
+                        <div
+                            class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center shadow-md transition-transform group-hover:scale-110">
+                            <i class="fas fa-heart text-[#00544d] text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-[#00544d]  mb-2">إرضاء العملاء والمصداقية</h3>
+                            <p class="text-gray-600  leading-relaxed">رضا عملائنا هو هدفنا الأول، ونحرص على بناء علاقات
+                                طويلة الأمد قائمة على الثقة والمصداقية</p>
+                        </div>
+                    </div>
+
+                    <!-- Feature Item -->
+                    <div class="flex items-start gap-4 group">
+                        <div
+                            class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center shadow-md transition-transform group-hover:scale-110">
+                            <i class="fas fa-lock text-[#00544d] text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-[#00544d]  mb-2">الأمان في تنفيذ الخدمات</h3>
+                            <p class="text-gray-600  leading-relaxed">نطبق أعلى معايير الأمان والحماية في جميع مراحل
+                                تنفيذ الخدمات لضمان حقوق عملائنا</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image -->
+                <div class="relative group" data-aos="fade-left" data-aos-delay="300">
+                    <div class="overflow-hidden rounded-3xl shadow-2xl">
+                        <img src="./asstes/img/2025-08-18.jpg" alt="عن الشركة"
+                            class="w-full h-[500px] object-cover transform transition-transform duration-700 group-hover:scale-105" />
+                    </div>
+                </div>
+
+            </div>
         </div>
 
-        <!-- Feature Item -->
-        <div class="flex items-start gap-4 group">
-          <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center shadow-md transition-transform group-hover:scale-110">
-            <i class="fas fa-shield-alt text-[#00544d] text-xl"></i>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold text-[#00544d]  mb-2">التعامل مع الوثائق بسرية تامة</h3>
-            <p class="text-gray-600  leading-relaxed">نضمن الحفاظ على سرية وأمان جميع المعلومات والوثائق الخاصة بعملائنا الكرام</p>
-          </div>
+
+
+        <!-- Floating Buttons -->
+        <div class="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
+            <a href="tel:966500000000"
+                class="bg-blue-600 text-white w-14 h-14 flex items-center justify-center rounded-full shadow-lg hover:bg-[#007d70] transition">
+                <i class="fas fa-phone-alt text-xl"></i>
+            </a>
+            <a href="https://wa.me/966500000000" target="_blank"
+                class="bg-green-500 text-white w-14 h-14 flex items-center justify-center rounded-full shadow-lg hover:bg-green-600 transition">
+                <i class="fab fa-whatsapp text-2xl"></i>
+            </a>
         </div>
+    </section>
 
-        <!-- Feature Item -->
-        <div class="flex items-start gap-4 group">
-          <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center shadow-md transition-transform group-hover:scale-110">
-            <i class="fas fa-heart text-[#00544d] text-xl"></i>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold text-[#00544d]  mb-2">إرضاء العملاء والمصداقية</h3>
-            <p class="text-gray-600  leading-relaxed">رضا عملائنا هو هدفنا الأول، ونحرص على بناء علاقات طويلة الأمد قائمة على الثقة والمصداقية</p>
-          </div>
+    <section class="relative bg-cover bg-center bg-no-repeat py-16 px-6 lg:px-20 text overflow-hidden banner-1"
+        style="background-image: url('./asstes/img/sign.png');">
+        <!-- طبقة تغطية داكنة -->
+        <div class="absolute inset-0 "></div>
+
+        <div class="relative max-w-5xl mx-auto text-center">
+            <!-- العنوان -->
+            <h2 class="text-4xl lg:text-5xl font-bold saudi-green mb-4">
+                منصة آفاق للخدمات الحكومية
+            </h2>
+
+            <!-- النص -->
+            <p class="text-lg md:text-xl leading-relaxed  max-w-3xl mx-auto mb-8">
+                في <span class="font-bold saudi-green">شركة منصة آفاق</span> نضع نصب أعيننا تسهيل الإجراءات الحكومية
+                وتقديم حلول رقمية متكاملة توفر الوقت والجهد.
+                نلتزم بالسرعة، الدقة، والأمان في جميع خدماتنا لنكون شريكك الموثوق
+                في إنجاز المعاملات بالمملكة العربية السعودية.
+            </p>
+
+            <!-- زر الاتصال -->
+            <div class="flex justify-center">
+                <a href="tel:966500000000"
+                    class="bg-saudi-green text-white font-bold py-3 px-8 rounded-full shadow-lg  transition-all ">
+                    اتصل بنا الآن
+                </a>
+            </div>
         </div>
-
-        <!-- Feature Item -->
-        <div class="flex items-start gap-4 group">
-          <div class="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center shadow-md transition-transform group-hover:scale-110">
-            <i class="fas fa-lock text-[#00544d] text-xl"></i>
-          </div>
-          <div>
-            <h3 class="text-xl font-bold text-[#00544d]  mb-2">الأمان في تنفيذ الخدمات</h3>
-            <p class="text-gray-600  leading-relaxed">نطبق أعلى معايير الأمان والحماية في جميع مراحل تنفيذ الخدمات لضمان حقوق عملائنا</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Image -->
-      <div class="relative group" data-aos="fade-left" data-aos-delay="300">
-        <div class="overflow-hidden rounded-3xl shadow-2xl">
-          <img src="./asstes/img/2025-08-18.jpg" alt="عن الشركة" class="w-full h-[500px] object-cover transform transition-transform duration-700 group-hover:scale-105" />
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
-
-  <!-- Floating Buttons -->
-  <div class="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
-    <a href="tel:966500000000" class="bg-blue-600 text-white w-14 h-14 flex items-center justify-center rounded-full shadow-lg hover:bg-[#007d70] transition">
-      <i class="fas fa-phone-alt text-xl"></i>
-    </a>
-    <a href="https://wa.me/966500000000" target="_blank" class="bg-green-500 text-white w-14 h-14 flex items-center justify-center rounded-full shadow-lg hover:bg-green-600 transition">
-      <i class="fab fa-whatsapp text-2xl"></i>
-    </a>
-  </div>
-</section>
-
-<section class="relative bg-cover bg-center bg-no-repeat py-16 px-6 lg:px-20 text overflow-hidden banner-1" 
-         style="background-image: url('./asstes/img/sign.png');">
-  <!-- طبقة تغطية داكنة -->
-  <div class="absolute inset-0 "></div>
-
-  <div class="relative max-w-5xl mx-auto text-center">
-    <!-- العنوان -->
-    <h2 class="text-4xl lg:text-5xl font-bold saudi-green mb-4">
-      منصة آفاق للخدمات الحكومية
-    </h2>
-
-    <!-- النص -->
-    <p class="text-lg md:text-xl leading-relaxed  max-w-3xl mx-auto mb-8">
-      في <span class="font-bold saudi-green">شركة منصة آفاق</span> نضع نصب أعيننا تسهيل الإجراءات الحكومية 
-      وتقديم حلول رقمية متكاملة توفر الوقت والجهد.  
-      نلتزم بالسرعة، الدقة، والأمان في جميع خدماتنا لنكون شريكك الموثوق 
-      في إنجاز المعاملات بالمملكة العربية السعودية.
-    </p>
-
-    <!-- زر الاتصال -->
-    <div class="flex justify-center">
-      <a href="tel:966500000000" 
-         class="bg-saudi-green text-white font-bold py-3 px-8 rounded-full shadow-lg  transition-all ">
-        اتصل بنا الآن
-      </a>
-    </div>
-  </div>
-</section>
+    </section>
 
 
     <!-- Services Section -->
@@ -316,9 +714,7 @@
                     <!-- Card 1: خدمات البلدية -->
                     <div class="bg-white rounded-3xl p-8 shadow-lg card-hover relative overflow-hidden">
                         <!-- Background Pattern -->
-                        <div class="absolute top-0 left-0 w-full h-full opacity-5">
-                            <div class="custom-gradient w-full h-full"></div>
-                        </div>
+
 
                         <!-- Image -->
                         <div class="w-full h-48 rounded-2xl overflow-hidden mb-6">
@@ -349,27 +745,29 @@
                             </ul>
 
                             <!-- Buttons -->
-                            <div class="flex gap-4">
-                                <button
+                            <div class="flex gap-3">
+                                <!-- زر الاتصال -->
+                                <a href="tel:+9665555555"
                                     class="bg-saudi-green text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
-                                    <i class="fas fa-arrow-left"></i>
-                                    اكتشف المزيد
-                                </button>
-                                <button
+                                    <i class="fas fa-phone-alt"></i>
+                                    اتصل بنا
+                                </a>
+
+                                <!-- زر واتساب -->
+                                <a href="https://wa.me/9665XXXXXXXX" target="_blank"
                                     class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
                                     <i class="fab fa-whatsapp"></i>
                                     واتساب
-                                </button>
+                                </a>
                             </div>
+
                         </div>
                     </div>
 
                     <!-- Card 2: خدمات مكتب العمل -->
                     <div class="bg-white rounded-3xl p-8 shadow-lg card-hover relative overflow-hidden">
                         <!-- Background Pattern -->
-                        <div class="absolute top-0 left-0 w-full h-full opacity-5">
-                            <div class="custom-gradient w-full h-full"></div>
-                        </div>
+
 
                         <!-- Image -->
                         <div class="w-full h-48 rounded-2xl overflow-hidden mb-6">
@@ -402,30 +800,31 @@
 
                             <!-- Buttons -->
                             <div class="flex gap-4">
-                                <button
-                                    class="bg-saudi-green text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
-                                    <i class="fas fa-arrow-left"></i>
-                                    اكتشف المزيد
-                                </button>
-                                <button
-                                    class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
-                                    <i class="fab fa-whatsapp"></i>
-                                    واتساب
-                                </button>
+                                <a href="tel:+9665XXXXXXXX">
+                                    <button
+                                        class="bg-saudi-green text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                        <i class="fas fa-phone-alt"></i>
+                                        اتصل بنا
+                                    </button>
+                                </a>
+                                <a href="https://wa.me/9665XXXXXXXX">
+                                    <button
+                                        class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                        <i class="fab fa-whatsapp"></i>
+                                        واتساب
+                                    </button>
+                                </a>
                             </div>
                         </div>
                     </div>
 
-                  <!-- Card: خدمات منصة مدد -->
+                    <!-- Card: خدمات منصة مدد -->
                     <div class="bg-white rounded-3xl p-8 shadow-lg card-hover relative overflow-hidden">
-                        <div class="absolute top-0 left-0 w-full h-full opacity-5">
-                            <div class="custom-gradient w-full h-full"></div>
-                        </div>
+
 
                         <!-- Image -->
                         <div class="w-full h-48 rounded-2xl overflow-hidden mb-6">
-                            <img src="./asstes/img/Mudad.png" alt="خدمات منصة مدد"
-                                class="w-full h-full object-cover">
+                            <img src="./asstes/img/Mudad.png" alt="خدمات منصة مدد" class="w-full h-full object-cover">
                         </div>
 
                         <!-- Content -->
@@ -433,11 +832,13 @@
                             <h3 class="text-2xl font-bold text-gray-800 mb-4">خدمات منصة مدد</h3>
 
                             <p class="text-gray-600 mb-4 leading-relaxed">
-                                نقدم جميع خدمات منصة مدد التي تساهم في تعزيز الشفافية وحماية حقوق العاملين وأصحاب الأعمال بكل سهولة وموثوقية.
+                                نقدم جميع خدمات منصة مدد التي تساهم في تعزيز الشفافية وحماية حقوق العاملين وأصحاب
+                                الأعمال بكل سهولة وموثوقية.
                             </p>
 
                             <p class="text-gray-500 text-sm mb-6 leading-relaxed">
-                                عبر منصة مدد يمكنك إنجاز معاملاتك المالية والإدارية المتعلقة بالرواتب وحماية الأجور بمرونة عالية ودقة مضمونة.
+                                عبر منصة مدد يمكنك إنجاز معاملاتك المالية والإدارية المتعلقة بالرواتب وحماية الأجور
+                                بمرونة عالية ودقة مضمونة.
                             </p>
 
                             <!-- Services List -->
@@ -448,16 +849,20 @@
 
                             <!-- Buttons -->
                             <div class="flex gap-4">
-                                <button
-                                    class="bg-saudi-green text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
-                                    <i class="fas fa-arrow-left"></i>
-                                    اكتشف المزيد
-                                </button>
-                                <button
-                                    class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
-                                    <i class="fab fa-whatsapp"></i>
-                                    واتساب
-                                </button>
+                                <a href="tel:+9665XXXXXXXX">
+                                    <button
+                                        class="bg-saudi-green text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                        <i class="fas fa-phone-alt"></i>
+                                        اتصل بنا
+                                    </button>
+                                </a>
+                                <a href="https://wa.me/9665XXXXXXXX">
+                                    <button
+                                        class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                        <i class="fab fa-whatsapp"></i>
+                                        واتساب
+                                    </button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -466,51 +871,55 @@
 
                     <!-- Card: خدمات المرور -->
                     <div class="bg-white rounded-3xl p-8 shadow-lg card-hover relative overflow-hidden">
-    <div class="absolute top-0 left-0 w-full h-full opacity-5">
-        <div class="custom-gradient w-full h-full"></div>
-    </div>
+                        <div class="absolute top-0 left-0 w-full h-full opacity-5">
+                            <div class="custom-gradient w-full h-full"></div>
+                        </div>
 
-    <!-- Image -->
-    <div class="w-full h-48 rounded-2xl overflow-hidden mb-6">
-        <img src="./asstes/img/Ministry of Human Resources and Social Development.png"
-            alt="التأمينات الاجتماعية" class="w-full h-full object-cover">
-    </div>
+                        <!-- Image -->
+                        <div class="w-full h-48 rounded-2xl overflow-hidden mb-6">
+                            <img src="./asstes/img/Ministry of Human Resources and Social Development.png"
+                                alt="التأمينات الاجتماعية" class="w-full h-full object-cover">
+                        </div>
 
-    <!-- Content -->
-    <div class="mt-16">
-        <h3 class="text-2xl font-bold text-gray-800 mb-4">التأمينات الاجتماعية</h3>
+                        <!-- Content -->
+                        <div class="mt-16">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">التأمينات الاجتماعية</h3>
 
-        <p class="text-gray-600 mb-4 leading-relaxed">
-            نوفر لك خدمات التأمينات الاجتماعية التي تساعد أصحاب الأعمال والموظفين على تسهيل جميع
-            الإجراءات بكل احترافية ودقة عالية.
-        </p>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                نوفر لك خدمات التأمينات الاجتماعية التي تساعد أصحاب الأعمال والموظفين على تسهيل جميع
+                                الإجراءات بكل احترافية ودقة عالية.
+                            </p>
 
-        <p class="text-gray-500 text-sm mb-6 leading-relaxed">
-            مع خبرتنا نضمن لك إنجاز معاملاتك بسهولة سواء في التوظيف أو تعديل البيانات أو تخفيض
-            التكاليف الشهرية المترتبة.
-        </p>
+                            <p class="text-gray-500 text-sm mb-6 leading-relaxed">
+                                مع خبرتنا نضمن لك إنجاز معاملاتك بسهولة سواء في التوظيف أو تعديل البيانات أو تخفيض
+                                التكاليف الشهرية المترتبة.
+                            </p>
 
-        <!-- Services List -->
-        <ul class="space-y-3 mb-8">
-            <li class="bullet-point text-gray-700">توظيف السعوديين</li>
-            <li class="bullet-point text-gray-700">تعديل أجور الموظفين</li>
-            <li class="bullet-point text-gray-700">تخفيض الفواتير الشهرية</li>
-        </ul>
+                            <!-- Services List -->
+                            <ul class="space-y-3 mb-8">
+                                <li class="bullet-point text-gray-700">توظيف السعوديين</li>
+                                <li class="bullet-point text-gray-700">تعديل أجور الموظفين</li>
+                                <li class="bullet-point text-gray-700">تخفيض الفواتير الشهرية</li>
+                            </ul>
 
-        <!-- Buttons -->
-        <div class="flex gap-4">
-            <button
-                class="bg-saudi-green text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
-                <i class="fas fa-arrow-left"></i>
-                اكتشف المزيد
-            </button>
-            <button
-                class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
-                <i class="fab fa-whatsapp"></i>
-                واتساب
-            </button>
-        </div>
-    </div>
+                            <!-- Buttons -->
+                            <div class="flex gap-4">
+                                <a href="tel:+9665XXXXXXXX">
+                                    <button
+                                        class="bg-saudi-green text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                        <i class="fas fa-phone-alt"></i>
+                                        اتصل بنا
+                                    </button>
+                                </a>
+                                <a href="https://wa.me/9665XXXXXXXX">
+                                    <button
+                                        class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                        <i class="fab fa-whatsapp"></i>
+                                        واتساب
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
                     </div>
 
 
@@ -518,9 +927,7 @@
 
                     <!-- Card: خدمات الجوازات -->
                     <div class="bg-white rounded-3xl p-8 shadow-lg card-hover relative overflow-hidden">
-                        <div class="absolute top-0 left-0 w-full h-full opacity-5">
-                            <div class="custom-gradient w-full h-full"></div>
-                        </div>
+
 
                         <!-- Image -->
                         <div class="w-full h-48 rounded-2xl overflow-hidden mb-6">
@@ -554,28 +961,30 @@
 
                             <!-- Buttons -->
                             <div class="flex gap-4">
-                                <button
-                                    class="bg-saudi-green text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
-                                    <i class="fas fa-arrow-left"></i>
-                                    اكتشف المزيد
-                                </button>
-                                <button
-                                    class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
-                                    <i class="fab fa-whatsapp"></i>
-                                    واتساب
-                                </button>
+                                <a href="tel:+9665XXXXXXXX">
+                                    <button
+                                        class="bg-saudi-green text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                        <i class="fas fa-phone-alt"></i>
+                                        اتصل بنا
+                                    </button>
+                                </a>
+                                <a href="https://wa.me/9665XXXXXXXX">
+                                    <button
+                                        class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                        <i class="fab fa-whatsapp"></i>
+                                        واتساب
+                                    </button>
+                                </a>
                             </div>
                         </div>
                     </div>
 
 
 
-                    
-                   <!-- Card: الخدمات الإلكترونية -->
+
+                    <!-- Card: الخدمات الإلكترونية -->
                     <div class="bg-white rounded-3xl p-8 shadow-lg card-hover relative overflow-hidden">
-                        <div class="absolute top-0 left-0 w-full h-full opacity-5">
-                            <div class="custom-gradient w-full h-full"></div>
-                        </div>
+
 
                         <!-- Image -->
                         <div class="w-full h-48 rounded-2xl overflow-hidden mb-6">
@@ -588,11 +997,13 @@
                             <h3 class="text-2xl font-bold text-gray-800 mb-4">الخدمات الإلكترونية</h3>
 
                             <p class="text-gray-600 mb-4 leading-relaxed">
-                                نوفر لك مجموعة متكاملة من الخدمات الإلكترونية التي تسهل حياتك اليومية وتساعدك على إنجاز معاملاتك بسرعة ودقة دون الحاجة إلى مراجعة الجهات المختلفة.
+                                نوفر لك مجموعة متكاملة من الخدمات الإلكترونية التي تسهل حياتك اليومية وتساعدك على إنجاز
+                                معاملاتك بسرعة ودقة دون الحاجة إلى مراجعة الجهات المختلفة.
                             </p>
 
                             <p class="text-gray-500 text-sm mb-6 leading-relaxed">
-                                مع حلول مبتكرة وخدمة عملاء متميزة، نضمن لك تجربة إلكترونية سلسة وآمنة تغطي جميع احتياجاتك الحكومية والشخصية.
+                                مع حلول مبتكرة وخدمة عملاء متميزة، نضمن لك تجربة إلكترونية سلسة وآمنة تغطي جميع
+                                احتياجاتك الحكومية والشخصية.
                             </p>
 
                             <!-- Services List -->
@@ -608,16 +1019,20 @@
 
                             <!-- Buttons -->
                             <div class="flex gap-4">
-                                <button
-                                    class="bg-saudi-green text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
-                                    <i class="fas fa-arrow-left"></i>
-                                    اكتشف المزيد
-                                </button>
-                                <button
-                                    class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
-                                    <i class="fab fa-whatsapp"></i>
-                                    واتساب
-                                </button>
+                                <a href="tel:+9665XXXXXXXX">
+                                    <button
+                                        class="bg-saudi-green text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                        <i class="fas fa-phone-alt"></i>
+                                        اتصل بنا
+                                    </button>
+                                </a>
+                                <a href="https://wa.me/9665XXXXXXXX">
+                                    <button
+                                        class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                        <i class="fab fa-whatsapp"></i>
+                                        واتساب
+                                    </button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -625,9 +1040,7 @@
 
 
                     <div class="bg-white rounded-3xl p-8 shadow-lg card-hover relative overflow-hidden">
-                        <div class="absolute top-0 left-0 w-full h-full opacity-5">
-                            <div class="custom-gradient w-full h-full"></div>
-                        </div>
+
 
                         <!-- Image -->
                         <div class="w-full h-48 rounded-2xl overflow-hidden mb-6">
@@ -657,24 +1070,26 @@
 
                             <!-- Buttons -->
                             <div class="flex gap-4">
-                                <button
-                                    class="bg-saudi-green text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
-                                    <i class="fas fa-arrow-left"></i>
-                                    اكتشف المزيد
-                                </button>
-                                <button
-                                    class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
-                                    <i class="fab fa-whatsapp"></i>
-                                    واتساب
-                                </button>
+                                <a href="tel:+9665XXXXXXXX">
+                                    <button
+                                        class="bg-saudi-green text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                        <i class="fas fa-phone-alt"></i>
+                                        اتصل بنا
+                                    </button>
+                                </a>
+                                <a href="https://wa.me/9665XXXXXXXX">
+                                    <button
+                                        class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                        <i class="fab fa-whatsapp"></i>
+                                        واتساب
+                                    </button>
+                                </a>
                             </div>
                         </div>
                     </div>
 
                     <div class="bg-white rounded-3xl p-8 shadow-lg card-hover relative overflow-hidden">
-                        <div class="absolute top-0 left-0 w-full h-full opacity-5">
-                            <div class="custom-gradient w-full h-full"></div>
-                        </div>
+
 
                         <!-- Image -->
                         <div class="w-full h-48 rounded-2xl overflow-hidden mb-6">
@@ -707,123 +1122,131 @@
 
                             <!-- Buttons -->
                             <div class="flex gap-4">
-                                <button
-                                    class="bg-saudi-green text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
-                                    <i class="fas fa-arrow-left"></i>
-                                    اكتشف المزيد
-                                </button>
-                                <button
-                                    class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
-                                    <i class="fab fa-whatsapp"></i>
-                                    واتساب
-                                </button>
+                                <a href="tel:+9665XXXXXXXX">
+                                    <button
+                                        class="bg-saudi-green text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                        <i class="fas fa-phone-alt"></i>
+                                        اتصل بنا
+                                    </button>
+                                </a>
+                                <a href="https://wa.me/9665XXXXXXXX">
+                                    <button
+                                        class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                        <i class="fab fa-whatsapp"></i>
+                                        واتساب
+                                    </button>
+                                </a>
                             </div>
                         </div>
                     </div>
 
-                <!-- Card: خدمات مساند -->
-                <div class="bg-white rounded-3xl p-8 shadow-lg card-hover relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-full h-full opacity-5">
-                        <div class="custom-gradient w-full h-full"></div>
-                    </div>
+                    <!-- Card: خدمات مساند -->
+                    <div class="bg-white rounded-3xl p-8 shadow-lg card-hover relative overflow-hidden">
 
-                    <!-- Image -->
-                    <div class="w-full h-48 rounded-2xl overflow-hidden mb-6">
-                        <img src="./asstes/img/Musaned- 01.png" alt="خدمات مساند"
-                            class="w-full h-full object-cover">
-                    </div>
 
-                    <!-- Content -->
-                    <div class="mt-16">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-4">خدمات مساند</h3>
+                        <!-- Image -->
+                        <div class="w-full h-48 rounded-2xl overflow-hidden mb-6">
+                            <img src="./asstes/img/Musaned- 01.png" alt="خدمات مساند"
+                                class="w-full h-full object-cover">
+                        </div>
 
-                        <p class="text-gray-600 mb-4 leading-relaxed">
-                            منصة مساند تقدم لك حلولاً متكاملة لإصدار التأشيرات الخاصة بالعمالة المنزلية
-                            بكل سهولة ومرونة مع متابعة دقيقة لإنجاز الطلبات بسرعة وموثوقية.
-                        </p>
+                        <!-- Content -->
+                        <div class="mt-16">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">خدمات مساند</h3>
 
-                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">
-                            سواء كنت بحاجة إلى تأشيرة سائق خاص أو عامل منزلي، نوفر لك الدعم الكامل
-                            لإتمام الطلب بأعلى مستويات الجودة والاحترافية.
-                        </p>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                منصة مساند تقدم لك حلولاً متكاملة لإصدار التأشيرات الخاصة بالعمالة المنزلية
+                                بكل سهولة ومرونة مع متابعة دقيقة لإنجاز الطلبات بسرعة وموثوقية.
+                            </p>
 
-                        <!-- Services List -->
-                        <ul class="space-y-3 mb-8">
-                            <li class="bullet-point text-gray-700">إصدار تأشيرات العمالة المنزلية (سائق خاص)</li>
-                            <li class="bullet-point text-gray-700">إصدار تأشيرات العمالة المنزلية (عامل منزلي)</li>
-                        </ul>
+                            <p class="text-gray-500 text-sm mb-6 leading-relaxed">
+                                سواء كنت بحاجة إلى تأشيرة سائق خاص أو عامل منزلي، نوفر لك الدعم الكامل
+                                لإتمام الطلب بأعلى مستويات الجودة والاحترافية.
+                            </p>
 
-                        <!-- Buttons -->
-                        <div class="flex gap-4">
-                            <button
-                                class="bg-saudi-green text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
-                                <i class="fas fa-arrow-left"></i>
-                                اكتشف المزيد
-                            </button>
-                            <button
-                                class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
-                                <i class="fab fa-whatsapp"></i>
-                                واتساب
-                            </button>
+                            <!-- Services List -->
+                            <ul class="space-y-3 mb-8">
+                                <li class="bullet-point text-gray-700">إصدار تأشيرات العمالة المنزلية (سائق خاص)</li>
+                                <li class="bullet-point text-gray-700">إصدار تأشيرات العمالة المنزلية (عامل منزلي)</li>
+                            </ul>
+
+                            <!-- Buttons -->
+                            <div class="flex gap-4">
+                                <a href="tel:+9665XXXXXXXX">
+                                    <button
+                                        class="bg-saudi-green text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                        <i class="fas fa-phone-alt"></i>
+                                        اتصل بنا
+                                    </button>
+                                </a>
+                                <a href="https://wa.me/9665XXXXXXXX">
+                                    <button
+                                        class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                        <i class="fab fa-whatsapp"></i>
+                                        واتساب
+                                    </button>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Card: خدمات الزكاة -->
-                <div class="bg-white rounded-3xl p-8 shadow-lg card-hover relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-full h-full opacity-5">
-                        <div class="custom-gradient w-full h-full"></div>
-                    </div>
+                    <!-- Card: خدمات الزكاة -->
+                    <div class="bg-white rounded-3xl p-8 shadow-lg card-hover relative overflow-hidden">
 
-                    <!-- Image -->
-                    <div class="w-full h-48 rounded-2xl overflow-hidden mb-6">
-                        <img src="./asstes/img/zakat-rax-and-customs-authority.png" alt="خدمات الزكاة"
-                            class="w-full h-full object-contain">
-                    </div>
 
-                    <!-- Content -->
-                    <div class="mt-16">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-4">خدمات الزكاة</h3>
+                        <!-- Image -->
+                        <div class="w-full h-48 rounded-2xl overflow-hidden mb-6">
+                            <img src="./asstes/img/zakat-rax-and-customs-authority.png" alt="خدمات الزكاة"
+                                class="w-full h-full object-contain">
+                        </div>
 
-                        <p class="text-gray-600 mb-4 leading-relaxed">
-                            نقدم خدمات متكاملة خاصة بالزكاة والضرائب لتسهيل إجراءاتك الرسمية بدقة وسرعة مع متابعة كاملة حتى إتمام الطلب.
-                        </p>
+                        <!-- Content -->
+                        <div class="mt-16">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">خدمات الزكاة</h3>
 
-                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">
-                            من تقديم الإقرارات الضريبية إلى إصدار الشهادات الرسمية، نوفر لك الحلول التي تضمن التزامك بالأنظمة بكل احترافية.
-                        </p>
+                            <p class="text-gray-600 mb-4 leading-relaxed">
+                                نقدم خدمات متكاملة خاصة بالزكاة والضرائب لتسهيل إجراءاتك الرسمية بدقة وسرعة مع متابعة
+                                كاملة حتى إتمام الطلب.
+                            </p>
 
-                        <!-- Services List -->
-                        <ul class="space-y-3 mb-8">
-                            <li class="bullet-point text-gray-700">رفع إقرارات ضريبية ربع سنوية</li>
-                            <li class="bullet-point text-gray-700">إصدار شهادة تسجيل في ضريبة القيمة المضافة</li>
-                            <li class="bullet-point text-gray-700">إصدار شهادة الزكاة</li>
-                            <li class="bullet-point text-gray-700">إيقاف الرقم المميز</li>
-                            <li class="bullet-point text-gray-700">إيقاف الضريبة</li>
-                            <li class="bullet-point text-gray-700">إيقاف الزكاة</li>
-                        </ul>
+                            <p class="text-gray-500 text-sm mb-6 leading-relaxed">
+                                من تقديم الإقرارات الضريبية إلى إصدار الشهادات الرسمية، نوفر لك الحلول التي تضمن التزامك
+                                بالأنظمة بكل احترافية.
+                            </p>
 
-                        <!-- Buttons -->
-                        <div class="flex gap-4">
-                            <button
-                                class="bg-saudi-green text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
-                                <i class="fas fa-arrow-left"></i>
-                                اكتشف المزيد
-                            </button>
-                            <button
-                                class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
-                                <i class="fab fa-whatsapp"></i>
-                                واتساب
-                            </button>
+                            <!-- Services List -->
+                            <ul class="space-y-3 mb-8">
+                                <li class="bullet-point text-gray-700">رفع إقرارات ضريبية ربع سنوية</li>
+                                <li class="bullet-point text-gray-700">إصدار شهادة تسجيل في ضريبة القيمة المضافة</li>
+                                <li class="bullet-point text-gray-700">إصدار شهادة الزكاة</li>
+                                <li class="bullet-point text-gray-700">إيقاف الرقم المميز</li>
+                                <li class="bullet-point text-gray-700">إيقاف الضريبة</li>
+                                <li class="bullet-point text-gray-700">إيقاف الزكاة</li>
+                            </ul>
+
+                            <!-- Buttons -->
+                            <div class="flex gap-4">
+                                <a href="tel:+9665XXXXXXXX">
+                                    <button
+                                        class="bg-saudi-green text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                        <i class="fas fa-phone-alt"></i>
+                                        اتصل بنا
+                                    </button>
+                                </a>
+                                <a href="https://wa.me/9665XXXXXXXX">
+                                    <button
+                                        class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                        <i class="fab fa-whatsapp"></i>
+                                        واتساب
+                                    </button>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
                     <!-- Card: خدمات منصة قوى -->
                     <div class="bg-white rounded-3xl p-8 shadow-lg card-hover relative overflow-hidden">
-                        <div class="absolute top-0 left-0 w-full h-full opacity-5">
-                            <div class="custom-gradient w-full h-full"></div>
-                        </div>
+
 
                         <!-- Image -->
                         <div class="w-full h-48 rounded-2xl overflow-hidden mb-6">
@@ -836,11 +1259,13 @@
                             <h3 class="text-2xl font-bold text-gray-800 mb-4">خدمات منصة قوى</h3>
 
                             <p class="text-gray-600 mb-4 leading-relaxed">
-                                نوفر لك جميع خدمات منصة قوى التي تسهل إجراءات العمل وتطوير بيئة الأعمال داخل المملكة بكل احترافية وسرعة.
+                                نوفر لك جميع خدمات منصة قوى التي تسهل إجراءات العمل وتطوير بيئة الأعمال داخل المملكة بكل
+                                احترافية وسرعة.
                             </p>
 
                             <p class="text-gray-500 text-sm mb-6 leading-relaxed">
-                                سواء كنت صاحب عمل أو موظف، نقدم لك حلول متكاملة لإنجاز معاملاتك عبر منصة قوى بسهولة وبدون تعقيد.
+                                سواء كنت صاحب عمل أو موظف، نقدم لك حلول متكاملة لإنجاز معاملاتك عبر منصة قوى بسهولة
+                                وبدون تعقيد.
                             </p>
 
                             <!-- Services List -->
@@ -853,16 +1278,20 @@
 
                             <!-- Buttons -->
                             <div class="flex gap-4">
-                                <button
-                                    class="bg-saudi-green text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
-                                    <i class="fas fa-arrow-left"></i>
-                                    اكتشف المزيد
-                                </button>
-                                <button
-                                    class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
-                                    <i class="fab fa-whatsapp"></i>
-                                    واتساب
-                                </button>
+                                <a href="tel:+9665XXXXXXXX">
+                                    <button
+                                        class="bg-saudi-green text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                        <i class="fas fa-phone-alt"></i>
+                                        اتصل بنا
+                                    </button>
+                                </a>
+                                <a href="https://wa.me/9665XXXXXXXX">
+                                    <button
+                                        class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
+                                        <i class="fab fa-whatsapp"></i>
+                                        واتساب
+                                    </button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -877,397 +1306,510 @@
 
 
     <div class="w-full my-5">
-  <img 
-    src="./asstes/img/Asset 16@4x.png" 
-    alt="نقشة سدو سعودية" 
-    class="w-full h-20 object-cover opacity-10">
-</div>
-
-    <section class="relative bg-white py-20 px-6 lg:px-20 overflow-hidden banner-2" style="background-image: url('./asstes/img/sign.png');">
-  <div class="max-w-6xl mx-auto  items-center">
-     <div class="absolute inset-0 bg-black/50"></div>
-    <!-- النص -->
-    <div class="text-center">
-      <h2 class="text-3xl md:text-4xl font-extrabold text-green-800 mb-6 ">
-        أهمية إنجاز الخدمات الحكومية بسرعة
-      </h2>
-      <p class="text-lg text-gray-700 leading-relaxed mb-6 ">
-        في <span class="font-bold text-green-700">منصة آفاق</span> ندرك أن سرعة إنجاز 
-        الخدمات الحكومية ليست مجرد خيار، بل ضرورة لضمان راحة المواطنين 
-        وتسهيل تعاملاتهم اليومية.  
-      </p>
-      <p class="text-lg text-gray-700 leading-relaxed mb-8 ">
-        لذلك نعمل على توفير حلول مبتكرة تضمن الدقة، الكفاءة، 
-        والالتزام بمعايير الجودة لتقديم تجربة سلسة تلبي توقعات العملاء في المملكة العربية السعودية.
-      </p>
-
-      <a href="tel:966500000000" 
-         class="inline-block bg-saudi-green text-white font-bold py-3 px-8 rounded-full shadow-md  transition-all ">
-        تواصل معنا الآن
-      </a>
+        <img src="./asstes/img/Asset 16@4x.png" alt="نقشة سدو سعودية" class="w-full h-20 object-cover opacity-10">
     </div>
 
-  
-  </div>
-</section>
-
-
-
- <!-- START SECTION: Why Choose Us -->
-  <section id="why-choose-us" class="section-padding relative overflow-hidden my-5">
-    <!-- decorative blobs -->
-    <svg class="blob absolute -left-20 -top-10 w-80 h-80" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-      <defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#00a88f"/><stop offset="1" stop-color="#00544d"/></linearGradient></defs>
-      <path fill="url(#g1)" d="M42.3,-63.4C56.5,-54.9,73.8,-47.6,77.7,-36.2C81.6,-24.8,72.1,-9.1,67.6,6.6C63.1,22.3,63.6,37.9,55.6,48.6C47.7,59.3,31.3,65.1,15.1,68.8C-1.1,72.6,-17.9,74.2,-32.9,69.2C-47.9,64.2,-61.1,52.7,-65.7,38.3C-70.3,23.9,-66.3,6.6,-59,-8.4C-51.7,-23.4,-41.1,-36.7,-29.3,-46.1C-17.6,-55.5,-4.7,-61.1,9.2,-66.6C23.1,-72.1,46.1,-71.8,42.3,-63.4Z" transform="translate(100 100)" />
-      
-    </svg>
-
-
-    <div class="container mx-auto px-6 md:px-12 lg:px-24">
-      <div class="max-w-7xl mx-auto bg-white  p-6 md:p-10  relative z-10">
-        <!-- header -->
-        <div class="flex items-center justify-between gap-4 mb-6">
-          <div class="flex items-center gap-4">
-            <div class="w-14 h-14 rounded-xl flex items-center justify-center" style="background: linear-gradient(135deg,var(--primary), #009a84);">
-              <!-- small logo icon -->
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
-                <path d="M4 12h16M4 6h16M4 18h10" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <div>
-              <h3 class="text-4xl lg:text-5xl font-bold saudi-green m-2 se font-bold">لماذا تختارنا؟</h3>
-              <p class=" text-slate-600">حلول سريعة وموثوقة لإتمام معاملاتك مع الجهات الحكومية بسهولة</p>
-            </div>
-          </div>
-
-          <div class="hidden md:flex items-center gap-3">
-            <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-white font-semibold" style="background:var(--primary)">
-              تواصل معنا
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-            <a href="https://wa.me/9665XXXXXXXX" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-200 text-slate-700 hover:shadow-sm">
-              واتساب
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 15a5 5 0 0 1-1 5l-3 1-1-3a7 7 0 1 1 5-8z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-          <!-- Right column: features -->
-          <div class="lg:col-span-7 space-y-4">
-            <p class="text-slate-600  md:text-base reveal">نحن نضع خبرتنا لنجعل معاملاتك الحكومية أسرع وأسهل. إليك الأسباب التي تميزنا:</p>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-              <!-- Card 1 -->
-        
-            <div class="reveal tilt rounded-2xl p-5 bg-gradient-to-br from-white to-[var(--glass)] border border-slate-100 transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
-            <div class="flex items-start gap-4">
-                <div class="flex-none w-12 h-12 rounded-lg flex items-center justify-center shadow-sm" style="background: rgba(0,84,77,0.08);">
-                <!-- أيقونة السرعة -->
-                <i class="fa-solid fa-gauge-high text-[var(--primary)] text-2xl"></i>
-                </div>
-                <div>
-                <h3 class="font-bold saudi-green text-2xl">السرعة</h3>
-                <p class="text text-slate-500 mt-1">
-                    إنجاز المعاملات بعمليات مُحسّنة وإجراءات واضحة لتوفير الوقت وتقليل الانتظار.
+    <section class="relative bg-white py-20 px-6 lg:px-20 overflow-hidden banner-2"
+        style="background-image: url('./asstes/img/sign.png');">
+        <div class="max-w-6xl mx-auto  items-center">
+            <div class="absolute inset-0 bg-black/50"></div>
+            <!-- النص -->
+            <div class="text-center">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-green-800 mb-6 ">
+                    أهمية إنجاز الخدمات الحكومية بسرعة
+                </h2>
+                <p class="text-lg text-gray-700 leading-relaxed mb-6 ">
+                    في <span class="font-bold text-green-700">منصة آفاق</span> ندرك أن سرعة إنجاز
+                    الخدمات الحكومية ليست مجرد خيار، بل ضرورة لضمان راحة المواطنين
+                    وتسهيل تعاملاتهم اليومية.
                 </p>
+                <p class="text-lg text-gray-700 leading-relaxed mb-8 ">
+                    لذلك نعمل على توفير حلول مبتكرة تضمن الدقة، الكفاءة،
+                    والالتزام بمعايير الجودة لتقديم تجربة سلسة تلبي توقعات العملاء في المملكة العربية السعودية.
+                </p>
+
+                <a href="tel:966500000000"
+                    class="inline-block bg-saudi-green text-white font-bold py-3 px-8 rounded-full shadow-md  transition-all ">
+                    تواصل معنا الآن
+                </a>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+    <!-- START SECTION: Why Choose Us -->
+    <section id="why-choose-us" class="section-padding relative overflow-hidden my-5">
+        <!-- decorative blobs -->
+        <svg class="blob absolute -left-20 -top-10 w-80 h-80" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="g1" x1="0" x2="1">
+                    <stop offset="0" stop-color="#00a88f" />
+                    <stop offset="1" stop-color="#00544d" />
+                </linearGradient>
+            </defs>
+            <path fill="url(#g1)"
+                d="M42.3,-63.4C56.5,-54.9,73.8,-47.6,77.7,-36.2C81.6,-24.8,72.1,-9.1,67.6,6.6C63.1,22.3,63.6,37.9,55.6,48.6C47.7,59.3,31.3,65.1,15.1,68.8C-1.1,72.6,-17.9,74.2,-32.9,69.2C-47.9,64.2,-61.1,52.7,-65.7,38.3C-70.3,23.9,-66.3,6.6,-59,-8.4C-51.7,-23.4,-41.1,-36.7,-29.3,-46.1C-17.6,-55.5,-4.7,-61.1,9.2,-66.6C23.1,-72.1,46.1,-71.8,42.3,-63.4Z"
+                transform="translate(100 100)" />
+
+        </svg>
+
+
+        <div class="container mx-auto px-6 md:px-12 lg:px-24">
+            <div class="max-w-7xl mx-auto bg-white  p-6 md:p-10  relative z-10">
+                <!-- header -->
+                <div class="flex items-center justify-between gap-4 mb-6">
+                    <div class="flex items-center gap-4">
+                        <div class="w-14 h-14 rounded-xl flex items-center justify-center"
+                            style="background: linear-gradient(135deg,var(--primary), #009a84);">
+                            <!-- small logo icon -->
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
+                                <path d="M4 12h16M4 6h16M4 18h10" stroke="#fff" stroke-width="1.6"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-4xl lg:text-5xl font-bold saudi-green m-2 se font-bold">لماذا تختارنا؟</h3>
+                            <p class=" text-slate-600">حلول سريعة وموثوقة لإتمام معاملاتك مع الجهات الحكومية بسهولة</p>
+                        </div>
+                    </div>
+
+                    <div class="hidden md:flex items-center gap-3">
+                        <a href="#contact"
+                            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-white font-semibold"
+                            style="background:var(--primary)">
+                            تواصل معنا
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12h14M12 5l7 7-7 7" stroke="white" stroke-width="1.6" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/9665XXXXXXXX" target="_blank"
+                            class="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-slate-200 text-slate-700 hover:shadow-sm">
+                            واتساب
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <path d="M21 15a5 5 0 0 1-1 5l-3 1-1-3a7 7 0 1 1 5-8z" stroke="currentColor"
+                                    stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                    <!-- Right column: features -->
+                    <div class="lg:col-span-7 space-y-4">
+                        <p class="text-slate-600  md:text-base reveal">نحن نضع خبرتنا لنجعل معاملاتك الحكومية أسرع
+                            وأسهل. إليك الأسباب التي تميزنا:</p>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+                            <!-- Card 1 -->
+
+                            <div
+                                class="reveal tilt rounded-2xl p-5 bg-gradient-to-br from-white to-[var(--glass)] border border-slate-100 transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+                                <div class="flex items-start gap-4">
+                                    <div class="flex-none w-12 h-12 rounded-lg flex items-center justify-center shadow-sm"
+                                        style="background: rgba(0,84,77,0.08);">
+                                        <!-- أيقونة السرعة -->
+                                        <i class="fa-solid fa-gauge-high text-[var(--primary)] text-2xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-bold saudi-green text-2xl">السرعة</h3>
+                                        <p class="text text-slate-500 mt-1">
+                                            إنجاز المعاملات بعمليات مُحسّنة وإجراءات واضحة لتوفير الوقت وتقليل الانتظار.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Card 2 -->
+                            <div
+                                class="reveal tilt rounded-2xl p-5 bg-gradient-to-br from-white to-[var(--glass)] border border-slate-100 transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+                                <div class="flex items-start gap-4">
+                                    <!-- أيقونة الموثوقية -->
+                                    <div class="flex-none w-12 h-12 rounded-lg flex items-center justify-center shadow-sm text-[#00544d] text-xl transition-colors duration-300 hover:bg-[#00544d] "
+                                        style="background: rgba(0,84,77,0.08);">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold saudi-green text-2xl">الموثوقية</h4>
+                                        <p class=" text-slate-500 mt-1">التعامل مع اجراءات رسمية بدقة وشفافية، وضمان
+                                            متابعة مستمرة حتى استلام النتيجة.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Card 3 -->
+                            <div
+                                class="reveal tilt rounded-2xl p-5 bg-gradient-to-br from-white to-[var(--glass)] border border-slate-100 transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+                                <div class="flex items-start gap-4">
+                                    <!-- أيقونة السعر -->
+                                    <div class="flex-none w-12 h-12 rounded-lg flex items-center justify-center shadow-sm text-[#00544d] text-xl transition-colors duration-300 hover:bg-[#00544d]  style="
+                                        background: rgba(0,84,77,0.08);">
+                                        <i class="fas fa-tags"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold saudi-green text-2xl">أسعار تنافسية</h4>
+                                        <p class="text-slate-500 mt-1">سعر واضح ومناسب مع خيارات باقات لتلبية احتياجات
+                                            الأفراد والشركات دون رسوم مخفية.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Card 4 -->
+                            <div
+                                class="reveal tilt rounded-2xl p-5 bg-gradient-to-br from-white to-[var(--glass)] border border-slate-100 transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
+                                <div class="flex items-start gap-4">
+                                    <div class="flex-none w-12 h-12 rounded-lg flex items-center justify-center shadow-sm text-[#00544d] text-xl"
+                                        style="background: rgba(0,84,77,0.08);">
+                                        <i class="fas fa-landmark"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold saudi-green text-2xl">خبرة مع الجهات الحكومية</h4>
+                                        <p class="text-slate-500 mt-1">فريق متمرّس يفهم متطلبات الجهات الحكومية ويُسهل
+                                            التواصل الرسمي لتسريع الإجراءات.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="mt-6 reveal">
+                            <a href="#services"
+                                class="inline-flex items-center gap-3 px-5 py-3 rounded-full font-semibold"
+                                style="background:var(--primary); color:#fff">
+                                اكتشف خدماتنا
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                    <path d="M8 5l8 7-8 7" stroke="white" stroke-width="1.6" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Left column: illustrative image -->
+                    <!-- Left column: illustrative image -->
+                    <div class="lg:col-span-5">
+                        <div
+                            class="reveal rounded-3xl overflow-hidden relative shadow-lg p-6 bg-gradient-to-b from-[#f8fffd] to-white transition-transform duration-500 hover:-translate-y-2 hover:shadow-2xl">
+                            <!-- الصورة التوضيحية -->
+                            <div class="p-6">
+                                <img src="./asstes/img/شعار بدون خلفية.png" alt="لماذا تختارنا"
+                                    class="w-full h-auto rounded-2xl shadow-md transition-transform duration-500 hover:scale-105 hover:shadow-xl bg-saudi-green">
+                            </div>
+
+
+
+
+                            <!-- أزرار الاتصال -->
+                            <div class="mt-6 flex flex-wrap gap-3 justify-center">
+                                <!-- زر الاتصال -->
+                                <a href="tel:+9665XXXXXXXX"
+                                    class="inline-flex items-center gap-2 px-5 py-3 rounded-full text-white font-semibold shadow-md transition hover:shadow-lg bg-saudi-green">
+                                    <i class="fas fa-phone-alt text-white"></i>
+                                    اتصال
+                                </a>
+
+                                <!-- زر واتساب -->
+                                <a href="https://wa.me/9665XXXXXXXX" target="_blank"
+                                    class="inline-flex items-center gap-2 px-5 py-3 rounded-full text-white font-semibold shadow-md transition hover:shadow-lg bg-gold">
+                                    <i class="fab fa-whatsapp text-white"></i>
+                                    واتساب
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
                 </div>
             </div>
-            </div>
-
-
-              <!-- Card 2 -->
-           <div class="reveal tilt rounded-2xl p-5 bg-gradient-to-br from-white to-[var(--glass)] border border-slate-100 transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
-        <div class="flex items-start gap-4">
-            <!-- أيقونة الموثوقية -->
-            <div class="flex-none w-12 h-12 rounded-lg flex items-center justify-center shadow-sm text-[#00544d] text-xl transition-colors duration-300 hover:bg-[#00544d] " style="background: rgba(0,84,77,0.08);">
-            <i class="fas fa-shield-alt"></i>
-            </div>
-            <div>
-            <h4 class="font-bold saudi-green text-2xl">الموثوقية</h4>
-            <p class=" text-slate-500 mt-1">التعامل مع اجراءات رسمية بدقة وشفافية، وضمان متابعة مستمرة حتى استلام النتيجة.</p>
-            </div>
         </div>
-        </div>
+    </section>
+    <!-- END SECTION -->
 
+    <script>
+        // Simple reveal on scroll + stagger
+        document.addEventListener("DOMContentLoaded", function () {
+            const reveals = Array.from(document.querySelectorAll('#why-choose-us .reveal'));
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        // optional: unobserve so animation runs once
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12 });
 
-              <!-- Card 3 -->
-         <div class="reveal tilt rounded-2xl p-5 bg-gradient-to-br from-white to-[var(--glass)] border border-slate-100 transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
-        <div class="flex items-start gap-4">
-            <!-- أيقونة السعر -->
-            <div class="flex-none w-12 h-12 rounded-lg flex items-center justify-center shadow-sm text-[#00544d] text-xl transition-colors duration-300 hover:bg-[#00544d]  style="background: rgba(0,84,77,0.08);">
-            <i class="fas fa-tags"></i>
-            </div>
-            <div>
-            <h4 class="font-bold saudi-green text-2xl">أسعار تنافسية</h4>
-            <p class="text-slate-500 mt-1">سعر واضح ومناسب مع خيارات باقات لتلبية احتياجات الأفراد والشركات دون رسوم مخفية.</p>
-            </div>
-        </div>
-        </div>
-
-
-              <!-- Card 4 -->
-           <div class="reveal tilt rounded-2xl p-5 bg-gradient-to-br from-white to-[var(--glass)] border border-slate-100 transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
-            <div class="flex items-start gap-4">
-                <div class="flex-none w-12 h-12 rounded-lg flex items-center justify-center shadow-sm text-[#00544d] text-xl" style="background: rgba(0,84,77,0.08);">
-                <i class="fas fa-landmark"></i>
-                </div>
-                <div>
-                <h4 class="font-bold saudi-green text-2xl">خبرة مع الجهات الحكومية</h4>
-                <p class="text-slate-500 mt-1">فريق متمرّس يفهم متطلبات الجهات الحكومية ويُسهل التواصل الرسمي لتسريع الإجراءات.</p>
-                </div>
-            </div>
-            </div>
-
-
-            </div>
-
-            <div class="mt-6 reveal">
-              <a href="#services" class="inline-flex items-center gap-3 px-5 py-3 rounded-full font-semibold" style="background:var(--primary); color:#fff">
-                اكتشف خدماتنا
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M8 5l8 7-8 7" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- Left column: illustrative image -->
- <!-- Left column: illustrative image -->
-<div class="lg:col-span-5">
-  <div 
-    class="reveal rounded-3xl overflow-hidden relative shadow-lg p-6 bg-gradient-to-b from-[#f8fffd] to-white transition-transform duration-500 hover:-translate-y-2 hover:shadow-2xl"
-  >
-   <!-- الصورة التوضيحية -->
-<div class="p-6">
-  <img 
-    src="./asstes/img/شعار بدون خلفية.png" 
-    alt="لماذا تختارنا" 
-    class="w-full h-auto rounded-2xl shadow-md transition-transform duration-500 hover:scale-105 hover:shadow-xl bg-saudi-green"
-  >
-</div>
-
-
-   
-
-    <!-- أزرار الاتصال -->
-    <div class="mt-6 flex flex-wrap gap-3 justify-center">
-      <!-- زر الاتصال -->
-      <a href="tel:+9665XXXXXXXX" class="inline-flex items-center gap-2 px-5 py-3 rounded-full text-white font-semibold shadow-md transition hover:shadow-lg bg-saudi-green" >
-        <i class="fas fa-phone-alt text-white"></i>
-        اتصال
-      </a>
-
-      <!-- زر واتساب -->
-      <a href="https://wa.me/9665XXXXXXXX" target="_blank" class="inline-flex items-center gap-2 px-5 py-3 rounded-full text-white font-semibold shadow-md transition hover:shadow-lg bg-gold" >
-        <i class="fab fa-whatsapp text-white"></i>
-        واتساب
-      </a>
-    </div>
-  </div>
-</div>
-
-
-
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- END SECTION -->
-
-  <script>
-    // Simple reveal on scroll + stagger
-    document.addEventListener("DOMContentLoaded", function() {
-      const reveals = Array.from(document.querySelectorAll('#why-choose-us .reveal'));
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            // optional: unobserve so animation runs once
-            observer.unobserve(entry.target);
-          }
+            reveals.forEach((el, i) => {
+                // small stagger
+                el.style.transitionDelay = (i * 90) + 'ms';
+                observer.observe(el);
+            });
         });
-      }, { threshold: 0.12 });
+    </script>
 
-      reveals.forEach((el, i) => {
-        // small stagger
-        el.style.transitionDelay = (i * 90) + 'ms';
-        observer.observe(el);
-      });
-    });
-  </script>
+    <!-- Banner Section -->
+    <section class="relative bg-gray-50 py-12 ">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div
+                class="flex flex-col lg:flex-row items-center justify-between bg-green-50 rounded-2xl shadow-lg p-8 relative overflow-hidden">
 
-<!-- Banner Section -->
-<section class="relative bg-gray-50 py-12 ">
-  <div class="container mx-auto px-6 lg:px-12">
-    <div class="flex flex-col lg:flex-row items-center justify-between bg-green-50 rounded-2xl shadow-lg p-8 relative overflow-hidden">
-      
-      <!-- Text Content -->
-      <div class="max-w-2xl mb-6 lg:mb-0">
-      <h2 class="text-3xl font-bold text-green-900 mb-4 ">
-  شركة منصة آفاق للخدمات الحكومية
-</h2>
-<p class="text-gray-700 mb-6  leading-relaxed">
-  تعتبر <span class="font-bold text-green-800">شركة منصة آفاق</span> من الشركات الرائدة في مجال 
-  <span class="text-green-700">الخدمات الحكومية بالمملكة العربية السعودية</span>، حيث نحرص على 
-  تقديم حلول مبتكرة تسهل إنجاز المعاملات الرسمية بسرعة، دقة، وأمان.  
-  نسعى دائماً إلى دعم عملائنا وتوفير خدمات متكاملة تسهم في توفير الوقت والجهد 
-  وتعزز من مستوى الكفاءة والموثوقية في التعاملات الحكومية.
-</p>
+                <!-- Text Content -->
+                <div class="max-w-2xl mb-6 lg:mb-0">
+                    <h2 class="text-3xl font-bold text-green-900 mb-4 ">
+                        شركة منصة آفاق للخدمات الحكومية
+                    </h2>
+                    <p class="text-gray-700 mb-6  leading-relaxed">
+                        تعتبر <span class="font-bold text-green-800">شركة منصة آفاق</span> من الشركات الرائدة في مجال
+                        <span class="text-green-700">الخدمات الحكومية بالمملكة العربية السعودية</span>، حيث نحرص على
+                        تقديم حلول مبتكرة تسهل إنجاز المعاملات الرسمية بسرعة، دقة، وأمان.
+                        نسعى دائماً إلى دعم عملائنا وتوفير خدمات متكاملة تسهم في توفير الوقت والجهد
+                        وتعزز من مستوى الكفاءة والموثوقية في التعاملات الحكومية.
+                    </p>
 
 
-        <!-- Buttons -->
-        <div class="flex gap-4">
-          <a href="tel:966500000000" 
-             class="bg-green-600 text-white px-6 py-3 rounded-xl shadow-md hover:bg-green-700 transition ">
-            <i class="fas fa-phone-alt mr-2"></i> اتصل بنا
-          </a>
-          <a href="https://wa.me/966500000000" target="_blank"
-             class="bg-yellow-500 text-white px-6 py-3 rounded-xl shadow-md hover:bg-yellow-600 transition ">
-            <i class="fab fa-whatsapp mr-2"></i> واتساب
-          </a>
+                    <!-- Buttons -->
+                    <div class="flex gap-4">
+                        <a href="tel:966500000000"
+                            class="bg-green-600 text-white px-6 py-3 rounded-xl shadow-md hover:bg-green-700 transition ">
+                            <i class="fas fa-phone-alt mr-2"></i> اتصل بنا
+                        </a>
+                        <a href="https://wa.me/966500000000" target="_blank"
+                            class="bg-yellow-500 text-white px-6 py-3 rounded-xl shadow-md hover:bg-yellow-600 transition ">
+                            <i class="fab fa-whatsapp mr-2"></i> واتساب
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Decoration / Side Image -->
+                <div class="hidden lg:block">
+                    <img src="./asstes/img/tourism-visa.png" alt="زخارف سعودية" class="w-40 h-40 ">
+                </div>
+            </div>
+
+            <!-- Saudi Pattern (Bottom Border) -->
+            <!-- Full Width Saudi Pattern -->
+            <div class="w-full my-5">
+                <img src="./asstes/img/Asset 16@4x.png" alt="نقشة سدو سعودية"
+                    class="w-full h-20 object-cover opacity-10">
+            </div>
+
         </div>
-      </div>
-
-      <!-- Decoration / Side Image -->
-      <div class="hidden lg:block">
-        <img src= "./asstes/img/tourism-visa.png" 
-             alt="زخارف سعودية" class="w-40 h-40 ">
-      </div>
-    </div>
-
-    <!-- Saudi Pattern (Bottom Border) -->
-   <!-- Full Width Saudi Pattern -->
-    <div class="w-full my-5">
-  <img 
-    src="./asstes/img/Asset 16@4x.png" 
-    alt="نقشة سدو سعودية" 
-    class="w-full h-20 object-cover opacity-10">
-</div>
-
-  </div>
-</section>
+    </section>
 
 
-   
 
 
- <section class="partners-section">
-        <div class="section-header">
-            <h2 class="section-title">شركاؤنا</h2>
-            <div class="title-divider"></div>
-            <p class="section-description">
-                نفتخر بشراكتنا مع أهم الجهات الحكومية في المملكة العربية السعودية
-            </p>
-        </div>
 
-        <div class="slider-container">
-            <div class="fade-edges fade-left"></div>
-            <div class="fade-edges fade-right"></div>
-            <div class="slider-track" id="sliderTrack">
-                <!-- First set of partners -->
-                <div class="partner-item">
-                    <img src="./asstes/img/Ministry-of-Commerce-01-1.png" alt="وزارة التجارة" class="partner-logo">
-                    <p class="partner-name">وزارة التجارة</p>
-                </div>
-
-                <div class="partner-item">
-                    <img src="./asstes/img/Ministry-of-Foreign-Affairs-01.png" alt="وزارة الخارجية" class="partner-logo">
-                    <p class="partner-name">وزارة الخارجية</p>
-                </div>
-
-                <div class="partner-item">
-                    <img src="./asstes/img/General Directorate of Passports.png" alt="الجوازات" class="partner-logo">
-                    <p class="partner-name">الجوازات</p>
-                </div>
-
-                <div class="partner-item">
-                    <img src="./asstes/img/Ministry of Human Resources and Social Development.png" alt="التأمينات" class="partner-logo">
-                    <p class="partner-name">التأمينات</p>
-                </div>
-
-                <div class="partner-item">
-                    <img src="./asstes/img/balady.png" alt="بلدي" class="partner-logo">
-                    <p class="partner-name">بلدي</p>
-                </div>
-
-                <div class="partner-item">
-                    <img src="./asstes/img/Musaned- 01.png" alt="مساند" class="partner-logo">
-                    <p class="partner-name">مساند</p>
-                </div>
-
-                <div class="partner-item">
-                    <img src="./asstes/img/Sadad-01.png" alt="سداد" class="partner-logo">
-                    <p class="partner-name">سداد</p>
-                </div>
-
-                <div class="partner-item">
-                    <img src="./asstes/img/zakat-rax-and-customs-authority.png" alt="الزكاة والضريبة" class="partner-logo">
-                    <p class="partner-name">الزكاة والضريبة</p>
-                </div>
-
-                <div class="partner-item">
-                    <img src="./asstes/img/Mudad.png" alt="مدد" class="partner-logo">
-                    <p class="partner-name">مدد</p>
-                </div>
-
-                <div class="partner-item">
-                    <img src="./asstes/img/QIWA-01.png" alt="قوى" class="partner-logo">
-                    <p class="partner-name">قوى</p>
-                </div>
-
-                <!-- Duplicate set for seamless loop -->
-                <div class="partner-item">
-                    <img src="./asstes/img/Ministry-of-Commerce-01-1.png" alt="وزارة التجارة" class="partner-logo">
-                    <p class="partner-name">وزارة التجارة</p>
-                </div>
-
-                <div class="partner-item">
-                    <img src="./asstes/img/Ministry-of-Foreign-Affairs-01.png" alt="وزارة الخارجية" class="partner-logo">
-                    <p class="partner-name">وزارة الخارجية</p>
-                </div>
-
-                <div class="partner-item">
-                    <img src="./asstes/img/General Directorate of Passports.png" alt="الجوازات" class="partner-logo">
-                    <p class="partner-name">الجوازات</p>
-                </div>
-
-                <div class="partner-item">
-                    <img src="./asstes/img/Ministry of Human Resources and Social Development.png" alt="التأمينات" class="partner-logo">
-                    <p class="partner-name">التأمينات</p>
-                </div>
-
-                <div class="partner-item">
-                    <img src="./asstes/img/balady.png" alt="بلدي" class="partner-logo">
-                    <p class="partner-name">بلدي</p>
-                </div>
-
-                <div class="partner-item">
-                    <img src="./asstes/img/Musaned- 01.png" alt="مساند" class="partner-logo">
-                    <p class="partner-name">مساند</p>
-                </div>
-
-                <div class="partner-item">
-                    <img src="./asstes/img/Sadad-01.png" alt="سداد" class="partner-logo">
-                    <p class="partner-name">سداد</p>
-                </div>
-
-                <div class="partner-item">
-                    <img src="./asstes/img/zakat-rax-and-customs-authority.png" alt="الزكاة والضريبة" class="partner-logo">
-                    <p class="partner-name">الزكاة والضريبة</p>
-                </div>
-
-                <div class="partner-item">
-                    <img src="./asstes/img/Mudad.png" alt="مدد" class="partner-logo">
-                    <p class="partner-name">مدد</p>
-                </div>
-
-                <div class="partner-item">
-                    <img src="./asstes/img/QIWA-01.png" alt="قوى" class="partner-logo">
-                    <p class="partner-name">قوى</p>
-                </div>
+    <!-- Enhanced Partners Section with Super Modern Design -->
+    <section class="partners-mega-section" dir="ltr">
+        <div class="partners-hero-header">
+            <div class="partners-title-container">
+                <div class="partners-title-backdrop"></div>
+                <h2 class="partners-mega-title">شركاؤنا</h2>
+                
+            </div>
+            <div class="partners-subtitle-container">
+                <p class="partners-description">
+                    نفتخر بشراكتنا مع أهم الجهات الحكومية في المملكة العربية السعودية
+                </p>
+                <div class="partners-description-line"></div>
             </div>
         </div>
 
-      
+        <div class="partners-slider-wrapper">
+            <div class="partners-gradient-overlay gradient-left"></div>
+            <div class="partners-gradient-overlay gradient-right"></div>
+            <div class="partners-infinite-track" id="partnersInfiniteTrack">
+                <!-- Partner Item Template -->
+                <div class="partner-super-item">
+                    <div class="partner-item-glow"></div>
+                    <div class="partner-image-container">
+                        <img src="./asstes/img/Ministry-of-Commerce-01-1.png" alt="وزارة التجارة" class="partner-super-logo">
+                        
+                    </div>
+              
+                </div>
+
+                <div class="partner-super-item">
+                    <div class="partner-item-glow"></div>
+                    <div class="partner-image-container">
+                        <img src="./asstes/img/Ministry-of-Foreign-Affairs-01.png" alt="وزارة الخارجية" class="partner-super-logo">
+                        
+                    </div>
+              
+                </div>
+
+                <div class="partner-super-item">
+                    <div class="partner-item-glow"></div>
+                    <div class="partner-image-container">
+                        <img src="./asstes/img/General Directorate of Passports.png" alt="الجوازات" class="partner-super-logo">
+                        
+                    </div>
+          
+                </div>
+
+                <div class="partner-super-item">
+                    <div class="partner-item-glow"></div>
+                    <div class="partner-image-container">
+                        <img src="./asstes/img/Ministry of Human Resources and Social Development.png" alt="التأمينات" class="partner-super-logo">
+                        
+                    </div>
+       
+                </div>
+
+                <div class="partner-super-item">
+                    <div class="partner-item-glow"></div>
+                    <div class="partner-image-container">
+                        <img src="./asstes/img/balady.png" alt="بلدي" class="partner-super-logo">
+                        
+                    </div>
+       
+                </div>
+
+                <div class="partner-super-item">
+                    <div class="partner-item-glow"></div>
+                    <div class="partner-image-container">
+                        <img src="./asstes/img/Musaned- 01.png" alt="مساند" class="partner-super-logo">
+                        
+                    </div>
+               
+                </div>
+
+                <div class="partner-super-item">
+                    <div class="partner-item-glow"></div>
+                    <div class="partner-image-container">
+                        <img src="./asstes/img/Sadad-01.png" alt="سداد" class="partner-super-logo">
+                        
+                    </div>
+               
+                </div>
+
+                <div class="partner-super-item">
+                    <div class="partner-item-glow"></div>
+                    <div class="partner-image-container">
+                        <img src="./asstes/img/zakat-rax-and-customs-authority.png" alt="الزكاة والضريبة" class="partner-super-logo">
+                        
+                    </div>
+        
+                </div>
+
+                <div class="partner-super-item">
+                    <div class="partner-item-glow"></div>
+                    <div class="partner-image-container">
+                        <img src="./asstes/img/Mudad.png" alt="مدد" class="partner-super-logo">
+                        
+                    </div>
+         
+                </div>
+
+                <div class="partner-super-item">
+                    <div class="partner-item-glow"></div>
+                    <div class="partner-image-container">
+                        <img src="./asstes/img/QIWA-01.png" alt="قوى" class="partner-super-logo">
+                        
+                    </div>
+          
+                </div>
+                <div class="partner-super-item">
+                    <div class="partner-item-glow"></div>
+                    <div class="partner-image-container">
+                        <img src="./asstes/img/Ministry-of-Commerce-01-1.png" alt="وزارة التجارة" class="partner-super-logo">
+                        
+                    </div>
+          
+                </div>
+
+                <div class="partner-super-item">
+                    <div class="partner-item-glow"></div>
+                    <div class="partner-image-container">
+                        <img src="./asstes/img/Ministry-of-Foreign-Affairs-01.png" alt="وزارة الخارجية" class="partner-super-logo">
+                        
+                    </div>
+           
+                </div>
+
+                <div class="partner-super-item">
+                    <div class="partner-item-glow"></div>
+                    <div class="partner-image-container">
+                        <img src="./asstes/img/General Directorate of Passports.png" alt="الجوازات" class="partner-super-logo">
+                        
+                    </div>
+             
+                </div>
+
+                <div class="partner-super-item">
+                    <div class="partner-item-glow"></div>
+                    <div class="partner-image-container">
+                        <img src="./asstes/img/Ministry of Human Resources and Social Development.png" alt="التأمينات" class="partner-super-logo">
+                        
+                    </div>
+           
+                </div>
+
+                <div class="partner-super-item">
+                    <div class="partner-item-glow"></div>
+                    <div class="partner-image-container">
+                        <img src="./asstes/img/balady.png" alt="بلدي" class="partner-super-logo">
+                        
+                    </div>
+                
+                </div>
+
+                <div class="partner-super-item">
+                    <div class="partner-item-glow"></div>
+                    <div class="partner-image-container">
+                        <img src="./asstes/img/Musaned- 01.png" alt="مساند" class="partner-super-logo">
+                        
+                    </div>
+              
+                </div>
+
+                <div class="partner-super-item">
+                    <div class="partner-item-glow"></div>
+                    <div class="partner-image-container">
+                        <img src="./asstes/img/Sadad-01.png" alt="سداد" class="partner-super-logo">
+                        
+                    </div>
+             
+                </div>
+
+                <div class="partner-super-item">
+                    <div class="partner-item-glow"></div>
+                    <div class="partner-image-container">
+                        <img src="./asstes/img/zakat-rax-and-customs-authority.png" alt="الزكاة والضريبة" class="partner-super-logo">
+                        
+                    </div>
+              
+                </div>
+
+                <div class="partner-super-item">
+                    <div class="partner-item-glow"></div>
+                    <div class="partner-image-container">
+                        <img src="./asstes/img/Mudad.png" alt="مدد" class="partner-super-logo">
+                        
+                    </div>
+          
+                </div>
+
+                <div class="partner-super-item">
+                    <div class="partner-item-glow"></div>
+                    <div class="partner-image-container">
+                        <img src="./asstes/img/QIWA-01.png" alt="قوى" class="partner-super-logo">
+                        
+                    </div>
+            
+                </div>
+            </div>
+     
+        </div>
     </section>
 
 
@@ -1279,10 +1821,10 @@
                 <!-- Company Info -->
                 <div>
                     <div class="flex items-center space-x-3 space-x-reverse mb-6">
-                         <div
-                        class="w-12 h-12 bg-saudi-green  rounded-lg flex items-center justify-center rounded-full border-2 border-white border-black">
-                        <img src="./asstes/img/شعار بدون خلفية.png" alt="">
-                      </div>
+                        <div
+                            class="w-12 h-12 bg-saudi-green  rounded-lg flex items-center justify-center rounded-full border-2 border-white border-black">
+                            <img src="./asstes/img/شعار بدون خلفية.png" alt="">
+                        </div>
                         <div>
                             <h3 class="text-xl font-bold">منصة آفاق</h3>
                             <p class="text-sm opacity-80">للخدمات الحكومية</p>
@@ -1297,8 +1839,8 @@
                             class="w-10 h-10 bg-blue-400 p-5 rounded-full flex items-center justify-center hover:bg-opacity-80 transition-colors">
                             <i class="fab fa-twitter text-white"></i>
                         </a>
-                       
-                       
+
+
                         <a href="https://www.tiktok.com/@basmat.afaq?_t=ZS-8zRT2jxTRUl&_r=1"
                             class="w-10 h-10 bg-black rounded-full flex items-center justify-center hover:bg-opacity-80 transition-colors">
                             <i class="fab fa-tiktok text-white"></i>
@@ -1360,8 +1902,8 @@
             <!-- Copyright -->
             <div class="border-t border-white border-opacity-20 pt-8">
                 <div class="text-center">
-                    <p class="opacity-90">
-                        © 2024 جميع الحقوق محفوظة لشركة منصة آفاق للخدمات الحكومية - المملكة العربية السعودية
+                    <p class="opacity-90" dir="ltr">
+                        © 2025 جميع الحقوق محفوظة لشركة منصة آفاق للخدمات الحكومية - المملكة العربية السعودية
                     </p>
                 </div>
             </div>
@@ -1398,12 +1940,12 @@
         window.addEventListener('scroll', () => {
             if (window.scrollY > 100) {
                 header.classList.add('navbar-scroll');
-            } else{
+            } else {
                 header.classList.remove('navbar-scroll');
                 header.classList.add('navbar-scroll-before');
                 header.classList.add('navbar-scroll-all');
             }
-        
+
 
         });
 
@@ -1518,6 +2060,180 @@
                 }, 50);
             }, 2000);
         }
+
+        // Enhanced True Infinite Partners Slider - Zero Lag Implementation
+        document.addEventListener('DOMContentLoaded', () => {
+            const track = document.getElementById('partnersInfiniteTrack');
+            if (!track) return;
+
+            // Get original partner items
+            const originalItems = Array.from(track.children);
+            const itemCount = originalItems.length;
+            
+            // Calculate the width needed for seamless loop
+            const itemWidth = 280 + 40; // item width + gap
+            const totalWidth = itemWidth * itemCount;
+            
+            // Clone items multiple times for ultra-smooth infinite effect
+            const cloneMultiplier = 4; // More clones = smoother infinite loop
+            
+            for (let i = 0; i < cloneMultiplier; i++) {
+                originalItems.forEach(item => {
+                    const clone = item.cloneNode(true);
+                    clone.classList.add('partner-clone');
+                    track.appendChild(clone);
+                });
+            }
+            
+            // Set up the infinite animation with perfect timing
+            const animationDuration = 40; // seconds
+            track.style.animation = `infiniteSlide ${animationDuration}s linear infinite`;
+            
+            // Enhanced hover interactions
+            const allItems = track.querySelectorAll('.partner-super-item');
+            let isHovered = false;
+            
+            allItems.forEach((item, index) => {
+                // Pause animation on hover
+                item.addEventListener('mouseenter', () => {
+                    if (!isHovered) {
+                        isHovered = true;
+                        track.style.animationPlayState = 'paused';
+                    }
+                    
+                    // Enhanced 3D hover effect
+                    item.style.transform = 'translateY(-20px) scale(1.05) rotateY(5deg)';
+                    item.style.zIndex = '100';
+                    item.style.filter = 'brightness(1.1) drop-shadow(0 20px 40px rgba(0,84,77,0.3))';
+                    
+                    // Affect neighboring items with magnetic effect
+                    const neighbors = [item.previousElementSibling, item.nextElementSibling];
+                    neighbors.forEach(neighbor => {
+                        if (neighbor && neighbor.classList.contains('partner-super-item')) {
+                            neighbor.style.transform = 'translateY(-5px) scale(0.95) rotateY(-2deg)';
+                            neighbor.style.filter = 'brightness(0.8)';
+                            neighbor.style.transition = 'all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                        }
+                    });
+                });
+                
+                item.addEventListener('mouseleave', () => {
+                    // Resume animation after short delay for smoother UX
+                    setTimeout(() => {
+                        if (isHovered) {
+                            isHovered = false;
+                            track.style.animationPlayState = 'running';
+                        }
+                    }, 300);
+                    
+                    // Reset all transformations
+                    item.style.transform = '';
+                    item.style.zIndex = '';
+                    item.style.filter = '';
+                    
+                    // Reset neighboring items
+                    const neighbors = [item.previousElementSibling, item.nextElementSibling];
+                    neighbors.forEach(neighbor => {
+                        if (neighbor && neighbor.classList.contains('partner-super-item')) {
+                            neighbor.style.transform = '';
+                            neighbor.style.filter = '';
+                        }
+                    });
+                });
+                
+                // Click animation
+                item.addEventListener('click', () => {
+                    item.style.transform = 'translateY(-25px) scale(1.08) rotateY(8deg)';
+                    setTimeout(() => {
+                        if (!item.matches(':hover')) {
+                            item.style.transform = '';
+                        }
+                    }, 200);
+                });
+            });
+            
+            // Performance optimization - use CSS transform instead of changing animation
+            // This ensures the smoothest possible infinite scroll
+            let animationStartTime = Date.now();
+            
+            function optimizeAnimation() {
+                // Reset animation seamlessly when it completes one cycle
+                const currentTime = Date.now();
+                const elapsed = (currentTime - animationStartTime) / 1000;
+                
+                if (elapsed >= animationDuration) {
+                    // Seamlessly reset the animation
+                    track.style.animation = 'none';
+                    track.offsetHeight; // Trigger reflow
+                    track.style.animation = `infiniteSlide ${animationDuration}s linear infinite`;
+                    animationStartTime = currentTime;
+                }
+                
+                requestAnimationFrame(optimizeAnimation);
+            }
+            
+            // Start optimization loop for ultra-smooth performance
+            requestAnimationFrame(optimizeAnimation);
+            
+            // Touch/swipe support for mobile
+            let startX = 0;
+            let isDragging = false;
+            
+            track.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+                isDragging = true;
+                track.style.animationPlayState = 'paused';
+            }, { passive: true });
+            
+            track.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                
+                const currentX = e.touches[0].clientX;
+                const diff = startX - currentX;
+                
+                // Add subtle resistance effect
+                track.style.transform = `translateX(${-diff * 0.5}px)`;
+            }, { passive: true });
+            
+            track.addEventListener('touchend', () => {
+                if (isDragging) {
+                    isDragging = false;
+                    track.style.transform = '';
+                    
+                    setTimeout(() => {
+                        track.style.animationPlayState = 'running';
+                    }, 200);
+                }
+            }, { passive: true });
+            
+            // Intersection Observer for performance - pause animation when not visible
+            const sectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        track.style.animationPlayState = 'running';
+                    } else {
+                        track.style.animationPlayState = 'paused';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            sectionObserver.observe(track.closest('.partners-mega-section'));
+            
+            // Animate progress bar
+            const progressBar = document.getElementById('partnersProgressBar');
+            if (progressBar) {
+                function updateProgressBar() {
+                    const currentTime = Date.now();
+                    const elapsed = ((currentTime - animationStartTime) % (animationDuration * 1000)) / 1000;
+                    const progress = (elapsed / animationDuration) * 100;
+                    progressBar.style.width = `${progress}%`;
+                    requestAnimationFrame(updateProgressBar);
+                }
+                updateProgressBar();
+            }
+            
+            console.log('🚀 Ultra-smooth infinite partners slider initialized!');
+        });
     </script>
 </body>
 
