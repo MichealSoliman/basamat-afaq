@@ -157,7 +157,13 @@
     background-position: center;
     background-repeat: no-repeat;
 }
-
+.banner-2{
+  background-image: url('./asstes/img/sign.png');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
 
         /* Partners Slider Styles */
 * {
