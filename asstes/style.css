@@ -11,8 +11,12 @@
             font-family: 'IBM Plex Sans Arabic', sans-serif;
         }
         
-        body {
-            background: linear-gradient(135deg, #f8fffe 0%, #e6f7f4 100%);
+       body {
+        font-family: 'Saudi', 'IBM Plex Sans Arabic', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'IBM Plex Sans Arabic', sans-serif;
+            font-weight: 600;
         }
         
         .saudi-green { color: var(--saudi-green); }
