@@ -39,11 +39,11 @@
         .border-gold { border-color: var(--gold); }
         
         .hero-pattern {
-            background-image: url('../asstes/img/banner.svg');
+            background-color: #00544d;
             background-size: cover;
             background-position: center;    
             background-repeat: no-repeat;
-            background-attachment: fixed;
+          
             /* background-image: 
                 radial-gradient(circle at 25% 25%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
                 radial-gradient(circle at 75% 75%, rgba(0, 84, 77, 0.1) 0%, transparent 50%),
