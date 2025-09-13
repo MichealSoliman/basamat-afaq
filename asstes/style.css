@@ -516,7 +516,7 @@
         /* Equal height cards grid */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             gap: 2rem;
             align-items: stretch;
         }
@@ -525,7 +525,7 @@
         .card-content {
             display: flex;
             flex-direction: column;
-            flex: 1;
+            height: 100%;
         }
 
         .card-image-container {
@@ -551,6 +551,13 @@
             .services-grid {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
             }
         }
 
