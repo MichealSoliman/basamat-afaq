@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Preferred domain
+Sitemap: https://basmatafaq.com/sitemap.xml
+
+# Block access to admin or sensitive areas (none for this static site)
+# Disallow: /admin/
+
+# Allow all images for SEO
+Allow: /asstes/img/
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
+
+# Additional SEO directives
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.webp$
+Allow: /*.svg$
+
+# Host directive (if needed)
+Host: https://basmatafaq.com/

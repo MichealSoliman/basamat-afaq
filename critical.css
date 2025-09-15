@@ -1,0 +1,137 @@
+/* Critical CSS for Above-the-Fold Content */
+/* This file should be inlined in the HTML head for better LCP */
+
+/* Font loading optimization */
+@font-face {
+  font-family: 'IBM Plex Sans Arabic';
+  font-display: swap;
+  font-weight: 400;
+  src: url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400&display=swap');
+}
+
+/* Critical hero section styles */
+.hero-critical {
+  background-color: #00544d;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5rem;
+}
+
+/* Critical navigation styles */
+.nav-critical {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  transition: all 0.3s ease;
+}
+
+/* Critical text styles */
+.text-critical {
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+  color: #d4af37;
+}
+
+/* Preload critical images */
+.hero-image-critical {
+  width: 100%;
+  max-width: 24rem;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: contain;
+}
+
+/* Reduce CLS by reserving space for images */
+.service-card-image {
+  width: 100%;
+  height: 12rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  background-color: #f3f4f6;
+}
+
+/* Performance optimizations */
+.performance-optimize {
+  content-visibility: auto;
+  contain-intrinsic-size: 200px;
+}
+
+/* Lazy loading placeholder */
+.lazy-placeholder {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Reduce layout shift for partner logos */
+.partner-logo-container {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9;
+}
+
+/* Optimize animations for better performance */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Critical button styles */
+.btn-critical {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  color: #00544d;
+  padding: 0.75rem 2rem;
+  border-radius: 0.75rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.btn-critical:hover {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(251, 191, 36, 0.3);
+}
+
+/* Mobile-first responsive design */
+@media (max-width: 768px) {
+  .hero-critical {
+    padding: 2rem 1rem;
+    min-height: auto;
+  }
+  
+  .text-critical {
+    font-size: 1.5rem;
+  }
+}
+
+/* Optimize for Core Web Vitals */
+.optimize-cls {
+  aspect-ratio: 16 / 9;
+  background-color: #f3f4f6;
+}
+
+.optimize-lcp {
+  loading: eager;
+  fetchpriority: high;
+}
+
+/* Preload critical fonts */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap');
