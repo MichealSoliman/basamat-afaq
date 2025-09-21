@@ -65,27 +65,7 @@
             });
         });
 
-        // Form Submission
-        document.querySelector('form').addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            // Get form data
-            const formData = new FormData(this);
-            const name = this.querySelector('input[type="text"]').value;
-            const email = this.querySelector('input[type="email"]').value;
-            const phone = this.querySelector('input[type="tel"]').value;
-            const message = this.querySelector('textarea').value;
-
-            // Simple validation
-            if (!name || !email || !phone || !message) {
-                alert('يرجى ملء جميع الحقول المطلوبة');
-                return;
-            }
-
-            // Simulate form submission
-            alert('تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.');
-            this.reset();
-        });
+  
 
         // Add loading animation to service cards
         const observerOptions = {

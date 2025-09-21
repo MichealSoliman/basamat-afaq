@@ -1,0 +1,274 @@
+{
+  "meta": {
+    "title": "Afaq General Services - Professional Government Services in Saudi Arabia | Sponsorship Transfer, Licenses, Official Transactions",
+    "description": "Afaq General Services provides professional electronic government services in Saudi Arabia for over 12 years. Sponsorship transfer, municipal licenses, Ministry of Commerce transactions, passports, social insurance, and Musaned. Call now 0508298617",
+    "keywords": "government services Saudi Arabia, sponsorship transfer, municipal licenses, government transactions, Ministry of Commerce, passports, social insurance, Musaned, Najiz, Qiwa, Mudad, Afaq Services"
+  },
+  "header": {
+    "companyName": "Afaq",
+    "companySubtitle": "General Services",
+    "navigation": {
+      "home": "Home",
+      "about": "About Us",
+      "services": "Our Services",
+      "partners": "Our Partners",
+      "rates": "Reviews",
+      "contact": "Contact Us"
+    }
+  },
+  "hero": {
+    "title": "Afaq General Services",
+    "subtitle": "Distinguished Vision and Wide Horizons",
+    "description": "More than 12 years of experience in services and government procedures",
+    "highlightText": "With high expertise, speed, and precision in execution",
+    "callNow": "Call Now",
+    "whatsapp": "WhatsApp",
+    "stats": {
+      "experience": "Years Experience",
+      "service": "24/7 Service",
+      "quality": "Quality Guarantee"
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "description": "We specialize in providing general services with the highest standards of quality and professionalism",
+    "features": [
+      {
+        "title": "Speed and Accuracy in Service Delivery",
+        "description": "We are committed to providing our services as quickly as possible while maintaining the highest levels of accuracy and quality in our work"
+      },
+      {
+        "title": "Handling Documents with Complete Confidentiality",
+        "description": "We guarantee the confidentiality and security of all information and documents belonging to our valued clients"
+      },
+      {
+        "title": "Customer Satisfaction and Credibility",
+        "description": "Customer satisfaction is our primary goal, and we strive to build long-term relationships based on trust and credibility"
+      },
+      {
+        "title": "Security in Service Implementation",
+        "description": "We apply the highest standards of security and protection in all stages of service implementation to ensure our clients' rights"
+      }
+    ]
+  },
+  "banner": {
+    "title": "Afaq General Services",
+    "description": "At Afaq Services, we aim to facilitate government procedures and provide comprehensive digital solutions that save time and effort. We are committed to speed, accuracy, and security in all our services to be your trusted partner in completing transactions in Saudi Arabia.",
+    "callToAction": "Contact Us Now"
+  },
+  "services": {
+    "title": "Our Services",
+    "description": "We provide a comprehensive range of general services to meet your various needs",
+    "categories": [
+      {
+        "id": "municipality",
+        "title": "Municipal Services",
+        "description": "We provide all municipal services electronically and in-person to complete your transactions quickly and professionally with the highest level of accuracy.",
+        "subDescription": "Facilitating all municipal license requests from issuance, renewal, and ownership transfer with follow-up until issuance.",
+        "services": [
+          "Issue commercial municipal license",
+          "Renew commercial municipal license",
+          "Modify commercial municipal license",
+          "Transfer ownership of commercial municipal license",
+          "Cancel or suspend commercial municipal license"
+        ]
+      },
+      {
+        "id": "insurance",
+        "title": "Insurance Services",
+        "description": "We offer a diverse range of insurance services that ensure peace of mind and ease of procedures.",
+        "subDescription": "We provide comprehensive insurance solutions for individuals and companies including medical insurance, vehicle insurance, and residence services.",
+        "services": [
+          "Medical insurance",
+          "Residence issuance insurance",
+          "Medical examination for residence issuance",
+          "Vehicle insurance",
+          "Vehicle ownership transfer insurance"
+        ]
+      },
+      {
+        "id": "najiz",
+        "title": "Najiz Services",
+        "description": "We provide all electronic Najiz services with ease and speed with precise follow-up until request completion.",
+        "subDescription": "We provide complete support to complete your judicial and legal transactions electronically with high professionalism.",
+        "services": [
+          "File court cases",
+          "File court judgment enforcement",
+          "Document custody deed",
+          "Document divorce deed",
+          "Document marriage contract"
+        ]
+      },
+      {
+        "id": "labor",
+        "title": "Ministry of Human Resources and Social Development Services (Labor Office)",
+        "description": "We provide all labor office services for individuals and companies in an easy and fast way with guaranteed accuracy in executing all official procedures.",
+        "subDescription": "We provide integrated solutions to facilitate all labor office transactions such as issuing, renewing, and canceling licenses and following up on requests until their complete completion.",
+        "services": [
+          "Sponsorship transfer for workers",
+          "Submit establishment violation settlement requests",
+          "File amicable settlement cases between worker and employer"
+        ]
+      },
+      {
+        "id": "mudad",
+        "title": "Mudad Platform Services",
+        "description": "We provide all Mudad platform services that contribute to enhancing transparency and protecting the rights of workers and employers with ease and reliability.",
+        "subDescription": "Through the Mudad platform, you can complete your financial and administrative transactions related to salaries and wage protection with high flexibility and guaranteed accuracy.",
+        "services": [
+          "Remove wage protection note and restore compliance rate to 100%",
+          "Transfer and upload employee payrolls monthly",
+          "Add employees and modify their data"
+        ]
+      },
+      {
+        "id": "gosi",
+        "title": "Social Insurance",
+        "description": "We provide social insurance services that help business owners and employees facilitate all procedures with professionalism and high accuracy.",
+        "subDescription": "With our experience, we guarantee you complete your transactions easily whether in employment, data modification, or reducing monthly costs incurred.",
+        "services": [
+          "Employ Saudi employees in establishments",
+          "Modify employee wages",
+          "Apply for government Sanad support",
+          "Apply for inheritance support",
+          "Apply for retirement salary"
+        ]
+      },
+      {
+        "id": "passports",
+        "title": "Passport and Residence Services",
+        "description": "We provide all passport and residence services quickly and easily with guaranteed high accuracy in executing all official transactions for individuals and companies.",
+        "subDescription": "We strive to facilitate all passport transactions from issuing and renewing residences and visas until completing procedures completely without hassle.",
+        "services": [
+          "Sponsorship transfer for all professions",
+          "Sponsorship transfer for dependents and companions",
+          "Sponsorship transfer for individual workers (private driver - domestic worker) for establishments and companies",
+          "Renew residences",
+          "Change professions"
+        ]
+      },
+      {
+        "id": "civilDefense",
+        "title": "Civil Defense Services",
+        "description": "We provide civil defense services with high professionalism to ensure your establishment complies with all safety and security standards.",
+        "subDescription": "We facilitate all procedures to obtain required permits and certificates with the highest speed and efficiency.",
+        "services": [
+          "Issue civil defense license",
+          "Issue all safety permits",
+          "Issue fire protection and prevention equipment installation certificate",
+          "Issue technical report",
+          "Issue completion certificate from police for camera installation"
+        ]
+      },
+      {
+        "id": "commerce",
+        "title": "Ministry of Commerce Services",
+        "description": "We provide all Ministry of Commerce services with easy and fast steps, with precise follow-up ensuring completion of your commercial and legal transactions without complications.",
+        "subDescription": "Whether you are an establishment owner, company, or individual, we help you manage and document your commercial business with efficiency and high professionalism.",
+        "services": [
+          "Open commercial establishment",
+          "Establish Saudi company",
+          "Transfer ownership of establishments and companies",
+          "Renew commercial records for establishments and companies",
+          "Cancel and close commercial records for establishments and companies",
+          "Reserve trade names in Arabic and English"
+        ]
+      },
+      {
+        "id": "musaned",
+        "title": "Musaned Services",
+        "description": "Musaned platform provides comprehensive solutions for issuing domestic worker visas with ease and flexibility with precise follow-up to complete requests quickly and reliably.",
+        "subDescription": "Whether you need a private driver or domestic worker visa, we provide complete support to complete the request with the highest levels of quality and professionalism.",
+        "services": [
+          "Recruit domestic workers",
+          "Transfer domestic worker services",
+          "Renew domestic worker visas"
+        ]
+      }
+    ],
+    "buttons": {
+      "callUs": "Call Us",
+      "whatsapp": "WhatsApp"
+    }
+  },
+  "partners": {
+    "title": "Our Partners",
+    "description": "We collaborate with the best companies and institutions to provide excellent services"
+  },
+  "testimonials": {
+    "title": "Reviews",
+    "description": "Our clients' opinions about our services",
+    "viewMore": "View more reviews",
+    "reviews": [
+      {
+        "name": "Khalid Al-Abdoli",
+        "location": "Jeddah, Saudi Arabia",
+        "timeAgo": "5 months ago",
+        "rating": 5,
+        "comment": "I recommend dealing with this office. They have speed of completion and credibility in dealing, and the employee is outstanding in morals and elegant treatment. Always forward, God willing."
+      },
+      {
+        "name": "Hassna Adam",
+        "location": "Riyadh, Saudi Arabia",
+        "timeAgo": "4 months ago",
+        "rating": 5,
+        "comment": "Very elegant and respectful treatment and fast service. Thank you very much Iman for your patience and style, and God willing, this is the office we will deal with only, believers God willing."
+      },
+      {
+        "name": "Ahmed Elayaty",
+        "location": "Dammam, Saudi Arabia",
+        "timeAgo": "3 weeks ago",
+        "rating": 5,
+        "comment": "Excellent treatment from Mr. Ali, and thank you for his morals and elegant style."
+      },
+      {
+        "name": "Nashwan Al-Shami",
+        "location": "Mecca, Saudi Arabia",
+        "timeAgo": "2 weeks ago",
+        "rating": 5,
+        "comment": "Basamat Afaq office, I dealt a lot with a nearby institution through them, and they were outstanding in elegance, excellent treatment, speed of completion, and credibility. I recommend dealing with them for all government services."
+      },
+      {
+        "name": "Jafar Jarash",
+        "location": "Medina, Saudi Arabia",
+        "timeAgo": "1 month ago",
+        "rating": 5,
+        "comment": "Basamat Afaq General Services is distinguished by providing excellent and fast services, especially in completing government transactions. The work team is cooperative and professional, enjoying efficiency and comprehensiveness. I recommend dealing with them to get the best service and guaranteed results. May God reward you."
+      }
+    ]
+  },
+  "contact": {
+    "phone": "0508298617",
+    "whatsapp": "966555952139",
+    "floatingButtons": {
+      "phone": "Call Us",
+      "whatsapp": "WhatsApp"
+    }
+  },
+  "footer": {
+    "companyName": "Afaq",
+    "companySubtitle": "General Services",
+    "description": "Afaq Office is an institution specialized in providing general services with the highest standards of quality and professionalism in the Kingdom of Saudi Arabia",
+    "quickLinks": "Quick Links",
+    "mainServices": "Main Services",
+    "contactInfo": "Contact Information",
+    "services": [
+      "Municipal Services",
+      "Passport Services",
+      "Ministry of Commerce",
+      "Social Insurance",
+      "Labor Office",
+      "Electronic Services"
+    ],
+    "address1": "Jeddah - Al-Bawadi District - Abu Al-Hassan Al-Hamdani Street",
+    "address2": "Jeddah - Al-Rabwa District - Yahya Al-Mu'allimi Street",
+    "email": "info@basmatafaq.com",
+    "copyright": "All rights reserved © 2025 Afaq General Services"
+  },
+  "common": {
+    "backToTop": "Back to Top",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success"
+  }
+}
