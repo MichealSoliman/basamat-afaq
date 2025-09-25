@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- عنوان الصفحة -->
+<title>CleanPlus - الرائد في خدمات النظافة بالرياض | شركة تنظيف احترافية</title>
+
+<meta name="description" content="شركة CleanPlus تقدم خدمات نظافة احترافية بالرياض تشمل تنظيف المنازل، المكاتب، الفلل، السجاد، المجالس وأكثر. فريق متخصص وخدمة عالية الجودة في الوقت المناسب." />
+
+<meta name="keywords" content="شركة تنظيف, خدمات نظافة, تنظيف منازل, تنظيف مكاتب, شركات تنظيف بالرياض, نظافة الفلل, تنظيف السجاد, نظافة المجالس, CleanPlus, شركة تنظيف بالرياض" />
+
+<meta name="author" content="CleanPlus - شركة خدمات النظافة بالرياض" />
+
+<!-- تحديد نوع الروبوتات -->
+<meta name="robots" content="index, follow" />
+
+<!-- Open Graph للفيسبوك -->
+<meta property="og:title" content="CleanPlus - الرائد في خدمات النظافة بالرياض" />
+<meta property="og:description" content="خدمات نظافة شاملة واحترافية بالرياض من شركة CleanPlus. احجز الآن!" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.cleanplusteam.com/" />
+<meta property="og:image" content="https://cleanplusteam.com/home_clean.avif" /> <!-- استبدل بالرابط الفعلي للصورة -->
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="CleanPlus - خدمات تنظيف احترافية بالرياض" />
+<meta name="twitter:description" content="شركة تنظيف بالرياض تقدم أعلى جودة في نظافة المنازل والمكاتب وجميع المنشآت." />
+<meta name="twitter:image" content="https://cleanplusteam.com/home_clean.avif" /> <!-- نفس الصورة للـ OG -->
+
+<!-- favicon (أيقونة الموقع) -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="CleanPlus أفضل شركة تنظيف في الرياض تقدم خدمات تنظيف المنازل والمكاتب والسجاد والخزانات بأعلى معايير الجودة وأفضل الأسعار في جميع أحياء الرياض">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            font-family: 'Cairo', sans-serif;
+        }
+        
+        body {
+            line-height: 1.8;
+            color: #333;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            height: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+        
+        .section-title {
+            position: relative;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+        
+        .stats-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 900;
+            display: block;
+        }
+        
+        .neighborhood-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .neighborhood-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .contact-section {
+            background: #2c3e50;
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .contact-info {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 50px;
+            padding: 12px 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .navbar-brand img {
+            height: 50px;
+        }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-right: 2rem;
+        }
+        
+        .feature-list li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 0;
+            color: #28a745;
+        }
+        
+        .service-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pricing-card.featured {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+        }
+        
+        .pricing-card.featured::before {
+            content: 'الأكثر طلباً';
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            background: #ff6b6b;
+            color: white;
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .why-choose-us {
+            background: #f8f9fa;
+            padding: 80px 0;
+        }
+        
+        .process-step {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .process-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 60px 0;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+        }
+        
+        .quality-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #28a745;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .service-detail {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .service-benefits {
+            background: white;
+            border-right: 4px solid #667eea;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: #2c3e50;">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://cleanplusteam.com/logo.avif" alt="CleanPlus Logo" class="me-2">
+                CleanPlus
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">من نحن</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">خدماتنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#areas">المناطق</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">اتصل بنا</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <h1 class="display-4 fw-bold mb-4">CleanPlus - الرائد في خدمات النظافة بالرياض</h1>
+                    <p class="lead mb-4">خبرة 12 عاماً في تقديم أفضل خدمات التنظيف للمنازل والمكاتب والمنشآت التجارية بأعلى معايير الجودة والاحترافية</p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
+                        <div class="badge bg-light text-dark p-3 rounded-pill">
+                            <i class="fas fa-shield-alt me-2"></i>
+                            ضمان الجودة 100%
+                        </div>
+                        <div class="badge bg-light text-dark p-3 rounded-pill">
+                            <i class="fas fa-clock me-2"></i>
+                            خدمة 24 ساعة
+                        </div>
+                        <div class="badge bg-light text-dark p-3 rounded-pill">
+                            <i class="fas fa-leaf me-2"></i>
+                            مواد صديقة للبيئة
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <a href="tel:+0565265233" class="btn btn-light btn-lg w-100">
+                                <i class="fas fa-phone me-2"></i>
+                                اتصل الآن: 0565265233+
+                            </a>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <a href="https://wa.me/0565265233" class="btn btn-success btn-lg w-100" target="_blank">
+                                <i class="fab fa-whatsapp me-2"></i>
+                                واتساب
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <span class="stat-number">12+</span>
+                        <h5>سنوات الخبرة</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <span class="stat-number">5000+</span>
+                        <h5>عميل راضٍ</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <span class="stat-number">20+</span>
+                        <h5>حي مخدوم</h5>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <h5>ضمان الجودة</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="section-title">من نحن - أفضل شركة تنظيف بالرياض</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="service-detail">
+                        <h3 class="mb-4">رؤيتنا</h3>
+                        <p>أن نكون الخيار الأول لخدمات التنظيف في الرياض وجميع أحيائها مثل العليا، الملز، والنسيم، من خلال تقديم خدمات تنظيف منازل وفلل بجودة لا مثيل لها. نسعى لتحقيق التميز في كل خدمة نقدمها، ونهدف إلى إرساء معايير جديدة في صناعة النظافة والتنظيف بالمملكة العربية السعودية.</p>
+                        
+                        <h3 class="mb-4 mt-4">رسالتنا</h3>
+                        <p>توفير بيئة نظيفة وصحية في المنازل والمكاتب عبر خدمات تنظيف شاملة تشمل غسيل السجاد، تنظيف الكنب، وتعقيم الخزانات بأسعار تنافسية. نلتزم بتطبيق أحدث التقنيات واستخدام أفضل المواد لضمان رضا عملائنا وحماية صحتهم وصحة عائلاتهم.</p>
+
+                        <h3 class="mb-4 mt-4">قيمنا الأساسية</h3>
+                        <ul class="feature-list">
+                            <li><strong>الاحترافية:</strong> نتميز بالخبرة العالية والتدريب المستمر لفرق العمل</li>
+                            <li><strong>الأمانة:</strong> نحافظ على ممتلكات عملائنا كأنها ممتلكاتنا الخاصة</li>
+                            <li><strong>الجودة:</strong> نستخدم أفضل المواد والمعدات لضمان أعلى معايير النظافة</li>
+                            <li><strong>رضا العميل:</strong> هدفنا الأول هو تحقيق رضا العميل الكامل</li>
+                            <li><strong>الالتزام:</strong> نلتزم بالمواعيد والجودة المتفق عليها</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://cleanplusteam.com/home_clean.avif" alt="فريق عمل CleanPlus" class="service-image mb-4">
+                    <div class="service-benefits">
+                        <h4><i class="fas fa-award text-primary me-2"></i>مميزاتنا التنافسية</h4>
+                        <ul class="feature-list mt-3">
+                            <li>فريق محترف مدرب على أحدث تقنيات التنظيف</li>
+                            <li>استخدام مواد تنظيف آمنة وصديقة للبيئة</li>
+                            <li>معدات حديثة ومتطورة للتنظيف العميق</li>
+                            <li>أسعار تنافسية تناسب جميع الميزانيات</li>
+                            <li>خدمة عملاء متاحة 24/7</li>
+                            <li>ضمان شامل على جميع الخدمات</li>
+                            <li>تغطية شاملة لجميع أحياء الرياض</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us">
+        <div class="container">
+            <h2 class="section-title">لماذا تختار CleanPlus؟</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-benefits text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h4>فريق محترف ومدرب</h4>
+                        <p>نمتلك فريق عمل محترف ومدرب على أعلى المستويات، يتمتع بخبرة واسعة في مجال التنظيف والصحة العامة. جميع موظفينا حاصلون على شهادات معتمدة في التنظيف والتعقيم، ويخضعون لبرامج تدريب مستمرة لضمان تقديم أفضل الخدمات.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-benefits text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h4>مواد آمنة وصديقة للبيئة</h4>
+                        <p>نحرص على استخدام مواد تنظيف آمنة وصديقة للبيئة، خالية من المواد الكيميائية الضارة. هذا يضمن سلامة أطفالكم وعائلاتكم، ويحافظ على البيئة المحيطة. جميع منتجاتنا معتمدة من قبل الجهات المختصة وتحمل شهادات الجودة العالمية.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-benefits text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h4>معدات حديثة ومتطورة</h4>
+                        <p>نستخدم أحدث المعدات والتقنيات في عمليات التنظيف، من مكانس كهربائية متطورة إلى أجهزة التعقيم بالبخار والأشعة فوق البنفسجية. هذا يضمن تنظيف عميق وفعال، ويوفر الوقت والجهد مع تحقيق أفضل النتائج.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-benefits text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4>خدمة سريعة ومرنة</h4>
+                        <p>نوفر خدمات التنظيف في مواعيد مرنة تناسب جدولكم اليومي، مع إمكانية الحجز المسبق أو الخدمة الطارئة. فريقنا مستعد للعمل في أي وقت، حتى في العطل والمناسبات، لضمان راحتكم ورضاكم التام.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-benefits text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <h4>أسعار تنافسية ومعقولة</h4>
+                        <p>نقدم أسعار تنافسية تناسب جميع الفئات والميزانيات، مع باقات متنوعة تلبي احتياجاتكم المختلفة. نؤمن بأن الجودة العالية لا تعني بالضرورة الأسعار المرتفعة، لذلك نسعى لتقديم أفضل قيمة مقابل المال.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-benefits text-center">
+                        <div class="service-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>ضمان شامل وتأمين</h4>
+                        <p>نوفر ضمان شامل على جميع خدماتنا، مع تأمين كامل لحماية ممتلكاتكم. إذا لم تكونوا راضين عن الخدمة، نعيد تنظيف المكان مجاناً أو نسترد المبلغ كاملاً. راحة بالكم وثقتكم هي أولويتنا القصوى.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <h2 class="section-title">خدماتنا المتميزة في التنظيف</h2>
+            <p class="text-center mb-5 fs-5">نقدم أفضل خدمات التنظيف الشامل للمنازل، المكاتب، السجاد، النوافذ، والتعقيم باستخدام أحدث التقنيات ومواد صديقة للبيئة. اكتشف خدماتنا الاحترافية التي تضمن بيئة صحية وآمنة لك ولعائلتك.</p>
+            
+            <div class="row">
+                <!-- تنظيف المنازل -->
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="service-card card h-100 position-relative">
+                        <div class="quality-badge">الأكثر طلباً</div>
+                        <img src="https://cleanplusteam.com/home_clean.avif" class="card-img-top service-image" alt="تنظيف المنازل">
+                        <div class="card-body">
+                            <div class="service-icon text-center">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <h4 class="card-title text-center">تنظيف المنازل</h4>
+                            <p class="card-text">خدمة تنظيف شاملة للمنازل مع التركيز على أدق التفاصيل. نقدم تنظيف عميق لجميع الغرف والمرافق، تنظيف الأرضيات والسجاد، تنظيف المطابخ والحمامات، تنظيف النوافذ والمرايا، وتعقيم شامل لضمان بيئة صحية وآمنة.</p>
+                            
+                            <div class="service-detail mb-3">
+                                <h5><i class="fas fa-star text-warning me-2"></i>مميزات الخدمة:</h5>
+                                <ul class="feature-list">
+                                    <li>تنظيف عميق وإزالة البقع الصعبة</li>
+                                    <li>تعقيم شامل لجميع الأسطح</li>
+                                    <li>تنظيف المطابخ والأجهزة</li>
+                                    <li>تنظيف الحمامات وإزالة الترسبات</li>
+                                    <li>تنظيف النوافذ والمرايا</li>
+                                    <li>ترتيب وتنظيم المساحات</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="service-benefits mb-3">
+                                <h5><i class="fas fa-cogs text-primary me-2"></i>عملية التنظيف:</h5>
+                                <ol class="ps-3">
+                                    <li><strong>التقييم الأولي:</strong> فحص شامل للمنزل وتحديد احتياجات التنظيف</li>
+                                    <li><strong>التخطيط:</strong> وضع خطة مخصصة حسب حجم ونوع المنزل</li>
+                                    <li><strong>التنفيذ:</strong> تنظيف شامل باستخدام أفضل المواد والمعدات</li>
+                                    <li><strong>المراجعة:</strong> فحص نهائي لضمان الجودة المطلوبة</li>
+                                </ol>
+                            </div>
+                            
+                            <div class="text-center">
+                                <p class="fw-bold text-primary mb-2">أسعار تبدأ من 300 ريال</p>
+                                <div class="d-flex gap-2">
+                                    <a href="tel:+0565265233" class="btn btn-primary flex-fill">اتصل الآن</a>
+                                    <a href="https://wa.me/0565265233" class="btn btn-success flex-fill">WhatsApp</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- تنظيف المكاتب -->
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="service-card card h-100">
+                        <img src="https://cleanplusteam.com/company_clean.avif" class="card-img-top service-image" alt="تنظيف المكاتب">
+                        <div class="card-body">
+                            <div class="service-icon text-center">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <h4 class="card-title text-center">تنظيف المكاتب والشركات</h4>
+                            <p class="card-text">خدمات احترافية لتنظيف المكاتب والشركات تشمل تنظيف يومي أو أسبوعي، تنظيف المكاتب والكراسي، تعقيم أجهزة الكمبيوتر والمعدات، تنظيف الأرضيات والموكيت، وتنظيف النوافذ والواجهات الزجاجية.</p>
+                            
+                            <div class="service-detail mb-3">
+                                <h5><i class="fas fa-briefcase text-warning me-2"></i>خدمات مخصصة للمكاتب:</h5>
+                                <ul class="feature-list">
+                                    <li>تنظيف يومي أو أسبوعي أو شهري</li>
+                                    <li>تلميع الأرضيات والموكيت</li>
+                                    <li>تنظيف النوافذ والواجهات</li>
+                                    <li>تعقيم أجهزة الكمبيوتر والهواتف</li>
+                                    <li>تنظيف دورات المياه والمطابخ</li>
+                                    <li>إفراغ سلال المهملات</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="service-benefits mb-3">
+                                <h5><i class="fas fa-chart-line text-success me-2"></i>فوائد بيئة العمل النظيفة:</h5>
+                                <ul class="feature-list">
+                                    <li>زيادة الإنتاجية والتركيز</li>
+                                    <li>تحسين الصحة العامة للموظفين</li>
+                                    <li>انطباع إيجابي للعملاء والزوار</li>
+                                    <li>تقليل انتشار الأمراض</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="text-center">
+                                <p class="fw-bold text-primary mb-2">عقود شهرية تبدأ من 800 ريال</p>
+                                <div class="d-flex gap-2">
+                                    <a href="tel:+0565265233" class="btn btn-primary flex-fill">اتصل الآن</a>
+                                    <a href="https://wa.me/0565265233" class="btn btn-success flex-fill">WhatsApp</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- تنظيف السجاد -->
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="service-card card h-100">
+                        <img src="https://cleanplusteam.com/home_cleaning.avif" class="card-img-top service-image" alt="تنظيف السجاد">
+                        <div class="card-body">
+                            <div class="service-icon text-center">
+                                <i class="fas fa-th-large"></i>
+                            </div>
+                            <h4 class="card-title text-center">تنظيف السجاد والموكيت</h4>
+                            <p class="card-text">خدمة متخصصة في تنظيف السجاد والموكيت باستخدام أحدث تقنيات التنظيف العميق. نستخدم مواد تنظيف خاصة لإزالة البقع والروائح، مع تقنيات التجفيف السريع والحفاظ على جودة الأقمشة وألوانها.</p>
+                            
+                            <div class="service-detail mb-3">
+                                <h5><i class="fas fa-magic text-warning me-2"></i>تقنيات التنظيف المتطورة:</h5>
+                                <ul class="feature-list">
+                                    <li>التنظيف بالبخار عالي الضغط</li>
+                                    <li>إزالة البقع العميقة والروائح</li>
+                                    <li>تعقيم شامل للقضاء على الجراثيم</li>
+                                    <li>تجفيف سريع خلال ساعات</li>
+                                    <li>حماية الألوان والأقمشة</li>
+                                    <li>علاج البقع الصعبة</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="service-benefits mb-3">
+                                <h5><i class="fas fa-heartbeat text-danger me-2"></i>فوائد صحية:</h5>
+                                <ul class="feature-list">
+                                    <li>إزالة الغبار والعوالق المسببة للحساسية</li>
+                                    <li>القضاء على البكتيريا والفطريات</li>
+                                    <li>تحسين جودة الهواء في المنزل</li>
+                                    <li>حماية الأطفال من الأمراض</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="text-center">
+                                <p class="fw-bold text-primary mb-2">4-8 ريال للمتر المربع</p>
+                                <div class="d-flex gap-2">
+                                    <a href="tel:+0565265233" class="btn btn-primary flex-fill">اتصل الآن</a>
+                                    <a href="https://wa.me/0565265233" class="btn btn-success flex-fill">WhatsApp</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- تنظيف الخزانات -->
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="service-card card h-100">
+                        <img src="https://cleanplusteam.com/khazan_cleaning.avif" class="card-img-top service-image" alt="تنظيف الخزانات">
+                        <div class="card-body">
+                            <div class="service-icon text-center">
+                                <i class="fas fa-tint"></i>
+                            </div>
+                            <h4 class="card-title text-center">تنظيف وتعقيم الخزانات</h4>
+                            <p class="card-text">خدمة تنظيف وتعقيم خزانات المياه العلوية والأرضية باستخدام مواد تعقيم آمنة ومعتمدة. نضمن نظافة المياه وسلامتها للاستخدام البشري، مع فحص دوري وصيانة شاملة لنظام الخزانات.</p>
+                            
+                            <div class="service-detail mb-3">
+                                <h5><i class="fas fa-shield-virus text-primary me-2"></i>عملية التنظيف والتعقيم:</h5>
+                                <ul class="feature-list">
+                                    <li>تفريغ الخزان بالكامل</li>
+                                    <li>تنظيف الجدران والأرضية</li>
+                                    <li>إزالة الترسبات والأوساخ</li>
+                                    <li>تعقيم شامل بمواد آمنة</li>
+                                    <li>فحص التسريبات والشقوق</li>
+                                    <li>إعادة تعبئة الخزان بمياه نظيفة</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="service-benefits mb-3">
+                                <h5><i class="fas fa-water text-info me-2"></i>أهمية تنظيف الخزانات:</h5>
+                                <ul class="feature-list">
+                                    <li>ضمان نظافة وسلامة مياه الشرب</li>
+                                    <li>منع تكون الطحالب والبكتيريا</li>
+                                    <li>إزالة الروائح والطعم غير المرغوب</li>
+                                    <li>الوقاية من الأمراض المنقولة بالمياه</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="text-center">
+                                <p class="fw-bold text-primary mb-2">تبدأ من 200 ريال للخزان</p>
+                                <div class="d-flex gap-2">
+                                    <a href="tel:+0565265233" class="btn btn-primary flex-fill">اتصل الآن</a>
+                                    <a href="https://wa.me/0565265233" class="btn btn-success flex-fill">WhatsApp</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- التعقيم الشامل -->
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="service-card card h-100">
+                        <img src="https://cleanplusteam.com/hotel_clean.avif" class="card-img-top service-image" alt="التعقيم الشامل">
+                        <div class="card-body">
+                            <div class="service-icon text-center">
+                                <i class="fas fa-shield-virus"></i>
+                            </div>
+                            <h4 class="card-title text-center">التعقيم الشامل</h4>
+                            <p class="card-text">خدمة تعقيم متقدمة باستخدام أحدث الأجهزة والتقنيات للقضاء على الفيروسات والبكتيريا. نستخدم مواد تعقيم آمنة ومعتمدة من منظمة الصحة العالمية، مع ضمان حماية شاملة لجميع أفراد العائلة.</p>
+                            
+                            <div class="service-detail mb-3">
+                                <h5><i class="fas fa-virus-slash text-danger me-2"></i>تقنيات التعقيم المتطورة:</h5>
+                                <ul class="feature-list">
+                                    <li>التعقيم بالأشعة فوق البنفسجية</li>
+                                    <li>الرش بمواد التعقيم المعتمدة</li>
+                                    <li>التعقيم بالبخار عالي الحرارة</li>
+                                    <li>استخدام الأوزون للتطهير</li>
+                                    <li>تعقيم الأسطح والهواء</li>
+                                    <li>فحص جودة التعقيم</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="service-benefits mb-3">
+                                <h5><i class="fas fa-home text-success me-2"></i>المناطق المشمولة:</h5>
+                                <ul class="feature-list">
+                                    <li>غرف النوم وصالات المعيشة</li>
+                                    <li>المطابخ والحمامات</li>
+                                    <li>المكاتب وغرف الاجتماعات</li>
+                                    <li>السيارات والمركبات</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="text-center">
+                                <p class="fw-bold text-primary mb-2">تبدأ من 150 ريال للغرفة</p>
+                                <div class="d-flex gap-2">
+                                    <a href="tel:+0565265233" class="btn btn-primary flex-fill">اتصل الآن</a>
+                                    <a href="https://wa.me/0565265233" class="btn btn-success flex-fill">WhatsApp</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- مكافحة الحشرات -->
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="service-card card h-100">
+                        <img src="https://cleanplusteam.com/pest_control.jpg" class="card-img-top service-image" alt="مكافحة الحشرات">
+                        <div class="card-body">
+                            <div class="service-icon text-center">
+                                <i class="fas fa-bug"></i>
+                            </div>
+                            <h4 class="card-title text-center">مكافحة الحشرات والآفات</h4>
+                            <p class="card-text">خدمة شاملة لمكافحة جميع أنواع الحشرات والآفات باستخدام مبيدات آمنة وفعالة. نقدم حلول وقائية وعلاجية مخصصة حسب نوع الآفة، مع ضمان على الخدمة ومتابعة دورية لضمان عدم عودة المشكلة.</p>
+                            
+                            <div class="service-detail mb-3">
+                                <h5><i class="fas fa-crosshairs text-warning me-2"></i>أنواع الآفات المعالجة:</h5>
+                                <ul class="feature-list">
+                                    <li>الصراصير والنمل</li>
+                                    <li>البق والعث</li>
+                                    <li>الفئران والقوارض</li>
+                                    <li>النمل الأبيض والأرضة</li>
+                                    <li>الذباب والبعوض</li>
+                                    <li>العناكب والعقارب</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="service-benefits mb-3">
+                                <h5><i class="fas fa-leaf text-success me-2"></i>مميزات خدمتنا:</h5>
+                                <ul class="feature-list">
+                                    <li>مبيدات آمنة وصديقة للبيئة</li>
+                                    <li>فحص شامل وتشخيص دقيق</li>
+                                    <li>خطة علاج مخصصة</li>
+                                    <li>ضمان على الخدمة لمدة 6 أشهر</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="text-center">
+                                <p class="fw-bold text-primary mb-2">تبدأ من 250 ريال للمنزل</p>
+                                <div class="d-flex gap-2">
+                                    <a href="tel:+0565265233" class="btn btn-primary flex-fill">اتصل الآن</a>
+                                    <a href="https://wa.me/0565265233" class="btn btn-success flex-fill">WhatsApp</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">كيف نعمل؟ - خطوات العمل المحترفة</h2>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="process-step">
+                        <div class="process-number">1</div>
+                        <h4>الاتصال والحجز</h4>
+                        <p>تواصل معنا عبر الهاتف أو واتساب لحجز موعد. سنقوم بتحديد الخدمة المطلوبة والوقت المناسب لك.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="process-step">
+                        <div class="process-number">2</div>
+                        <h4>التقييم والتخطيط</h4>
+                        <p>زيارة ميدانية لتقييم احتياجات التنظيف ووضع خطة عمل مخصصة تناسب متطلباتك وميزانيتك.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="process-step">
+                        <div class="process-number">3</div>
+                        <h4>التنفيذ المحترف</h4>
+                        <p>تنفيذ عملية التنظيف باستخدام أفضل المواد والمعدات من قبل فريق محترف ومدرب.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="process-step">
+                        <div class="process-number">4</div>
+                        <h4>المراجعة والتسليم</h4>
+                        <p>فحص نهائي للتأكد من جودة العمل وتسليم المكان نظيف ومعقم حسب المعايير المتفق عليها.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Areas Section -->
+    <section id="areas" class="py-5">
+        <div class="container">
+            <h2 class="section-title">المناطق المخدومة في الرياض</h2>
+            <p class="text-center mb-5 fs-5">نوفر خدمات تنظيف احترافية في جميع أحياء الرياض الرئيسية بفرق عمل متخصصة ومعدات حديثة</p>
+            
+            <div class="row">
+                <!-- الملز -->
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="neighborhood-card">
+                        <h4><i class="fas fa-map-marker-alt text-primary me-2"></i>حي الملز</h4>
+                        <p>نقدم خدمات تنظيف احترافية في حي الملز تشمل تنظيف الشقق والفلل بأسعار تبدأ من 300 ريال. نستخدم تقنيات متطورة للتنظيف العميق للسجاد والموكيت وتعقيم خزانات المياه بمعدات حديثة. خدماتنا متاحة يومياً مع فريق مدرب متخصص في الملز لضمان بيئة نظيفة وصحية لسكان الحي.</p>
+                        <div class="service-benefits">
+                            <h5>خدمات مميزة في الملز:</h5>
+                            <ul class="feature-list">
+                                <li>تنظيف الشقق والفلل السكنية</li>
+                                <li>تنظيف المكاتب والشركات</li>
+                                <li>غسيل السجاد والموكيت</li>
+                                <li>تعقيم خزانات المياه</li>
+                                <li>خدمة طوارئ 24 ساعة</li>
+                            </ul>
+                        </div>
+                        <div class="text-center mt-3">
+                            <a href="tel:+0565265233" class="btn btn-primary me-2">اتصل الآن</a>
+                            <a href="https://wa.me/0565265233" class="btn btn-success">واتساب</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- العليا -->
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="neighborhood-card">
+                        <h4><i class="fas fa-map-marker-alt text-primary me-2"></i>حي العليا</h4>
+                        <p>في حي العليا الراقي، نقدم خدمات تنظيف المكاتب والمنازل بجودة عالية تشمل تنظيف النوافذ والستائر وتلميع الأرضيات بأحدث المعدات. فريقنا المتخصص يستخدم مواد تنظيف آمنة وصديقة للبيئة لضمان راحة العملاء. خدماتنا مثالية للمحلات التجارية والمكاتب والمنازل الفاخرة في العليا بأسعار تنافسية.</p>
+                        <div class="service-benefits">
+                            <h5>خدمات حي العليا:</h5>
+                            <ul class="feature-list">
+                                <li>تنظيف المكاتب والشركات الكبرى</li>
+                                <li>تنظيف المحلات التجارية</li>
+                                <li>تنظيف النوافذ والواجهات الزجاجية</li>
+                                <li>تلميع الأرضيات الرخامية</li>
+                                <li>عقود صيانة شهرية</li>
+                            </ul>
+                        </div>
+                        <div class="text-center mt-3">
+                            <a href="tel:+0565265233" class="btn btn-primary me-2">اتصل الآن</a>
+                            <a href="https://wa.me/0565265233" class="btn btn-success">واتساب</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- النخيل -->
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="neighborhood-card">
+                        <h4><i class="fas fa-map-marker-alt text-primary me-2"></i>حي النخيل</h4>
+                        <p>خدمات تنظيف متميزة في حي النخيل تشمل تنظيف القصور والفلل الكبيرة مع التركيز على تنظيف المسابح وتنسيق الحدائق. نقدم خدمات تنظيف الأثاث الجلدي والخشبي الفاخر بتقنيات متطورة وتعطير المنازل بعطور طبيعية فاخرة لإضفاء لمسة راقية تناسب طبيعة الحي المميز.</p>
+                        <div class="service-benefits">
+                            <h5>خدمات حي النخيل الفاخرة:</h5>
+                            <ul class="feature-list">
+                                <li>تنظيف القصور والفلل الكبيرة</li>
+                                <li>تنظيف وصيانة المسابح</li>
+                                <li>تنظيف الأثاث الفاخر</li>
+                                <li>تنسيق وتنظيف الحدائق</li>
+                                <li>خدمات التعطير الفاخرة</li>
+                            </ul>
+                        </div>
+                        <div class="text-center mt-3">
+                            <a href="tel:+0565265233" class="btn btn-primary me-2">اتصل الآن</a>
+                            <a href="https://wa.me/0565265233" class="btn btn-success">واتساب</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- الصحافة -->
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="neighborhood-card">
+                        <h4><i class="fas fa-map-marker-alt text-primary me-2"></i>حي الصحافة</h4>
+                        <p>في حي الصحافة، نوفر خدمات تنظيف ما بعد التشطيب والدهان بأسعار تبدأ من 600 ريال للفلل. تشمل خدماتنا تنظيف شامل لإزالة بقايا الأعمال الإنشائية، تنظيف الكنب والمفروشات، وتنظيف السيارات بمعدات متطورة. فريقنا المتخصص يضمن نظافة مثالية مع استجابة سريعة لجميع طلبات العملاء في الصحافة.</p>
+                        <div class="service-benefits">
+                            <h5>خدمات حي الصحافة:</h5>
+                            <ul class="feature-list">
+                                <li>تنظيف ما بعد التشطيب</li>
+                                <li>إزالة بقايا الدهان والجبس</li>
+                                <li>تنظيف الكنب والمفروشات</li>
+                                <li>تنظيف السيارات</li>
+                                <li>خدمات التنظيف السريع</li>
+                            </ul>
+                        </div>
+                        <div class="text-center mt-3">
+                            <a href="tel:+0565265233" class="btn btn-primary me-2">اتصل الآن</a>
+                            <a href="https://wa.me/0565265233" class="btn btn-success">واتساب</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- الياسمين -->
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="neighborhood-card">
+                        <h4><i class="fas fa-map-marker-alt text-primary me-2"></i>حي الياسمين</h4>
+                        <p>خدمات تنظيف فاخرة في حي الياسمين تشمل تنظيف الثريات والكريستال بعناية فائقة وتلميع الأرضيات الرخامية بتقنيات احترافية. نقدم خدمات VIP للمنازل الفاخرة مع تنظيف التحف والديكورات الثمينة بأيدي خبراء متخصصين. فريقنا مدرب على تقديم تجربة تنظيف راقية تناسب مستوى الحي المتميز بأسعار مناسبة.</p>
+                        <div class="service-benefits">
+                            <h5>خدمات VIP في الياسمين:</h5>
+                            <ul class="feature-list">
+                                <li>تنظيف الثريات والكريستال</li>
+                                <li>تلميع الأرضيات الرخامية</li>
+                                <li>تنظيف التحف والديكورات</li>
+                                <li>خدمات VIP للمنازل الفاخرة</li>
+                                <li>تنظيف بالمواعيد المخصصة</li>
+                            </ul>
+                        </div>
+                        <div class="text-center mt-3">
+                            <a href="tel:+0565265233" class="btn btn-primary me-2">اتصل الآن</a>
+                            <a href="https://wa.me/0565265233" class="btn btn-success">واتساب</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- الروضة -->
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="neighborhood-card">
+                        <h4><i class="fas fa-map-marker-alt text-primary me-2"></i>حي الروضة</h4>
+                        <p>في حي الروضة العائلي، نقدم خدمات تنظيف شاملة للمنازل العائلية تشمل تنظيف الحدائق والمرافق الخارجية بعناية خاصة. خدماتنا تشمل تنظيف السجاد بأسعار تنافسية 4-8 ريال للمتر وتعقيم الخزانات باستخدام مواد آمنة للأطفال. فريقنا المتخصص يضمن نظافة مثالية للمنازل العائلية في الروضة بمواعيد مرنة تناسب الأسر.</p>
+                        <div class="service-benefits">
+                            <h5>خدمات حي الروضة العائلية:</h5>
+                            <ul class="feature-list">
+                                <li>تنظيف المنازل العائلية</li>
+                                <li>تنظيف وتنسيق الحدائق</li>
+                                <li>تنظيف المرافق الخارجية</li>
+                                <li>تعقيم آمن للأطفال</li>
+                                <li>مواعيد مرنة للأسر</li>
+                            </ul>
+                        </div>
+                        <div class="text-center mt-3">
+                            <a href="tel:+0565265233" class="btn btn-primary me-2">اتصل الآن</a>
+                            <a href="https://wa.me/0565265233" class="btn btn-success">واتساب</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- النسيم -->
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="neighborhood-card">
+                        <h4><i class="fas fa-map-marker-alt text-primary me-2"></i>حي النسيم</h4>
+                        <p>في حي النسيم الجميل، نقدم خدمات تنظيف موسمية تشمل التنظيف الربيعي الشامل وتحضير المنازل للأعياد والمناسبات الخاصة. نستخدم عطور طبيعية منعشة لتعطير المنازل مع تنظيف احترافي للسجاد والمفروشات بأسعار تبدأ من 4 ريال للمتر، لتوفير بيئة منعشة ونظيفة تناسب اسم الحي العطر.</p>
+                        <div class="service-benefits">
+                            <h5>خدمات حي النسيم المنعشة:</h5>
+                            <ul class="feature-list">
+                                <li>التنظيف الموسمي والربيعي</li>
+                                <li>تحضير المنازل للأعياد</li>
+                                <li>التعطير بالعطور الطبيعية</li>
+                                <li>تنظيف المفروشات والستائر</li>
+                                <li>خدمات التنظيف المنعشة</li>
+                            </ul>
+                        </div>
+                        <div class="text-center mt-3">
+                            <a href="tel:+0565265233" class="btn btn-primary me-2">اتصل الآن</a>
+                            <a href="https://wa.me/0565265233" class="btn btn-success">واتساب</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- السويدي -->
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="neighborhood-card">
+                        <h4><i class="fas fa-map-marker-alt text-primary me-2"></i>حي السويدي</h4>
+                        <p>خدمات تنظيف اقتصادية في حي السويدي بأسعار تبدأ من 200 ريال للشقق الصغيرة. نقدم باقات تنظيف أسبوعية وشهرية تناسب جميع الميزانيات مع تنظيف احترافي للمكاتب والشقق بجودة عالية. فريقنا المحلي يضمن خدمة سريعة ونظافة مثالية في السويدي بأسعار تنافسية ومرونة في طرق الدفع.</p>
+                        <div class="service-benefits">
+                            <h5>باقات السويدي الاقتصادية:</h5>
+                            <ul class="feature-list">
+                                <li>أسعار اقتصادية تناسب الجميع</li>
+                                <li>باقات أسبوعية وشهرية</li>
+                                <li>تنظيف الشقق الصغيرة</li>
+                                <li>مرونة في طرق الدفع</li>
+                                <li>خدمة محلية سريعة</li>
+                            </ul>
+                        </div>
+                        <div class="text-center mt-3">
+                            <a href="tel:+0565265233" class="btn btn-primary me-2">اتصل الآن</a>
+                            <a href="https://wa.me/0565265233" class="btn btn-success">واتساب</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- أحياء أخرى -->
+                <div class="col-12">
+                    <div class="neighborhood-card text-center">
+                        <h4><i class="fas fa-city text-primary me-2"></i>أحياء أخرى في الرياض</h4>
+                        <p class="mb-4">نخدم أيضاً العديد من الأحياء الأخرى في الرياض بنفس مستوى الجودة والاحترافية</p>
+                        
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 mb-3">
+                                <div class="service-benefits">
+                                    <h5>الأحياء الشمالية</h5>
+                                    <ul class="list-unstyled">
+                                        <li>• الفيحاء</li>
+                                        <li>• المرسلات</li>
+                                        <li>• الربيع</li>
+                                        <li>• المروج</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-3">
+                                <div class="service-benefits">
+                                    <h5>الأحياء الشرقية</h5>
+                                    <ul class="list-unstyled">
+                                        <li>• الملك فهد</li>
+                                        <li>• الملك عبد الله</li>
+                                        <li>• الدرعية</li>
+                                        <li>• الشفا</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-3">
+                                <div class="service-benefits">
+                                    <h5>الأحياء الغربية</h5>
+                                    <ul class="list-unstyled">
+                                        <li>• الحمراء</li>
+                                        <li>• غرناطة</li>
+                                        <li>• اليرموك</li>
+                                        <li>• العريجاء</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-3">
+                                <div class="service-benefits">
+                                    <h5>خدمة شاملة</h5>
+                                    <ul class="list-unstyled">
+                                        <li>• تغطية 100% للرياض</li>
+                                        <li>• فرق متخصصة</li>
+                                        <li>• استجابة سريعة</li>
+                                        <li>• جودة موحدة</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mt-4">
+                            <p class="fw-bold text-primary mb-3">اتصل بنا لمعرفة خدماتنا في حيك</p>
+                            <a href="tel:+0565265233" class="btn btn-primary me-2">اتصل الآن</a>
+                            <a href="https://wa.me/0565265233" class="btn btn-success">واتساب</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">باقات وأسعار خدمات التنظيف</h2>
+            <p class="text-center mb-5 fs-5">اختر الباقة التي تناسب احتياجاتك وميزانيتك من بين خياراتنا المتنوعة</p>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="pricing-card">
+                        <h4 class="text-primary">الباقة الأساسية</h4>
+                        <div class="h2 text-center my-4">
+                            <span class="text-primary">من 200</span>
+                            <small class="text-muted">ريال</small>
+                        </div>
+                        <ul class="feature-list">
+                            <li>تنظيف الأرضيات والموكيت</li>
+                            <li>تنظيف الحمامات الأساسي</li>
+                            <li>تنظيف المطبخ</li>
+                            <li>إفراغ سلال المهملات</li>
+                            <li>تنظيف النوافذ من الداخل</li>
+                        </ul>
+                        <div class="text-center mt-4">
+                            <a href="tel:+966569131252" class="btn btn-primary w-100">احجز الآن</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="pricing-card featured">
+                        <h4 class="text-primary">الباقة الشاملة</h4>
+                        <div class="h2 text-center my-4">
+                            <span class="text-primary">من 400</span>
+                            <small class="text-muted">ريال</small>
+                        </div>
+                        <ul class="feature-list">
+                            <li>جميع خدمات الباقة الأساسية</li>
+                            <li>تنظيف السجاد والمفروشات</li>
+                            <li>تعقيم وتطهير شامل</li>
+                            <li>تنظيف النوافذ من الداخل والخارج</li>
+                            <li>تنظيف الثلاجة من الداخل</li>
+                            <li>ترتيب وتنظيم الأثاث</li>
+                        </ul>
+                        <div class="text-center mt-4">
+                            <a href="tel:+0565265233" class="btn btn-primary w-100">احجز الآن</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="pricing-card">
+                        <h4 class="text-primary">الباقة الفاخرة</h4>
+                        <div class="h2 text-center my-4">
+                            <span class="text-primary">من 800</span>
+                            <small class="text-muted">ريال</small>
+                        </div>
+                        <ul class="feature-list">
+                            <li>جميع خدمات الباقة الشاملة</li>
+                            <li>تنظيف وتعقيم الخزانات</li>
+                            <li>مكافحة الحشرات الأساسية</li>
+                            <li>تنظيف الثريات والتحف</li>
+                            <li>تعطير المنزل</li>
+                            <li>خدمة مابعد التنظيف</li>
+                            <li>ضمان لمدة أسبوع</li>
+                        </ul>
+                        <div class="text-center mt-4">
+                            <a href="tel:+0565265233" class="btn btn-primary w-100">احجز الآن</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <h4>عروض خاصة</h4>
+                <div class="row mt-4">
+                    <div class="col-md-4">
+                        <div class="service-benefits text-center">
+                            <h5 class="text-success">خصم 20%</h5>
+                            <p>على العقود الشهرية</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-benefits text-center">
+                            <h5 class="text-success">خصم 30%</h5>
+                            <p>على العقود السنوية</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-benefits text-center">
+                            <h5 class="text-success">خدمة مجانية</h5>
+                            <p>عند الحجز لأول مرة</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title">الأسئلة الشائعة</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="faq-item">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                        ما هي المواد المستخدمة في التنظيف؟
+                                    </button>
+                                </h2>
+                                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        نستخدم مواد تنظيف آمنة وصديقة للبيئة، معتمدة من منظمة الصحة العالمية. جميع المنتجات خالية من المواد الكيميائية الضارة وآمنة للأطفال والحيوانات الأليفة. نختار منتجات عالية الجودة تضمن نظافة فعالة دون الإضرار بالصحة أو البيئة.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                        كم يستغرق تنظيف المنزل؟
+                                    </button>
+                                </h2>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        يعتمد وقت التنظيف على حجم المنزل ونوع الخدمة المطلوبة. عادة يستغرق تنظيف الشقة المتوسطة 2-4 ساعات، بينما الفلل الكبيرة قد تحتاج 6-8 ساعات. نقدم تقدير دقيق للوقت المطلوب بعد معاينة المكان أو عبر الهاتف حسب المعلومات المقدمة.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                        هل تقدمون ضمان على الخدمة؟
+                                    </button>
+                                </h2>
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        نعم، نقدم ضمان شامل على جميع خدماتنا. إذا لم تكن راضياً عن مستوى النظافة، سنعيد تنظيف المكان مجاناً خلال 24 ساعة. كما نوفر تأمين شامل لحماية ممتلكاتك أثناء عملية التنظيف، ونتحمل مسؤولية أي أضرار قد تحدث.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                        هل يمكن تحديد موعد في نفس اليوم؟
+                                    </button>
+                                </h2>
+                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        نعم، نوفر خدمة الطوارئ والحجز في نفس اليوم حسب توفر الفرق. ننصح بالحجز المسبق لضمان الحصول على الموعد المرغوب. لدينا فرق عمل متاحة معظم أوقات اليوم، ونسعى لتلبية احتياجاتكم الطارئة قدر الإمكان.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                        ما هي طرق الدفع المتاحة؟
+                                    </button>
+                                </h2>
+                                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        نقبل جميع طرق الدفع المناسبة: النقد، التحويل البنكي، بطاقات الائتمان، والدفع الإلكتروني عبر التطبيقات المصرفية. يمكن الدفع قبل الخدمة أو بعدها حسب تفضيلكم. نوفر أيضاً إمكانية الدفع بالتقسيط للعقود الشهرية والسنوية.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                                        هل تنظفون المكاتب والشركات؟
+                                    </button>
+                                </h2>
+                                <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        نعم، نقدم خدمات تنظيف احترافية للمكاتب والشركات والمنشآت التجارية. لدينا فرق متخصصة في تنظيف بيئات العمل مع مراعاة طبيعة العمل والخصوصية. نوفر عقود تنظيف يومية أو أسبوعية أو شهرية حسب احتياجاتكم، مع خدمات مخصصة لكل نوع من المنشآت.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">آراء عملائنا</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="testimonial-card">
+                        <div class="mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p>"خدمة ممتازة وفريق محترف جداً. نظفوا منزلي بإتقان شديد واستخدموا مواد آمنة. أنصح بهم بشدة."</p>
+                        <h5 class="text-primary">أحمد محمد</h5>
+                        <small class="text-muted">حي الملز</small>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="testimonial-card">
+                        <div class="mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p>"شركة موثوقة وأسعار معقولة. نظفوا مكتبنا وكانت النتيجة رائعة. التزموا بالموعد المحدد."</p>
+                        <h5 class="text-primary">فاطمة السعد</h5>
+                        <small class="text-muted">حي العليا</small>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="testimonial-card">
+                        <div class="mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p>"غسلوا السجاد وأزالوا بقع صعبة جداً. الخدمة سريعة والنتيجة فاقت توقعاتي. شكراً لكم."</p>
+                        <h5 class="text-primary">عبدالله القحطاني</h5>
+                        <small class="text-muted">حي النسيم</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title text-white">تواصل معنا</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="contact-info text-center">
+                        <div class="service-icon text-white">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h4>اتصل بنا</h4>
+                        <p class="mb-3">نحن متاحون 24/7 لتلبية احتياجاتكم</p>
+                        <a href="tel:+0565265233" class="btn btn-light">
+                            <i class="fas fa-phone me-2"></i>
+                            0565265233+
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="contact-info text-center">
+                        <div class="service-icon text-white">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h4>واتساب</h4>
+                        <p class="mb-3">تواصل معنا عبر واتساب للاستفسار والحجز</p>
+                        <a href="https://wa.me/0565265233" class="btn btn-success" target="_blank">
+                            <i class="fab fa-whatsapp me-2"></i>
+                            أرسل رسالة
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="contact-info text-center">
+                        <div class="service-icon text-white">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>موقعنا</h4>
+                        <p class="mb-3">نخدم جميع أحياء الرياض</p>
+                        <address class="mb-0">
+                            الرياض، المملكة العربية السعودية<br>
+                            خدمة شاملة لجميع الأحياء
+                        </address>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <h3 class="mb-4">احجز خدمتك الآن</h3>
+                    <p class="lead mb-4">تواصل معنا للحصول على أفضل خدمات التنظيف في الرياض</p>
+                    <div class="d-flex flex-wrap justify-content-center gap-3">
+                        <a href="tel:+0565265233" class="btn btn-light btn-lg">
+                            <i class="fas fa-phone me-2"></i>
+                            اتصل الآن
+                        </a>
+                        <a href="https://wa.me/0565265233" class="btn btn-success btn-lg" target="_blank">
+                            <i class="fab fa-whatsapp me-2"></i>
+                            واتساب
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4" style="background: #1a1a1a; color: white;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center">
+                        <img src="https://cleanplusteam.com/logo.avif" alt="CleanPlus Logo" style="height: 40px;" class="me-3">
+                        <div>
+                            <h5 class="mb-0">CleanPlus</h5>
+                            <small class="text-muted">شركة النظافة الرائدة في الرياض</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 text-md-end mt-3 mt-md-0">
+                    <p class="mb-0">&copy; 2024 CleanPlus. جميع الحقوق محفوظة</p>
+                    <small class="text-muted">خدمات تنظيف احترافية منذ 2012</small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe service cards and other elements
+        document.querySelectorAll('.service-card, .neighborhood-card, .testimonial-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // WhatsApp floating button functionality
+        function sendWhatsAppMessage() {
+            const message = "مرحباً، أود الاستفسار عن خدمات التنظيف في الرياض";
+            const url = `https://wa.me/0565265233?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+
+        // Phone call functionality
+        function makePhoneCall() {
+            window.location.href = "tel:+0565265233";
+        }
+
+        // Add click tracking for better analytics
+        document.querySelectorAll('a[href*="tel:"], a[href*="wa.me"]').forEach(link => {
+            link.addEventListener('click', function() {
+                console.log('Contact method used:', this.href);
+            });
+        });
+    </script>
+</body>
+</html>

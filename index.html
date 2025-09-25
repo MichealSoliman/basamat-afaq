@@ -27,7 +27,7 @@
     <meta property="og:description" content="نقدم خدمات حكومية إلكترونية متميزة في السعودية منذ 12 سنة. نقل كفالة، تراخيص، معاملات رسمية بسرعة ودقة عالية">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://basmatafaq.com">
-    <meta property="og:image" content="https://basmatafaq.comasstes/img/about.jpg">
+    <meta property="og:image" content="https://basmatafaq.com/asstes/img/about.jpg">
     <meta property="og:image:alt" content="آفاق للخدمات العامة - شعار الشركة">
     <meta property="og:site_name" content="آفاق للخدمات العامة">
     <meta property="og:locale" content="ar_SA">
@@ -36,7 +36,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="آفاق للخدمات العامة - خدمات حكومية إلكترونية">
     <meta name="twitter:description" content="خدمات حكومية إلكترونية احترافية في السعودية. نقل كفالة، تراخيص، معاملات رسمية">
-    <meta name="twitter:image" content="https://basmatafaq.comasstes/img/about.jpg">
+    <meta name="twitter:image" content="https://basmatafaq.com/asstes/img/about.jpg">
     <meta name="twitter:image:alt" content="آفاق للخدمات العامة">
     
     <!-- Structured Data for Local Business -->
@@ -168,102 +168,7 @@
     <script src="./asstes/localization.js"></script>
     
     <!-- Debug script for testing toggle buttons -->
-    <script>
-        // Enhanced error handling and defensive programming
-        window.addEventListener('error', function(e) {
-            console.error('🚫 Global error caught:', e.error);
-            console.error('Error details:', {
-                message: e.message,
-                filename: e.filename,
-                lineno: e.lineno,
-                colno: e.colno
-            });
-        });
-        
-        window.addEventListener('unhandledrejection', function(e) {
-            console.error('🚫 Unhandled promise rejection:', e.reason);
-        });
-        
-        // Test function to ensure toggle buttons work
-        window.addEventListener('load', function() {
-            console.log('🎉 Page fully loaded, testing localization');
-            
-            try {
-                // Wait a bit for localization to initialize
-                setTimeout(function() {
-                    try {
-                        if (window.debugLocalization && typeof window.debugLocalization === 'function') {
-                            console.log('🔍 Running localization debug:');
-                            const debugResult = window.debugLocalization();
-                            console.log('Debug result:', debugResult);
-                        } else {
-                            console.warn('⚠️ Debug function not available');
-                        }
-                        
-                        // Language switching functionality
-                        const toggleBtns = document.querySelectorAll('[data-lang-switch]');
-                        console.log('🔍 Found toggle buttons for testing:', toggleBtns?.length || 0);
-                        
-                        if (toggleBtns && toggleBtns.length > 0) {
-                            // Add click event listeners to language buttons
-                            toggleBtns.forEach(btn => {
-                                btn.addEventListener('click', function() {
-                                    const targetLang = this.getAttribute('data-lang-switch');
-                                    console.log('🔄 Language switch requested:', targetLang);
-                                    
-                                    // Determine current language from URL or page
-                                    const currentPath = window.location.pathname;
-                                    const isCurrentlyArabic = currentPath.includes('/ar') || currentPath === '/' || currentPath === '/index.html';
-                                    
-                                    // Switch to appropriate page
-                                    if (targetLang === 'en' && isCurrentlyArabic) {
-                                        // Switch to English
-                                        window.location.href = './index-en.html';
-                                    } else if (targetLang === 'ar' && !isCurrentlyArabic) {
-                                        // Switch to Arabic
-                                        window.location.href = './index-ar.html';
-                                    }
-                                });
-                            });
-                        }
-                        
-                        // Test URL-based routing functionality
-                        console.log('🔍 Current URL:', window.location?.href || 'unknown');
-                        console.log('🔍 URL path:', window.location?.pathname || 'unknown');
-                        console.log('🔍 URL search:', window.location?.search || 'none');
-                        
-                        // Add a global test function for URL routing
-                        window.testUrlRouting = function() {
-                            try {
-                                console.log('🧪 Testing URL routing:');
-                                console.log('1. Testing /ar/ URL: http://localhost:8000/ar/');
-                                console.log('2. Testing /en/ URL: http://localhost:8000/en/');
-                                console.log('3. Testing ?lang=ar: http://localhost:8000/?lang=ar');
-                                console.log('4. Testing ?lang=en: http://localhost:8000/?lang=en');
-                                console.log('Use the browser to test these URLs manually.');
-                                return true;
-                            } catch (error) {
-                                console.error('❌ Error in testUrlRouting:', error);
-                                return false;
-                            }
-                        };
-                        
-                        // Test the global functions
-                        if (window.switchLanguage && typeof window.switchLanguage === 'function') {
-                            console.log('✅ switchLanguage function is available');
-                        } else {
-                            console.warn('⚠️ switchLanguage function not available');
-                        }
-                        
-                    } catch (error) {
-                        console.error('❌ Error during localization testing:', error);
-                    }
-                }, 1000);
-            } catch (error) {
-                console.error('❌ Error setting up localization test:', error);
-            }
-        });
-    </script>
+
       <style>
         .text-gold {
             color: #fbbf24;
@@ -310,7 +215,7 @@
     <!-- Language Loading Indicator -->
     <div id="language-loader" style="display: none;">
         <div class="loader-spinner"></div>
-        <span >جاري التحميل...</span>
+        <span data-i18n="common.loading">جاري التحميل...</span>
     </div>
 
     <!-- Header -->
@@ -319,63 +224,54 @@
             <div class="flex justify-between items-center ">
                 <!-- Logo -->
                 <div class="flex items-center space-x-3 space-x-reverse">
-                 <div
-                            class="w-14 h-14 bg-saudi-green flex items-center justify-center">
+                 <div class="w-14 h-14 bg-saudi-green flex items-center justify-center">
                             <img src="./asstes/img/about-1.png" alt="">
                         </div>
                     <div>
-                        <h1 class="text-xl font-bold text-white" > آفاق</h1>
-                        <p class="text-sm text-white" >للخدمات العامة</p>
+                        <h1 class="text-xl font-bold text-white" data-i18n="header.companyName"> آفاق</h1>
+                        <p class="text-sm text-white" data-i18n="header.companySubtitle">للخدمات العامة</p>
                     </div>
                 </div>
 
-                <!-- Language Links -->
-                <div class="hidden lg:flex items-center space-x-4 space-x-reverse">
-                    <a href="/" class="text-white hover:text-saudi-green transition-colors font-semibold text-sm">العربية</a>
-                    <a href="/en" class="text-white hover:text-saudi-green transition-colors font-semibold text-sm">English</a>
-                </div>
-
-                <!-- Language Toggle Button -->
-                <div class="hidden lg:flex items-center">
-                    <div class="language-toggle-container relative">
-                        <div class="language-toggle flex items-center bg-white/10 backdrop-blur-sm rounded-full p-1 border border-white/20">
-                            <button 
-                                data-lang-switch="ar" 
-                                class="lang-toggle-btn arabic-btn flex items-center justify-center w-16 h-8 rounded-full text-xs font-bold transition-all duration-300 relative overflow-hidden"
-                                title="العربية">
-                                <span class="relative z-10 text-black">عربي</span>
-                            </button>
-                            <button 
-                                data-lang-switch="en" 
-                                class="lang-toggle-btn english-btn flex items-center justify-center w-16 h-8 rounded-full text-xs font-bold transition-all duration-300 relative overflow-hidden"
-                                title="English">
-                                <span class="relative z-10 text-black">EN</span>
-                            </button>
-                        </div>
-                        <div class="toggle-slider absolute top-1 left-1 w-16 h-8 bg-white rounded-full transition-transform duration-300 shadow-md"></div>
-                    </div>
-                </div>
-
+        
                 <!-- Desktop Navigation -->
                 <div class="hidden lg:flex items-center space-x-8 space-x-reverse ">
                     <a href="#home"
-                        class="text-white hover:text-saudi-green transition-colors font-semibold" >الرئيسية</a>
-                    <a href="#about" class="text-white hover:text-saudi-green transition-colors font-semibold" >من
+                        class="text-white hover:text-saudi-green transition-colors font-semibold" data-i18n="header.navigation.home">الرئيسية</a>
+                    <a href="#about" class="text-white hover:text-saudi-green transition-colors font-semibold" data-i18n="header.navigation.about">من
                         نحن</a>
                     <a href="#services"
-                        class="text-white hover:text-saudi-green transition-colors font-semibold" >خدماتنا</a>
+                        class="text-white hover:text-saudi-green transition-colors font-semibold" data-i18n="header.navigation.services">خدماتنا</a>
                     <a href="#Our-partners"
-                        class="text-white hover:text-saudi-green transition-colors font-semibold" >شركاؤنا</a>
+                        class="text-white hover:text-saudi-green transition-colors font-semibold" data-i18n="header.navigation.partners">شركاؤنا</a>
                     <a href="#rates"
-                        class="text-white hover:text-saudi-green transition-colors font-semibold" >التقييمات</a>
+                        class="text-white hover:text-saudi-green transition-colors font-semibold" data-i18n="header.navigation.rates">التقييمات</a>
 
                 </div>
 
-                <!-- CTA Button -->
-                <div class="hidden lg:block">
-                    <a href="tel:0508298617" class=" px-6 py-3 rounded-lg font-semibold text-white bg-saudi-green ">
+                <!-- Language Toggle & CTA Button -->
+                <div class="hidden lg:flex items-center space-x-4 space-x-reverse">
+                    <!-- Language Toggle -->
+                    <div class="language-toggle">
+                        <button id="lang-toggle" class="flex items-center space-x-2 space-x-reverse px-4 py-2 rounded-lg font-semibold text-white transition-all duration-300 ">
+                            <i class="fas fa-globe text-sm"></i>
+                            <span class="text-sm">العربية</span>
+                            <i class="fas fa-chevron-down text-xs transition-transform duration-300" id="lang-arrow"></i>
+                        </button>
+                        <div id="lang-dropdown" class="absolute top-full mt-2 right-0 bg-white rounded-lg shadow-xl border border-gray-200 py-2 min-w-[120px] hidden z-50">
+                            <a href="index-en.html" class="block px-4 py-2 text-gray-700 hover:bg-saudi-green-lighter hover:text-saudi-green transition-colors duration-200 text-sm">
+                                <i class="fas fa-flag-usa ml-2"></i>English
+                            </a>
+                            <a href="index-ar.html" class="block px-4 py-2 text-gray-700 hover:bg-saudi-green-lighter hover:text-saudi-green transition-colors duration-200 text-sm">
+                                <i class="fas fa-flag ml-2"></i>العربية
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA Button -->
+                    <a href="tel:0508298617" class="px-6 py-3 rounded-lg font-semibold text-white bg-saudi-green hover:bg-saudi-green-light transition-all duration-300 shadow-lg hover:shadow-xl">
                         <i class="fas fa-phone-alt ml-2"></i>
-                        <span >اتصل بنا</span>
+                        <span data-i18n="header.navigation.contact">اتصل بنا</span>
                     </a>
                 </div>
 
@@ -388,44 +284,36 @@
             <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden lg:hidden mt-4 bg-saudi-green rounded-lg shadow-lg p-4">
                 <div class="flex flex-col space-y-4">
-                    <!-- Mobile Language Links -->
-                    <div class="flex justify-center space-x-4 space-x-reverse mb-4">
-                        <a href="/" class="text-white hover:text-gold transition-colors font-semibold text-sm px-3 py-1 rounded">العربية</a>
-                        <a href="/en" class="text-white hover:text-gold transition-colors font-semibold text-sm px-3 py-1 rounded">English</a>
-                    </div>
-                    
-                    <!-- Mobile Language Toggle -->
-                    <div class="language-toggle-container relative flex justify-center mb-4">
-                        <div class="language-toggle flex items-center bg-white/10 backdrop-blur-sm rounded-full p-1 border border-white/20">
-                            <button 
-                                data-lang-switch="ar" 
-                                class="lang-toggle-btn arabic-btn flex items-center justify-center w-20 h-10 rounded-full text-sm font-bold transition-all duration-300 relative overflow-hidden"
-                                title="العربية">
-                                <span class="relative z-10 text-black">عربي</span>
-                            </button>
-                            <button 
-                                data-lang-switch="en" 
-                                class="lang-toggle-btn english-btn flex items-center justify-center w-20 h-10 rounded-full text-sm font-bold transition-all duration-300 relative overflow-hidden"
-                                title="English">
-                                <span class="relative z-10 text-black">EN</span>
-                            </button>
-                        </div>
-                        <div class="toggle-slider absolute top-1 left-1 w-20 h-10 bg-white rounded-full transition-transform duration-300 shadow-md"></div>
-                    </div>
-                    
+                 
+                  
                     <a href="#home"
-                        class="text-white hover:text-saudi-green transition-colors font-semibold" >الرئيسية</a>
-                    <a href="#about" class="text-white hover:text-saudi-green transition-colors font-semibold">من
+                        class="text-white hover:text-saudi-green transition-colors font-semibold" data-i18n="header.navigation.home">الرئيسية</a>
+                    <a href="#about" class="text-white hover:text-saudi-green transition-colors font-semibold" data-i18n="header.navigation.about">من
                         نحن</a>
                     <a href="#services"
-                        class="text-white hover:text-saudi-green transition-colors font-semibold" >خدماتنا</a>
+                        class="text-white hover:text-saudi-green transition-colors font-semibold" data-i18n="header.navigation.services">خدماتنا</a>
                     <a href="#Our-partners"
-                        class="text-white hover:text-saudi-green transition-colors font-semibold" >شركاؤنا</a>
+                        class="text-white hover:text-saudi-green transition-colors font-semibold" data-i18n="header.navigation.partners">شركاؤنا</a>
+
+                    <!-- Mobile Language Toggle -->
+                    <div class="border-t border-saudi-green-light pt-4">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-white text-sm font-semibold">اللغة / Language</span>
+                        </div>
+                        <div class="flex space-x-2 space-x-reverse">
+                            <a href="index-ar.html" class="flex-1 bg-saudi-green-light hover:bg-saudi-green px-4 py-2 rounded-lg font-semibold text-white text-center transition-all duration-300">
+                                <i class="fas fa-flag ml-2"></i>العربية
+                            </a>
+                            <a href="index-en.html" class="flex-1 bg-saudi-green-light hover:bg-saudi-green px-4 py-2 rounded-lg font-semibold text-white text-center transition-all duration-300">
+                                <i class="fas fa-flag-usa ml-2"></i>English
+                            </a>
+                        </div>
+                    </div>
 
                     <a href="tel:0508298617"
                         class="bg-saudi-green px-6 py-3 rounded-lg font-semibold text-white shadow-lg text-center">
                         <i class="fas fa-phone-alt ml-2"></i>
-                        <span >اتصل بنا</span>
+                        <span data-i18n="header.navigation.contact">اتصل بنا</span>
                     </a>
                 </div>
             </div>
@@ -446,18 +334,18 @@
             <div class="order-1 lg:order-1 text-center lg:text-right p-3">
                 <div class="max-w-2xl mx-auto lg:mx-0">
                     <!-- Main Title -->
-                    <h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold text-gold mb-6 leading-tight" >
+                    <h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold text-gold mb-6 leading-tight" data-i18n="hero.title">
                           آفاق للخدمات العامة
                         <br>
                     </h1>
-                    <h2 class="text-4xl lg:text-3xl xl:text-4xl font-bold text-white mb-6 leading-tight" >
+                    <h2 class="text-4xl lg:text-3xl xl:text-4xl font-bold text-white mb-6 leading-tight" data-i18n="hero.subtitle">
                              رؤية متميزة وآفاق واسعة
                     </h2>
                     <!-- Subtitle -->
                     <p class="font-semibold lg:text-xl xl:text-2xl text-gold mb-8 leading-relaxed">
-                        <span >أكثر من 12 سنة خبرة في مجال الخدمات والتعقيب</span>
+                        <span data-i18n="hero.description">أكثر من 12 سنة خبرة في مجال الخدمات والتعقيب</span>
                         <br>
-                        <span class="font-semibold text-gold" >
+                        <span class="font-semibold text-gold" data-i18n="hero.highlightText">
                             بخبرة عالية وسرعة ودقة في التنفيذ
                         </span>
                     </p>
@@ -468,13 +356,13 @@
                         <a href="tel:0508298617" 
                            class="btn-primary inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-bold text-lg shadow-2xl min-w-[180px] h-[60px]">
                             <i class="fas fa-phone-alt"></i>
-                            <span >اتصل الآن</span>
+                            <span data-i18n="hero.callNow">اتصل الآن</span>
                         </a>
                         <!-- WhatsApp Button -->
                         <a href="https://wa.me/966555952139" target="_blank" 
                            class="btn-primary inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-bold text-lg shadow-2xl min-w-[180px] h-[60px]">
                             <i class="fab fa-whatsapp"></i>
-                            <span >واتساب</span>
+                            <span data-i18n="hero.whatsapp">واتساب</span>
                         </a>
                     </div>
 
@@ -482,15 +370,15 @@
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
                         <div class="rounded-xl p-6 text-center border border-white/20 hover:bg-white/20 transition-all duration-300">
                             <div class="text-3xl font-bold text-gold mb-2">+12</div>
-                            <div class="text-sm text-white" >سنوات خبرة</div>
+                            <div class="text-sm text-white" data-i18n="hero.stats.experience">سنوات خبرة</div>
                         </div>
                         <div class="rounded-xl p-6 text-center border border-white/20 hover:bg-white/20 transition-all duration-300">
                             <div class="text-3xl font-bold text-gold mb-2">24/7</div>
-                            <div class="text-sm text-white" >خدمة مستمرة</div>
+                            <div class="text-sm text-white" data-i18n="hero.stats.service">خدمة مستمرة</div>
                         </div>
                         <div class="rounded-xl p-6 text-center border border-white/20 hover:bg-white/20 transition-all duration-300">
                             <div class="text-3xl font-bold text-gold mb-2">100%</div>
-                                <div class="text-sm text-white" >ضمان الجودة</div>
+                            <div class="text-sm text-white" data-i18n="hero.stats.quality">ضمان الجودة</div>
                         </div>
                     </div>
                 </div>
@@ -519,14 +407,14 @@
 
 
     <!-- About Us Section with Dynamic Content -->
-    <section id="about" class="relative py-20 bg-gradient-to-br from-white via-gray-50 to-green-50 overflow-hidden dynamic-section" >
+    <section id="about" class="relative py-20 bg-gradient-to-br from-white via-gray-50 to-green-50 overflow-hidden dynamic-section" data-dynamic-section="about">
         <div class="container mx-auto px-6 lg:px-12">
 
             <!-- Title -->
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl lg:text-5xl font-extrabold partners-mega-title" >نبذة عنا</h2>
+                <h2 class="text-4xl lg:text-5xl font-extrabold partners-mega-title" data-i18n="about.title" data-section-title>نبذة عنا</h2>
                 <div class="w-24 h-1 bg-yellow-500 mx-auto mt-4 mb-6 rounded-full"></div>
-                <p class="text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed" >
+                <p class="text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed" data-i18n="about.description" data-section-description>
                     نحن متخصصين في تقديم الخدمات العامة بأعلى معايير الجودة والمهنية
                 </p>
             </div>
@@ -543,8 +431,8 @@
                             <i class="fas fa-tachometer-alt text-[#00544d] text-xl"></i>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold text-[#00544d]  mb-2" >السرعة والدقة في أداء الخدمات</h3>
-                            <p class="text-gray-600  leading-relaxed" >نلتزم بتقديم خدماتنا في أسرع وقت ممكن مع الحفاظ
+                            <h3 class="text-xl font-bold text-[#00544d]  mb-2" data-i18n="about.features.0.title">السرعة والدقة في أداء الخدمات</h3>
+                            <p class="text-gray-600  leading-relaxed" data-i18n="about.features.0.description">نلتزم بتقديم خدماتنا في أسرع وقت ممكن مع الحفاظ
                                 على أعلى مستويات الدقة والجودة في العمل</p>
                         </div>
                     </div>
@@ -556,8 +444,8 @@
                             <i class="fas fa-shield-alt text-[#00544d] text-xl"></i>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold text-[#00544d]  mb-2" >التعامل مع الوثائق بسرية تامة</h3>
-                            <p class="text-gray-600  leading-relaxed" >نضمن الحفاظ على سرية وأمان جميع المعلومات والوثائق
+                            <h3 class="text-xl font-bold text-[#00544d]  mb-2" data-i18n="about.features.1.title">التعامل مع الوثائق بسرية تامة</h3>
+                            <p class="text-gray-600  leading-relaxed" data-i18n="about.features.1.description">نضمن الحفاظ على سرية وأمان جميع المعلومات والوثائق
                                 الخاصة بعملائنا الكرام</p>
                         </div>
                     </div>
@@ -569,8 +457,8 @@
                             <i class="fas fa-heart text-[#00544d] text-xl"></i>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold text-[#00544d]  mb-2" >إرضاء العملاء والمصداقية</h3>
-                            <p class="text-gray-600  leading-relaxed" >رضا عملائنا هو هدفنا الأول، ونحرص على بناء علاقات
+                            <h3 class="text-xl font-bold text-[#00544d]  mb-2" data-i18n="about.features.2.title">إرضاء العملاء والمصداقية</h3>
+                            <p class="text-gray-600  leading-relaxed" data-i18n="about.features.2.description">رضا عملائنا هو هدفنا الأول، ونحرص على بناء علاقات
                                 طويلة الأمد قائمة على الثقة والمصداقية</p>
                         </div>
                     </div>
@@ -582,8 +470,8 @@
                             <i class="fas fa-lock text-[#00544d] text-xl"></i>
                         </div>
                         <div>
-                            <h3 class="text-xl font-bold text-[#00544d]  mb-2" >الأمان في تنفيذ الخدمات</h3>
-                            <p class="text-gray-600  leading-relaxed" >نطبق أعلى معايير الأمان والحماية في جميع مراحل
+                            <h3 class="text-xl font-bold text-[#00544d]  mb-2" data-i18n="about.features.3.title">الأمان في تنفيذ الخدمات</h3>
+                            <p class="text-gray-600  leading-relaxed" data-i18n="about.features.3.description">نطبق أعلى معايير الأمان والحماية في جميع مراحل
                                 تنفيذ الخدمات لضمان حقوق عملائنا</p>
                         </div>
                     </div>
@@ -622,18 +510,18 @@
 
     <!-- Banner Section with Dynamic Content -->
     <section class="relative bg-cover bg-center bg-no-repeat py-16 px-6 lg:px-20 text overflow-hidden banner-1 dynamic-section" style="
-      background: linear-gradient(90deg, rgba(0, 84, 77, 1) 0%,rgba(22, 144, 110, 0.7) 100%)" >
+      background: linear-gradient(90deg, rgba(0, 84, 77, 1) 0%,rgba(22, 144, 110, 0.7) 100%)" data-dynamic-section="banner">
         <!-- طبقة تغطية داكنة -->
         <div class="absolute inset-0"></div>
 
         <div class="relative max-w-5xl mx-auto text-center">
             <!-- العنوان -->
-            <h2 class="text-4xl lg:text-5xl font-bold text-white mb-4" >
+            <h2 class="text-4xl lg:text-5xl font-bold text-white mb-4" data-i18n="banner.title" data-section-title>
                 آفاق للخدمات العامة
             </h2>
 
             <!-- النص -->
-            <p class="text-lg md:text-xl leading-relaxed  text-white  mx-auto mb-8" >
+            <p class="text-lg md:text-xl leading-relaxed  text-white  mx-auto mb-8" data-i18n="banner.description" data-section-description>
                 في <span class="font-bold text-white"> آفاق للخدمات </span> نضع نصب أعيننا تسهيل الإجراءات الحكومية
                 وتقديم حلول رقمية متكاملة توفر الوقت والجهد.
                 نلتزم بالسرعة، الدقة، والأمان في جميع خدماتنا لنكون شريكك الموثوق
@@ -644,7 +532,7 @@
             <div class="flex justify-center">
                 <a href="tel:0508298617"
                     class="bg-saudi-green text-white font-bold py-3 px-8 rounded-full shadow-lg  transition-all ">
-                    <span >اتصل بنا الآن</span>
+                    <span data-i18n="banner.callToAction">اتصل بنا الآن</span>
                 </a>
             </div>
         </div>
@@ -652,12 +540,12 @@
 
 
     <!-- Services Section with Dynamic Content -->
-    <section id="services" class="py-20 bg-saudi-green-lighter islamic-pattern dynamic-section" >
+    <section id="services" class="py-20 bg-saudi-green-lighter islamic-pattern dynamic-section" data-dynamic-section="services">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl lg:text-5xl font-bold saudi-green mb-4" >خدماتنا</h2>
+                <h2 class="text-4xl lg:text-5xl font-bold saudi-green mb-4" data-i18n="services.title" data-section-title>خدماتنا</h2>
                 <div class="w-24 h-1 bg-gold mx-auto mb-6"></div>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto" >
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto" data-i18n="services.description" data-section-description>
                     نقدم مجموعة شاملة من الخدمات العامة لتلبية احتياجاتكم المختلفة
                 </p>
             </div>
@@ -716,7 +604,7 @@
                         </div>
                     </div>
 <!-- Card 2: خدمات التأمين with Dynamic Content -->
-<div class="bg-white rounded-3xl p-8 shadow-lg card-hover relative overflow-hidden" >
+<div class="bg-white rounded-3xl p-8 shadow-lg card-hover relative overflow-hidden" data-service-id="insurance">
     <div class="card-content">
         <!-- Image -->
         <div class="card-image-container w-full h-48 rounded-2xl overflow-hidden mb-6">
@@ -725,18 +613,18 @@
 
         <!-- Content -->
         <div class="card-text-content">
-            <h3 class="text-2xl font-bold text-gray-800 mb-4" >خدمات التأمين</h3>
+            <h3 class="text-2xl font-bold text-gray-800 mb-4" data-service-title>خدمات التأمين</h3>
 
-            <p class="text-gray-600 mb-4 leading-relaxed">
+            <p class="text-gray-600 mb-4 leading-relaxed" data-service-description>
                 نقدم مجموعة متنوعة من خدمات التأمين التي تضمن لك راحة البال وسهولة في الإجراءات.
             </p>
 
-            <p class="text-gray-500 text-sm mb-6 leading-relaxed" >
+            <p class="text-gray-500 text-sm mb-6 leading-relaxed" data-service-sub-description>
                 نوفر حلول تأمينية شاملة للأفراد والشركات تشمل التأمين الطبي وتأمين المركبات وخدمات الإقامة.
             </p>
 
             <!-- Services List -->
-            <ul class="space-y-3 mb-8" >
+            <ul class="space-y-3 mb-8" data-services-list>
                 <li class="bullet-point text-gray-700">تأمين طبي</li>
                 <li class="bullet-point text-gray-700">تأمين إصدار إقامة</li>
                 <li class="bullet-point text-gray-700">فحص طبي إصدار إقامة</li>
@@ -748,16 +636,16 @@
             <div class="card-buttons flex gap-3">
                 <!-- زر الاتصال -->
                 <a href="tel:0508298617"
-                    class="bg-saudi-green text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2" >
+                    class="bg-saudi-green text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2" data-call-button>
                     <i class="fas fa-phone-alt"></i>
-                    <span >اتصل بنا</span>
+                    <span data-i18n="services.buttons.callUs">اتصل بنا</span>
                 </a>
 
                 <!-- زر واتساب -->
                 <a href="https://wa.me/966555952139" target="_blank"
-                    class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2" >
+                    class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2" data-whatsapp-button>
                     <i class="fab fa-whatsapp"></i>
-                    <span >واتساب</span>
+                    <span data-i18n="services.buttons.whatsapp">واتساب</span>
                 </a>
             </div>
         </div>
@@ -765,7 +653,7 @@
 </div>
 
                     <!-- Card 3: خدمات ناجز with Dynamic Content -->
-                    <div class="bg-white rounded-3xl p-8 shadow-lg card-hover relative overflow-hidden" >
+                    <div class="bg-white rounded-3xl p-8 shadow-lg card-hover relative overflow-hidden" data-service-id="najiz">
                         <div class="card-content">
                             <!-- Image -->
                             <div class="card-image-container w-full h-48 rounded-2xl overflow-hidden mb-6">
@@ -774,18 +662,18 @@
 
                             <!-- Content -->
                             <div class="card-text-content">
-                                <h3 class="text-2xl font-bold text-gray-800 mb-4" >خدمات ناجز</h3>
+                                <h3 class="text-2xl font-bold text-gray-800 mb-4" data-service-title>خدمات ناجز</h3>
 
-                                <p class="text-gray-600 mb-4 leading-relaxed" >
+                                <p class="text-gray-600 mb-4 leading-relaxed" data-service-description>
                                     نقدم لك جميع خدمات ناجز الإلكترونية بكل سهولة وسرعة مع متابعة دقيقة حتى إتمام الطلب.
                                 </p>
 
-                                <p class="text-gray-500 text-sm mb-6 leading-relaxed" >
+                                <p class="text-gray-500 text-sm mb-6 leading-relaxed" data-service-sub-description>
                                     نوفر لك الدعم الكامل لإنجاز معاملاتك القضائية والعدلية إلكترونياً باحترافية عالية.
                                 </p>
 
                                 <!-- Services List -->
-                                <ul class="space-y-3 mb-8" >
+                                <ul class="space-y-3 mb-8" data-services-list>
                                     <li class="bullet-point text-gray-700"> رفع الدعاوى القضائية</li>
                                     <li class="bullet-point text-gray-700"> رفع تنفيذ الأحكام القضائية</li>
                                     <li class="bullet-point text-gray-700"> توثيق صك الحضانة</li>
@@ -797,16 +685,16 @@
                                 <div class="card-buttons flex gap-3">
                                     <!-- زر الاتصال -->
                                     <a href="tel:0508298617"
-                                        class="bg-saudi-green text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2" >
+                                        class="bg-saudi-green text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2" data-call-button>
                                         <i class="fas fa-phone-alt"></i>
-                                            <span >اتصل بنا</span>
+                                        <span data-i18n="services.buttons.callUs">اتصل بنا</span>
                                     </a>
 
                                     <!-- زر واتساب -->
                                     <a href="https://wa.me/966555952139" target="_blank"
-                                        class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2" >
+                                        class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2" data-whatsapp-button>
                                         <i class="fab fa-whatsapp"></i>
-                                        <span>واتساب</span>
+                                        <span data-i18n="services.buttons.whatsapp">واتساب</span>
                                     </a>
                                 </div>
                             </div>
@@ -858,7 +746,7 @@
                                     <button
                                         class="custom-gold text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center gap-2">
                                         <i class="fab fa-whatsapp"></i>
-                                        <span >واتساب</span>
+                                        <span data-i18n="services.buttons.whatsapp">واتساب</span>
                                     </button>
                                 </a>
                             </div>
@@ -1762,7 +1650,7 @@
         <div class="partners-hero-header">
             <div class="partners-title-container">
                 <div class="partners-title-backdrop"></div>
-                <h6 class=" partners-mega-title-2 " > خدماتنا مع أهم الجهات
+                <h6 class=" partners-mega-title-2 "> خدماتنا مع أهم الجهات
                     <br> في المملكة العربية السعودية
                 </h6>
 
@@ -2078,8 +1966,8 @@
         <div class="container mx-auto px-4">
             <!-- Section Header -->
             <div class="text-center mb-16">
-                <h2 class=" mb-4 partners-mega-title" >تقييمات عملائنا</h2>
-                <p class="text-xl text-gray-600 max-w-2xl mx-auto" >
+                <h2 class=" mb-4 partners-mega-title">تقييمات عملائنا</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
                     آراء عملائنا الكرام من خلال تقييماتهم  لنا
                 </p>
                 <div class="w-20 h-1 bg-saudi-green mx-auto mt-6"></div>
@@ -2087,15 +1975,103 @@
 
             <!-- Rates Slider Container -->
             <div class="relative max-w-7xl mx-auto">
-                <!-- Navigation Buttons -->
-                <button id="ratesScrollLeft"
-                    class="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-lg border border-gray-200 flex items-center justify-center text-gray-600 hover:text-saudi-green hover:border-saudi-green transition-all duration-300">
+                    <!-- Navigation Buttons -->
+                    <button id="ratesScrollLeft"
+                    class="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-lg border border-gray-200 flex items-center justify-center text-gray-600 hover:text-saudi-green hover:border-saudi-green transition-all duration-300"
+                    aria-label="Scroll left"
+                    type="button"
+                >
                     <i class="fas fa-chevron-left"></i>
                 </button>
                 <button id="ratesScrollRight"
-                    class="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-lg border border-gray-200 flex items-center justify-center text-gray-600 hover:text-saudi-green hover:border-saudi-green transition-all duration-300">
+                    class="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-lg border border-gray-200 flex items-center justify-center text-gray-600 hover:text-saudi-green hover:border-saudi-green transition-all duration-300"
+                    aria-label="Scroll right"
+                    type="button"
+                >
                     <i class="fas fa-chevron-right"></i>
                 </button>
+                <script>
+                // Make the rates scroll container scrollable left/right smoothly with mouse, touch, and buttons
+                document.addEventListener("DOMContentLoaded", function () {
+                    const scrollContainer = document.getElementById('ratesScrollContainer');
+                    const scrollLeftBtn = document.getElementById('ratesScrollLeft');
+                    const scrollRightBtn = document.getElementById('ratesScrollRight');
+                    const scrollAmount = 300;
+
+                    // Button scroll
+                    scrollLeftBtn.addEventListener('click', () => {
+                        scrollContainer.scrollBy({
+                            left: -scrollAmount,
+                            behavior: 'smooth'
+                        });
+                    });
+                    scrollRightBtn.addEventListener('click', () => {
+                        scrollContainer.scrollBy({
+                            left: scrollAmount,
+                            behavior: 'smooth'
+                        });
+                    });
+
+                    // Mouse drag scroll
+                    let isDown = false;
+                    let startX;
+                    let scrollLeft;
+
+                    scrollContainer.addEventListener('mousedown', (e) => {
+                        isDown = true;
+                        scrollContainer.classList.add('cursor-grabbing');
+                        startX = e.pageX - scrollContainer.offsetLeft;
+                        scrollLeft = scrollContainer.scrollLeft;
+                    });
+                    scrollContainer.addEventListener('mouseleave', () => {
+                        isDown = false;
+                        scrollContainer.classList.remove('cursor-grabbing');
+                    });
+                    scrollContainer.addEventListener('mouseup', () => {
+                        isDown = false;
+                        scrollContainer.classList.remove('cursor-grabbing');
+                    });
+                    scrollContainer.addEventListener('mousemove', (e) => {
+                        if (!isDown) return;
+                        e.preventDefault();
+                        const x = e.pageX - scrollContainer.offsetLeft;
+                        const walk = (x - startX) * 1.5; // scroll-fast
+                        scrollContainer.scrollLeft = scrollLeft - walk;
+                    });
+
+                    // Touch drag scroll
+                    let touchStartX = 0;
+                    let touchScrollLeft = 0;
+                    scrollContainer.addEventListener('touchstart', (e) => {
+                        touchStartX = e.touches[0].pageX;
+                        touchScrollLeft = scrollContainer.scrollLeft;
+                    });
+                    scrollContainer.addEventListener('touchmove', (e) => {
+                        const x = e.touches[0].pageX;
+                        const walk = (x - touchStartX) * 1.5;
+                        scrollContainer.scrollLeft = touchScrollLeft - walk;
+                    });
+
+                    // Optional: Hide scrollbars for all browsers
+                    scrollContainer.style.scrollbarWidth = "none";
+                    scrollContainer.style.msOverflowStyle = "none";
+                    scrollContainer.classList.add('hide-scrollbar');
+                });
+                </script>
+                <style>
+                #ratesScrollContainer::-webkit-scrollbar {
+                    display: none;
+                }
+                .cursor-grabbing {
+                    cursor: grabbing !important;
+                    user-select: none;
+                }
+                .hide-scrollbar {
+                    scrollbar-width: none;
+                    -ms-overflow-style: none;
+                }
+                </style>
+
 
                 <!-- Rates Scroll Container -->
                 <div id="ratesScrollContainer" class="overflow-x-scroll scroll-smooth px-8"
@@ -2138,7 +2114,7 @@
                                  <img src="./asstes/img/user.png" alt="عميل 1"
                                     class="w-16 h-16 rounded-full object-cover border-2 border-gray-200 bg-saudi-green">
                                 <div class="mr-4">
-                                    <h4 class="font-semibold text-gray-800"> Hassna Adam</h4>
+                                    <h4 class="font-semibold text-gray-800"> حسنة عدنان</h4>
                                     <div class="flex items-center mt-1">
                                         <span class="text-sm text-gray-500 ml-2"> 4 months ago</span>
                                         <div class="flex text-yellow-400">
@@ -2169,7 +2145,7 @@
                                  <img src="./asstes/img/user.png" alt="عميل 2"
                                     class="w-16 h-16 rounded-full object-cover border-2 border-gray-200 bg-saudi-green">
                                 <div class="mr-4">
-                                    <h4 class="font-semibold text-gray-800"> ahmed elayaty</h4>
+                                    <h4 class="font-semibold text-gray-800"> احمد الياطي</h4>
                                     <div class="flex items-center mt-1">
                                         <span class="text-sm text-gray-500 ml-2"> 3 weeks ago </span>
                                         <div class="flex text-yellow-400">
@@ -2353,7 +2329,7 @@
                                 <img src="./asstes/img/user.png" alt="عميل 8"
                                     class="w-16 h-16 rounded-full object-cover border-2 border-gray-200 bg-saudi-green">
                                 <div class="mr-4">
-                                    <h4 class="font-semibold text-gray-800"> Adel Bder</h4>
+                                    <h4 class="font-semibold text-gray-800">  عادل بدر</h4>
                                     <div class="flex items-center mt-1">
                                         <span class="text-sm text-gray-500 ml-2">2 weeks ago </span>
                                         <div class="flex text-yellow-400">
@@ -2440,7 +2416,7 @@
                                 <img src="./asstes/img/user.png" alt="عميل 11"
                                     class="w-16 h-16 rounded-full object-cover border-2 border-gray-200 bg-saudi-green">
                                 <div class="mr-4">
-                                    <h4 class="font-semibold text-gray-800">  Jana Alsaiari</h4>
+                                    <h4 class="font-semibold text-gray-800">  جنى السياري</h4>
                                     <div class="flex items-center mt-1">
                                         <span class="text-sm text-gray-500 ml-2">4 months ago</span>
                                         <div class="flex text-yellow-400">
@@ -2469,7 +2445,7 @@
                                 <img src="./asstes/img/user.png" alt="عميل 12"
                                     class="w-16 h-16 rounded-full object-cover border-2 border-gray-200 bg-saudi-green">
                                 <div class="mr-4">
-                                    <h4 class="font-semibold text-gray-800">  Gasem Saed</h4>
+                                    <h4 class="font-semibold text-gray-800">  جاسم سعد</h4>
                                     <div class="flex items-center mt-1">
                                         <span class="text-sm text-gray-500 ml-2">4 months ago</span>
                                         <div class="flex text-yellow-400">
@@ -2497,7 +2473,7 @@
                                 <img src="./asstes/img/user.png" alt="عميل 13"
                                     class="w-16 h-16 rounded-full object-cover border-2 border-gray-200 bg-saudi-green">
                                 <div class="mr-4">
-                                    <h4 class="font-semibold text-gray-800">  Mohammed Sami</h4>
+                                    <h4 class="font-semibold text-gray-800">  محمد سامي</h4>
                                     <div class="flex items-center mt-1">
                                         <span class="text-sm text-gray-500 ml-2">4 months ago</span>
                                         <div class="flex text-yellow-400">
@@ -2675,7 +2651,7 @@
                                 <img src="./asstes/img/user.png" alt="عميل 19"
                                     class="w-16 h-16 rounded-full object-cover border-2 border-gray-200 bg-saudi-green">
                                 <div class="mr-4">
-                                    <h4 class="font-semibold text-gray-800"> Faisal Alga</h4>
+                                    <h4 class="font-semibold text-gray-800"> فيصل </h4>
                                     <div class="flex items-center mt-1">
                                         <span class="text-sm text-gray-500 ml-2">2 months ago</span>
                                         <div class="flex text-yellow-400">
@@ -2744,7 +2720,7 @@
                                 <i class="fas fa-star"></i>
                             </div>
                            <a href="https://www.google.com/maps/place/%D8%A8%D8%B5%D9%85%D8%A9+%D8%A7%D9%81%D8%A7%D9%82+%D9%84%D9%84%D8%AE%D8%AF%D9%85%D8%A7%D8%AA+%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9%E2%80%AD/@21.5970649,39.1708836,17z/data=!3m1!4b1!4m6!3m5!1s0x15c17dd72795a913:0xee416cd1f442e430!8m2!3d21.5970649!4d39.1708836!16s%2Fg%2F11wbh9zt4c?entry=ttu&g_ep=EgoyMDI1MDkwNy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-md fw-bold text-saudi-green hover:text-saudi-green transition">
-                                <span >اطلع على المزيد من التقييمات</span>
+                                <span data-i18n="testimonials.viewMore">اطلع على المزيد من التقييمات</span>
                                 <i class="fas fa-arrow-left ml-2 m-3"></i> 
                             </a>
                         </div>
@@ -2753,40 +2729,34 @@
             </div>
         </div>
     </section>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const scrollContainer = document.getElementById('ratesScrollContainer');
-        const scrollLeftBtn = document.getElementById('ratesScrollLeft');
-        const scrollRightBtn = document.getElementById('ratesScrollRight');
-
-       
-        const scrollAmount = 300;
-
-        scrollLeftBtn.addEventListener('click', () => {
-            scrollContainer.scrollBy({
-                left: -scrollAmount,
-                behavior: 'smooth'
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const scrollContainer = document.getElementById('ratesScrollContainer');
+            const scrollLeftBtn = document.getElementById('ratesScrollLeft');
+            const scrollRightBtn = document.getElementById('ratesScrollRight');
+    
+           
+            const scrollAmount = 300;
+    
+            scrollLeftBtn.addEventListener('click', () => {
+                scrollContainer.scrollBy({
+                    left: -scrollAmount,
+                    behavior: 'smooth'
+                });
+            });
+    
+            scrollRightBtn.addEventListener('click', () => {
+                scrollContainer.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
             });
         });
-
-        scrollRightBtn.addEventListener('click', () => {
-            scrollContainer.scrollBy({
-                left: scrollAmount,
-                behavior: 'smooth'
-            });
-        });
-    });
-</script>
+    </script>
 
     <!-- Footer -->
     <footer class="bg-saudi-green text-white py-16 islamic-pattern">
         <div class="container mx-auto px-4">
-            <!-- Language Links in Footer -->
-            <div class="flex justify-center space-x-6 space-x-reverse mb-8">
-                <a href="/" class="text-white hover:text-gold transition-colors font-semibold text-lg">العربية</a>
-                <a href="/en" class="text-white hover:text-gold transition-colors font-semibold text-lg">English</a>
-            </div>
-            
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                 <!-- Company Info -->
                 <div>
@@ -2909,6 +2879,40 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="./asstes/script.js"></script>
+    
+    <!-- Language Toggle Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const langToggle = document.getElementById('lang-toggle');
+            const langDropdown = document.getElementById('lang-dropdown');
+            const langArrow = document.getElementById('lang-arrow');
+            
+            if (langToggle && langDropdown && langArrow) {
+                // Toggle dropdown visibility
+                langToggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    langDropdown.classList.toggle('hidden');
+                    langArrow.classList.toggle('rotate');
+                });
+                
+                // Close dropdown when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
+                        langDropdown.classList.add('hidden');
+                        langArrow.classList.remove('rotate');
+                    }
+                });
+                
+                // Close dropdown on escape key
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape') {
+                        langDropdown.classList.add('hidden');
+                        langArrow.classList.remove('rotate');
+                    }
+                });
+            }
+        });
+    </script>
 
 </body>
 
